@@ -1,0 +1,81 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>GeoNight</title>
+    <style>
+        html, body, #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+        #responseBox{
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 9999;
+            background-color: rgba(255, 255, 255, .8);
+            padding: 1rem;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.18/"></script>
+
+    <script type="module">
+
+        import ArcGISMap from "https://js.arcgis.com/4.18/@arcgis/core/Map.js";
+        import MapView from "https://js.arcgis.com/4.18/@arcgis/core/views/MapView.js";
+        import FeatureLayer from "https://js.arcgis.com/4.18/@arcgis/core/layers/FeatureLayer.js";
+        import esriConfig from "https://js.arcgis.com/4.18/@arcgis/core/config.js";
+        import {distance} from "https://js.arcgis.com/4.18/@arcgis/core/geometry/geometryEngineAsync.js";
+        import {project} from "https://js.arcgis.com/4.18/@arcgis/core/geometry/projection.js";
+
+        esriConfig.apiKey = "AAPKb2ab4249fa8b48218ea1d3f993d86e30GG1q0cy5ivCIPXKbo-wo-fj3tO-ZFJp0hq7tTriKC-DUaM8vud4GclOQGtSoAq7D";
+
+        const map = new ArcGISMap({
+            basemap: "arcgis-topographic"
+        });
+
+        const view = new MapView({
+            container: "viewDiv",
+            map: map,
+            center: [-3,40],
+            zoom: 3
+        });
+
+        window.layer = new FeatureLayer({
+            url: "https://services.arcgis.com/Q6ZFRRvMTlsTTFuP/arcgis/rest/services/geonightplaces/FeatureServer"
+        });
+
+        var urlParams = new URLSearchParams(window.location.search);
+
+        const testNum = urlParams.has('testNum')? urlParams.get('testNum') : 0;
+        let response = '';
+
+        layer.queryFeatures().then(function(results){
+            response = results.features[testNum];
+        });
+
+        view.on("click", function(event) {
+            console.log("event = ", event)
+            const evtProjected = project(response.geometry, {wkid:event.mapPoint.spatialReference.wkid})
+            const promise = distance(evtProjected, event.mapPoint, "kilometers")
+            promise.then(function(res){
+                const txtResponse = `<br>Test num = ${testNum}, distancia a ${response.attributes.Name} -> ${res}`;
+                console.log(txtResponse);
+                document.getElementById('response').innerHTML = txtResponse;
+            })
+        });
+
+    </script>
+</head>
+<body>
+    <div id="viewDiv"></div>
+    <div id="responseBox">
+        Haz clic en el mapa donde creas que se encuentra la ciudad.
+        <span id="response"></span>
+    </div>
+</body>
+</html>
