@@ -35,7 +35,7 @@
         esriConfig.apiKey = "AAPKb2ab4249fa8b48218ea1d3f993d86e30GG1q0cy5ivCIPXKbo-wo-fj3tO-ZFJp0hq7tTriKC-DUaM8vud4GclOQGtSoAq7D";
 
         const map = new ArcGISMap({
-            basemap: "arcgis-topographic"
+            basemap: "topo"
         });
 
         const view = new MapView({
@@ -45,7 +45,7 @@
             zoom: 3
         });
 
-        window.layer = new FeatureLayer({
+        const layer = new FeatureLayer({
             url: "https://services.arcgis.com/Q6ZFRRvMTlsTTFuP/arcgis/rest/services/geonightplaces/FeatureServer"
         });
 
