@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link
       rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/monokai-sublime.min.css"
@@ -157,7 +157,7 @@
 
 
 
-        
+
         <div id="content-home" class="page">
           <script>
             var test = [
@@ -294,7 +294,7 @@
             <span id="response"></span>
           </div>
           <div id="viewDiv"></div>
-          
+
 
           <script type="module">
 
@@ -306,30 +306,30 @@
             import {project} from "https://js.arcgis.com/4.18/@arcgis/core/geometry/projection.js";
             import Graphic from "https://js.arcgis.com/4.18/@arcgis/core/Graphic.js";
             import GraphicsLayer from "https://js.arcgis.com/4.18/@arcgis/core/layers/GraphicsLayer.js";
-    
+
             // esriConfig.apiKey = "AAPKb2ab4249fa8b48218ea1d3f993d86e30GG1q0cy5ivCIPXKbo-wo-fj3tO-ZFJp0hq7tTriKC-DUaM8vud4GclOQGtSoAq7D";
-    
+
             const map = new ArcGISMap({
                 basemap: "topo"
             });
-    
+
             const view = new MapView({
                 container: "viewDiv",
                 map: map,
                 center: [-3,40],
                 zoom: 3
             });
-    
+
             var urlParams = new URLSearchParams(window.location.search);
-    
+
             const testNum = urlParams.has('testNum')? parseInt(urlParams.get('testNum')) : 1;
             let response = '';
-    
+
             const layer = new FeatureLayer({
                 url: "https://services.arcgis.com/Q6ZFRRvMTlsTTFuP/arcgis/rest/services/geonightplaces/FeatureServer",
                 definitionExpression: `"Order" = ${testNum}`
             });
-    
+
             const query = {
                 where: `"Order" = ${testNum}`
             }
@@ -341,10 +341,10 @@
                     response = results.features[0];
                 }
             });
-    
+
             const graphicsLayer = new GraphicsLayer();
             map.add(graphicsLayer);
-    
+
             view.on("click", function(event) {
                 if(response != -1){
                     console.log("event = ", event)
@@ -358,17 +358,17 @@
                         `;
                         console.log(txtResponse);
                         document.getElementById('response').innerHTML = txtResponse;
-    
+
                         map.add(layer)
                         graphicsLayer.removeAll()
-    
+
                         const point = {
                             type: "point",
                             x: event.mapPoint.x,
                             y: event.mapPoint.y,
                             spatialReference: { wkid: 102100}
                         };
-    
+
                         const simpleMarkerSymbol = {
                             type: "simple-marker",
                             color: [226, 119, 40],
@@ -377,14 +377,14 @@
                                 width: 1
                             }
                         };
-    
+
                         const pointGraphic = new Graphic({
                             geometry: point,
                             symbol: simpleMarkerSymbol
                         });
-    
+
                         graphicsLayer.add(pointGraphic);
-    
+
                         const fullExtent = [response, pointGraphic];
                         view.goTo(fullExtent).then(function () {
                             if (!view.extent.contains(fullExtent))
@@ -393,14 +393,14 @@
                         auth0.getUser().then(user => {
                           console.log("User=", user)
                         })
-                        
-    
+
+
                     })
                 }
             });
-    
+
         </script>
-          
+
           <!--
           <div class="text-center hero">
             <img
@@ -525,8 +525,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/app.js"></script>
+    <script src="public/js/ui.js"></script>
+    <script src="public/js/app.js"></script>
     <script src="https://js.arcgis.com/4.18/"></script>
   </body>
 </html>
