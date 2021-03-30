@@ -270,24 +270,26 @@
     <script>
         const games = [
             {
-                title: 'Más de 500 mapas para jugar',
-                description: 'Aprende jugando con mapas físicos, polícos, de gentilicios, ambientales, históricos, ...',
+                title: 'Didactalia',
+                description: 'Más de 500 juegos con mapas físicos, polícos, de gentilicios, ambientales, históricos, ...',
                 url: 'https://mapasinteractivos.didactalia.net/comunidad/mapasflashinteractivos/MapasDidactalia?',
                 author: 'Didactalia',
                 language: 'Español',
-                type: 'Web'
+                type: 'Web',
+                img: 'assets/imgs/didactalia.gif'
             },
             {
                 title: 'APPangea',
-                descripcion: 'Aprende Geografía e Historia desde tu móvil o table respondiento a preguntas y compitiendo más personas',
+                description: 'Aprende Geografía e Historia desde tu móvil o table respondiento a preguntas y compitiendo más personas',
                 url: 'https://appangea.com/',
                 author: 'Desconocido / Docentes',
                 language: 'Español',
-                type: 'Móvil (Android & iOS)'
+                type: 'Móvil (Android & iOS)',
+                img: 'assets/imgs/appangea.png'
             },
             {
                 title: 'Nombra ese monumento',
-                descripcion: 'Rasca rápido e intenta averiguar el nombre del monumento',
+                description: 'Rasca rápido e intenta averiguar el nombre del monumento',
                 url: 'https://hhkaos.github.io/name-that-landmark/',
                 author: 'Esri',
                 language: 'Español',
@@ -295,7 +297,7 @@
             },
             {
                 title: 'GeoSapiens Web',
-                descripcion: '',
+                description: '',
                 url: 'https://educativo.ign.es/geosapiens/htm/en/index.html',
                 author: '',
                 language: '',
@@ -303,7 +305,7 @@
             },
             {
                 title: 'GeoSapiens App',
-                descripcion: 'Pon a prueba tus conocimientos sobre geografía, física, política y paisaje',
+                description: 'Pon a prueba tus conocimientos sobre geografía, física, política y paisaje',
                 url: 'https://www.ign.es/web/dir-aplicaciones-moviles',
                 author: 'Instituto Geográfico Nacional',
                 language: 'Español',
@@ -311,7 +313,7 @@
             },
             {
                 title: 'La leyenda de las joyas perdidas',
-                descripcion: 'Escape Room Virtual de dificultad media y duración aproximada de 90minutos',
+                description: 'Escape Room Virtual de dificultad media y duración aproximada de 90minutos',
                 url: 'http://educativo.ign.es/escape-room/',
                 author: 'Instituto Geográfico Nacional',
                 language: 'Español',
@@ -319,7 +321,7 @@
             },
             {
                 title: 'Juegos de geografía',
-                descripcion: 'Seis juegos para practicar los términos geográficos imprescindibles para la EBAU/EVAU',
+                description: 'Seis juegos para practicar los términos geográficos imprescindibles para la EBAU/EVAU',
                 url: 'https://www.ign.es/web/ign/portal/recursos-educativos/juegos',
                 author: 'Instituto Geográfico Nacional',
                 language: 'Español',
@@ -327,7 +329,7 @@
             },
             {
                 title: 'Cartografía antigua',
-                descripcion: 'Once puzles hechos con maás antiguos de entre 60 y 70 piezas',
+                description: 'Once puzles hechos con maás antiguos de entre 60 y 70 piezas',
                 url: 'https://www.jigsawplanet.com/cartotecaign/mapas-antiguos',
                 author: 'Instituto Geográfico Nacional',
                 language: 'Español',
@@ -335,7 +337,7 @@
             },
             {
                 title: 'Rompecabezas',
-                descripcion: 'Configura el puzzle a tu medida; elige ubización, tamaño, dificultad, ...',
+                description: 'Configura el puzzle a tu medida; elige ubización, tamaño, dificultad, ...',
                 url: 'https://maps.esri.com/rc/puzzle2/index.html',
                 author: 'Esri',
                 language: 'Inglés',
@@ -343,7 +345,7 @@
             },
             {
                 title: 'Un juego de geodésicas',
-                descripcion: 'Encuentra la ubicación que sea equidistante a tres ciudades seleccionadas al azar',
+                description: 'Encuentra la ubicación que sea equidistante a tres ciudades seleccionadas al azar',
                 url: 'https://maps.esri.com/jg/GeodesicsGame/index.html',
                 author: 'Esri',
                 language: 'Inglés',
@@ -351,7 +353,7 @@
             },
             {
                 title: '¿Conoces Europa?',
-                descripcion: 'Arrastra los países a su posición correcta en el mapa',
+                description: 'Arrastra los países a su posición correcta en el mapa',
                 url: 'http://thinkmaps.github.io/Puzzle/index_en.html',
                 author: 'Esri',
                 language: 'Inglés',
@@ -361,10 +363,17 @@
 
         games.forEach(elem => {
             const template = Handlebars.compile(`
-                <li>{{title}}</li>
+                <li>
+                    <a href="{{elem.url}}">
+                        <img src="{{elem.img}}" alt="GIF animado de {{elem.title}}">
+                        {{elem.title}}<br>
+                        {{elem.description}}<br>
+                        Autor: {{elem.author}}
+                    </a>
+                </li>
             `);
             const gamesEl = document.getElementById('games');
-            const str = template({ title: elem.title });
+            const str = template({ elem: elem });
             gamesEl.insertAdjacentHTML( 'beforeend', str);
 
         })
