@@ -288,20 +288,13 @@
                 img: 'assets/imgs/appangea.png'
             },
             {
-                title: 'Nombra ese monumento',
-                description: 'Rasca rápido e intenta averiguar el nombre del monumento',
-                url: 'https://hhkaos.github.io/name-that-landmark/',
-                author: 'Esri',
-                language: 'Español',
-                type: 'Web'
-            },
-            {
                 title: 'GeoSapiens Web',
-                description: '',
-                url: 'https://educativo.ign.es/geosapiens/htm/en/index.html',
-                author: '',
-                language: '',
-                type: ''
+                description: 'Pon a prueba tus conocimientos sobre geografía, física, política y paisaje',
+                url: 'https://educativo.ign.es/geosapiens/htm/es/index.html',
+                author: 'Instituto Geográfico Nacional',
+                language: 'Español',
+                type: 'Web',
+                img: 'assets/imgs/geosapiens.gif'
             },
             {
                 title: 'GeoSapiens App',
@@ -309,7 +302,8 @@
                 url: 'https://www.ign.es/web/dir-aplicaciones-moviles',
                 author: 'Instituto Geográfico Nacional',
                 language: 'Español',
-                type: 'Móvil (Android & iOS)'
+                type: 'Móvil (Android & iOS)',
+                img: 'assets/imgs/geosapiens-app-thumb.png'
             },
             {
                 title: 'La leyenda de las joyas perdidas',
@@ -317,7 +311,8 @@
                 url: 'http://educativo.ign.es/escape-room/',
                 author: 'Instituto Geográfico Nacional',
                 language: 'Español',
-                type: 'Web'
+                type: 'Web',
+                img: 'assets/imgs/scape-room-ign.gif'
             },
             {
                 title: 'Juegos de geografía',
@@ -325,23 +320,18 @@
                 url: 'https://www.ign.es/web/ign/portal/recursos-educativos/juegos',
                 author: 'Instituto Geográfico Nacional',
                 language: 'Español',
-                type: 'Web'
+                type: 'Web',
+                img: 'assets/imgs/juegos-de-geografia-ign.gif'
+
             },
             {
                 title: 'Cartografía antigua',
-                description: 'Once puzles hechos con maás antiguos de entre 60 y 70 piezas',
+                description: 'Once puzles hechos con mapas antiguos. Dificultad configurable (dese 24 piezas)',
                 url: 'https://www.jigsawplanet.com/cartotecaign/mapas-antiguos',
                 author: 'Instituto Geográfico Nacional',
                 language: 'Español',
-                type: 'Web'
-            },
-            {
-                title: 'Rompecabezas',
-                description: 'Configura el puzzle a tu medida; elige ubización, tamaño, dificultad, ...',
-                url: 'https://maps.esri.com/rc/puzzle2/index.html',
-                author: 'Esri',
-                language: 'Inglés',
-                type: 'Web'
+                type: 'Web',
+                img: 'assets/imgs/mapas-antiguos-ign.gif'
             },
             {
                 title: 'Un juego de geodésicas',
@@ -349,7 +339,8 @@
                 url: 'https://maps.esri.com/jg/GeodesicsGame/index.html',
                 author: 'Esri',
                 language: 'Inglés',
-                type: 'Web'
+                type: 'Web',
+                img: 'assets/imgs/game-of-geodesics.gif'
             },
             {
                 title: '¿Conoces Europa?',
@@ -357,19 +348,60 @@
                 url: 'http://thinkmaps.github.io/Puzzle/index_en.html',
                 author: 'Esri',
                 language: 'Inglés',
-                type: 'Web'
+                type: 'Web',
+                img: 'assets/imgs/conoces-europa.gif'
+            },
+            {
+                title: 'Nombra ese monumento',
+                description: 'Rasca rápido e intenta averiguar el nombre del monumento',
+                url: 'https://hhkaos.github.io/name-that-landmark/',
+                author: 'Esri',
+                language: 'Español',
+                type: 'Web',
+                img: 'assets/imgs/name_that_landmark.gif'
+            },
+            {
+                title: 'Rompecabezas',
+                description: 'Configura el puzzle a tu medida; elige ubización, tamaño, dificultad, ...',
+                url: 'https://maps.esri.com/rc/puzzle2/index.html',
+                author: 'Esri',
+                language: 'Inglés',
+                type: 'Web',
+                img: 'assets/imgs/rompecabezas-esri.gif'
             }
         ];
 
         games.forEach(elem => {
             const template = Handlebars.compile(`
                 <li>
-                    <a href="{{elem.url}}">
-                        <img src="{{elem.img}}" alt="GIF animado de {{elem.title}}">
-                        {{elem.title}}<br>
-                        {{elem.description}}<br>
-                        Autor: {{elem.author}}
-                    </a>
+
+
+                        <figure class="card card-flip">
+                            <div class="card text-white">
+                                <div class="card-img img-fluid" style="background-image:url({{elem.img}})"></div>
+                                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                                    <h4 class="card-title">{{elem.title}}</h4>
+                                </div>
+                            </div>
+                            <div class="card text-black bg-primary">
+                                <div class="card-body d-flex justify-content-center align-items-center">
+                                    <p class="card-text text-center">
+                                        <strong class="title">{{elem.title}}</strong><br>
+                                        {{elem.description}}
+                                        <span style="display:block; margin:5px 0 2px; font-size:.9rem">
+                                            <small><strong>Autor</strong>: {{elem.author}}</small>
+                                        </span>
+                                        <span class="btn-bar">
+                                            <a href="{{elem.url}}" target="_blank" class="btn btn-primary btn-sm">Abrir</a>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </figure>
+
+
+
+
                 </li>
             `);
             const gamesEl = document.getElementById('games');
