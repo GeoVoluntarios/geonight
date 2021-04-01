@@ -10067,7 +10067,7 @@ h3 {
   color: #fff;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #1abc9c;
+  color: #fec605;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
   color: #fff;
@@ -10135,7 +10135,9 @@ h3 {
     line-height: 3.5rem;
   }
   .masthead .masthead-subheading {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    text-shadow: 0px 0px 2px #212140;
+    padding: 0px 31%;
   }
 }
 .portfolio .portfolio-item {
@@ -10598,6 +10600,23 @@ body,
 .sponsor-background--color {
   background-color: #fec605;
 }
+.subtitle{
+    text-transform: none;
+    color: #fec605;
+    font-size: .7rem;
+}
+.yellow{
+    color: #fec605;
+}
+.bg-yellow{
+    background-color: #fec605;
+}
+.bg-yellow a{
+    color: #1100ff;
+}
+a.yellow:hover{
+    color: #3dd4f3
+}
 
 .snap {
   height: auto;
@@ -10652,4 +10671,7 @@ body{height:100vh;}
 .sponsor-grid__item{
 
 }
+}
+.juega{
+    padding: 0 23%;
 }
