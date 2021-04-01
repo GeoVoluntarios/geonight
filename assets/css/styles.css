@@ -10426,8 +10426,7 @@ strong.title{
 SPONSORS
 */
 
-body,
-* {
+sponsor-grid__container{
   font-family: sans-serif;
   box-sizing: border-box;
 }
@@ -10566,6 +10565,7 @@ body,
   display: flex;
   box-sizing: border-box;
 }
+
 .sponsor-grid__expander div {
   flex: 1 1 50%;
 }
@@ -10674,4 +10674,8 @@ body{height:100vh;}
 }
 .juega{
     padding: 0 23%;
+}
+
+.mt-12{
+    margin-top:14rem
 }
