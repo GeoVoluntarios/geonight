@@ -54,7 +54,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top bg-port-gore" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">GeoNight</a>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">GeoNight <span class="subtitle">by AGE</span></a>
             <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
@@ -62,14 +62,17 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#concurso">Concurso</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#juegos">Otros juegos</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#juegos">Juega</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#sobre-la-geonight">Sobre esta iniciativa</a></li>
-                    <!-- <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Otros recursos</a></li> -->
+                    <!--
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Otros REAs</a></li>
+                        https://datos.gob.es/es/noticia/recursos-educativos-de-libre-acceso-apertura-de-la-ensenanza-y-el-aprendizaje
+                        https://blog-idee.blogspot.com/2021/01/la-ide-didactica.html
+                    -->
                 </ul>
             </div>
         </div>
     </nav>
-
     <!-- Masthead-->
     <header class="masthead bg-primary text-white text-center" id="hero">
         <div class="container d-flex align-items-center flex-column">
@@ -84,7 +87,9 @@
             </div>
             <!-- Masthead Subheading-->
             <p class="masthead-subheading font-weight-light mb-0">
-                <em>"Los niños y niñas no juegan para aprender, aprenden porque juegan"</em>, Jean Piaget
+                <!-- <em>"Los niños y niñas no juegan para aprender, aprenden porque juegan"</em>, Jean Piaget -->
+                <!-- <em>Pon a prueba tus conocimientos en geografía, compite en el concurso y descubre otros juegos</em> -->
+                <em>Más de <a href="#sobre-la-geonight" class="yellow js-scroll-trigger">200 eventos simultáneos</a> para disfrutar de la geografía en 40 países de 5 continentes</em>
             </p>
         </div>
     </header>
@@ -94,11 +99,16 @@
         <div class="container">
             <div class="row mb1">
                 <div class="col-md-12">
-                    <h2>Concurso Terra Incógnita (1ª Edición)</h2>
+                    <h2>Juego-Concurso Terra Incógnita</h2>
                 </div>
             </div>
             <div class="row mb1">
                 <div class="col-md-8">
+                    <blockquote class="blockquote">
+                        <p class="mb-0"><em><small>Los niños y niñas no juegan para aprender, aprenden porque juegan.</small></em></p>
+                        <footer class="blockquote-footer"><small>Jean Piaget</small></footer>
+                      </blockquote>
+
                     <p>
                         Entre los días <strong>8 y 9 de Abril</strong> de 2021 se
                         organizarán sesiones de juego grupales (de hasta 8 personas)
@@ -107,10 +117,10 @@
                     </p>
                     <p>
                         De forma colectiva cada grupo tendrá que desvelar la identidad
-                        y localización de una serie de lugares ubicacods en distintos
-                        puntos del mundo. Se darán pistas de contenido geográfico (
-                        características del medio físicos y del medio humano,
-                        potencialidades, riesgos, problemas ambientales, etc)
+                        y localización de una serie de lugares ubicados en distintos
+                        puntos del mundo. Para descubrirlos, se darán pistas de contenido geográfico
+                        (características del medio físicos y del medio humano,
+                        potencialidades, riesgos, problemas ambientales, etc.).
                     </p>
                     <p>
                         Los grupos ganadores reciban un conjunto de obsequios vinculados
@@ -138,7 +148,11 @@
     <section class="page-section bg-port-gore" id="juegos">
         <div class="container">
             <!-- Portfolio Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase mb-0">Otros juegos</h2>
+            <h2 class="page-section-heading text-center text-uppercase mb-0">Juega</h2>
+            <p class="text-center mt-3 small juega">
+                Además de con el concurso, <strong class="yellow">puedes seguir poniendo a prueba tus conocimientos en geografía</strong>
+                con los siguientes juegos (creados por: organismos públicos, como privados y particulares).
+            </p>
             <!-- Icon Divider-->
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
@@ -149,6 +163,9 @@
 
 
             <ul id="games"></ul>
+            <p class="text-center mt-3 small juega">
+                ¿Conoces algún juego que no esté listado aquí?, por favor escríbenos a info@geovoluntarios.org.
+            </p>
         </div>
     </section>
     <!-- <form>
@@ -169,29 +186,48 @@
         <div class="container">
             <h2>Sobre esta iniciativa</h2>
             <p>
-                La "Noche de la Geografía" (<a href="https://www.geonight.net/">geonight.net</a>)
-                es una iniciativa internacional en la que una
+                La <a href="https://es.wikipedia.org/wiki/Geograf%C3%ADa">geografía
+                </a> es ciencia apasionante que mueve el mundo, sin embargo bastante desconocida para la mayoría de las personas,
+                <strong class="bg-yellow">si paras a cualquiera por la calle
+                y le preguntas: "¿sabes <a href="https://www.age-geografia.es/site/somos-geografs/"">qué puede hacer una persona titulada en geografía</a>?",
+                habrá pocas que sepan decir algo más que: leer mapas, nombrar capitales, ríos o cosas parecidas.</strong>
+            </p>
+            <p>
+                L@s profesionales en geografía están capacitad@s para mucho más, como: saber cómo <a href="https://es.wikipedia.org/wiki/Planificaci%C3%B3n_Territorial">ordenar del territorio</a>,
+                <a href="https://es.wikipedia.org/wiki/Geomarketing">diseñar estrategias de geomarketing</a>, explotar herramientas
+                de <a href="https://es.wikipedia.org/wiki/Teledetecci%C3%B3n">teledetección</a> de última generación,
+                encontrar patrones y relaciones entre problemas de humanos y naturales de diversa índole a través del <a href="https://es.wikipedia.org/wiki/An%C3%A1lisis_espacial">análisis espacial</a> convirtiéndoles
+                en perfectos aliados para ayudar a lograr los <a href="https://www.un.org/sustainabledevelopment/es/objetivos-de-desarrollo-sostenible/">Objetivos de Desarrollo Sostenible</a>, etc.
+
+            </p>
+            <p>
+                 Con el objetivo de poner en relieve la geografía y a l@s profesionales de este campo, se celebra <strong class="bg-yellow">La "Noche de la Geografía"
+                 (<a href="https://www.geonight.net/">geonight.net</a>)
+                 una iniciativa internacional en la que una
                 tarde o noche al año <a href="https://www.geonight.net/geonight-2021-events-map/">
-                    se organizan eventos simultáneamente en todo el mundo
-                </a> para
-                poner en relieve la geografía y a l@s profesionales de este campo.
+                    se organizan eventos simultáneamente en todo el mundo</strong>
+                </a> con este fin.
+
             </p>
             <p>
-                Con ella se pretende dar al gran público la oportunidad de
-                familiarizarse con los conceptos y estudios geográficos y hacer
-                más accesible la investigación geográfica.
+                De esta forma se <strong class="bg-yellow">pretende que cualquier persona tenga la oportunidad de
+                familiarizarse con el enfoque de la disciplina geográfica, su labor de
+                investigación y su utilidad como ciencia aplicada para resolver los
+                grandes retos a los que se enfrenta el planeta</strong>.
             </p>
             <p>
-                Concretamente esta página que estás visitando es una iniciativa
+                Concretamente <strong class="bg-yellow">esta página que estás visitando es una
                 <a href="https://www.age-geografia.es/site/juega-con-la-age-en-la-noche-de-la-geografia/">
-                    puesta en marcha por la Asociación Española de Geografía
-                </a> en colaboración con otras
-                entidades nacionales para difundir de una manera lúdica los
+                    iniciativa lúdica puesta en marcha por la Asociación Española de Geografía
+                </a></strong> en colaboración con otras
+                entidades nacionales para difundir los
                 contenidos de la Geografía, así como fomentar la conexión entre
                 el colectivo de geógrafos/as y aficionados/as a la Geografía de
-                distintas partes del mundo. El juego TERRA INCOGNITA ha sido
-                creado por la AGE y la Red TransUMAntes de la UMA, y
-                desarrollado por GeoVoluntarios.org (la ONG Asociación Española de GeoVoluntariado Digital).
+                distintas partes del mundo.
+            </p>
+            <p>
+                El juego Terra Incógnita ha sido creado por la AGE y la Red TransUMAntes de la UMA, y desarrollado desde
+                la comunidad de GeoDevelopers.
             </p>
 
 
@@ -234,55 +270,34 @@
                                 </p>
                             </div>
 
-                        </div>
-                    </div>
-                    <div class="sponsor-grid__item">
-                        <div class="sponsor-grid__logo">
-                            <div class="sponsor-grid__logo__center">
-                                <img class="logo" src="assets/imgs/logo_uma.png" alt="Logo Universidad de Málaga">
-                            </div>
-                        </div>
-                        <div class="sponsor-grid__expander">
-                            <div class="sponsor-grid__description">
-                                <h4>Universidad de Málaga</h4>
-                                <p>
-                                    La <a href="https://www.uma.es/#gsc.tab=0">Universidad de Málaga</a> o, según sus siglas, UMA, es una universidad pública
-                                    fundada en 1972. En ella estudian cerca de 40 000 alumnos y trabajan cerca de 2450
-                                     profesores. Oferta 63 titulaciones de grado y 120 de posgrado, entre programas de
-                                     doctorado, másteres y titulaciones propias. Las enseñanzas se imparten en 19 centros
-                                     por profesores adscritos a 81 departamentos.
-                                </p>
-                                <div class="iframe">
-                                    <iframe width="320" height="180" src="https://www.youtube.com/embed/xwlg1FEtRO4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                            </div>
 
                         </div>
                     </div>
+
                     <div class="sponsor-grid__item">
                         <div class="sponsor-grid__logo">
                             <div class="sponsor-grid__logo__center">
-                                <img class="logo" src="assets/imgs/logo_geovoluntarios.png" alt="Logo GeoVoluntarios">
+                                <img class="logo" src="assets/imgs/logo_geodev_nuevo.png" alt="Logo GeoDevelopers">
                             </div>
                         </div>
                         <div class="sponsor-grid__expander">
                             <div class="sponsor-grid__description">
-                                <h4>GeoVoluntarios | Asociación Española de GeoVoluntariado Digital</h4>
+                                <h4>GeoDevelopers</h4>
                                 <p>
-                                    <a href="https://geovoluntarios.org/sobre-la-asociacion/">
-                                        GeoVoluntarios.org
-                                    </a> es una asociación sin ánimo de lucro que tiene como fines proporcionar
-                                    ayuda a organizaciones en cualquiera de las fases de una emergencia, priorizando
-                                    la ayuda a otras organizaciones sin ánimo de lucro, fomentar el voluntariado
-                                    digital, apoyar a organizaciones trabajando en la consecución de los Objetivos
-                                    de Desarrollo Sostenible (ODS), proveer de herramientas geoespaciales y datos
-                                    geolocalizados, proporcionar el apoyo técnico a organizaciones que necesitan
-                                    ayuda para fines sociales, y no económicos, además de proporcionar una estructura
-                                    humana y técnica que ofrezca garantías a las organizaciones y voluntarios.
+                                    <a href="https://www.geodevelopers.org/">
+                                        GeoDevelopers
+                                    </a> es una comunidad de personas que desde 2014 están intercambiando conocimientos sobre
+                                    el desarrollo de aplicaciones usando datos georeferenciados y mapas, visualización
+                                    de datos, análisis espacial, etc.
+                                </p>
+                                <p>
+                                    En el <a href="https://www.youtube.com/channel/UC5Kegds6aV88wjdAhqQ5Wsg">canal de Youtube</a>
+                                    se pueden encontrar las charlas organizadas hasta la fecha, y usando el sistema de mensajería
+                                    <a href="https://discord.gg/8pXkBPkvd2">Discord</a> puedes chartear con ellos.
                                 </p>
                                 <div class="iframe">
                                     <div class="iframe">
-                                        <iframe width="320" height="180" src="https://www.youtube.com/embed/okN5qpQegiQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <iframe width="320" height="180" src="https://www.youtube.com/embed/_vZT9yM0R6Q" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                 </div>
                             </div>
@@ -384,6 +399,36 @@
                     <div class="sponsor-grid__item">
                         <div class="sponsor-grid__logo">
                             <div class="sponsor-grid__logo__center">
+                                <img class="logo" src="assets/imgs/logo_geovoluntarios.png" alt="Logo GeoVoluntarios">
+                            </div>
+                        </div>
+                        <div class="sponsor-grid__expander">
+                            <div class="sponsor-grid__description">
+                                <h4>GeoVoluntarios | Asociación Española de GeoVoluntariado Digital</h4>
+                                <p>
+                                    <a href="https://geovoluntarios.org/sobre-la-asociacion/">
+                                        GeoVoluntarios.org
+                                    </a> es una asociación sin ánimo de lucro que tiene como fines proporcionar
+                                    ayuda a organizaciones en cualquiera de las fases de una emergencia, priorizando
+                                    la ayuda a otras organizaciones sin ánimo de lucro, fomentar el voluntariado
+                                    digital, apoyar a organizaciones trabajando en la consecución de los Objetivos
+                                    de Desarrollo Sostenible (ODS), proveer de herramientas geoespaciales y datos
+                                    geolocalizados, proporcionar el apoyo técnico a organizaciones que necesitan
+                                    ayuda para fines sociales, y no económicos, además de proporcionar una estructura
+                                    humana y técnica que ofrezca garantías a las organizaciones y voluntarios.
+                                </p>
+                                <div class="iframe">
+                                    <div class="iframe">
+                                        <iframe width="320" height="180" src="https://www.youtube.com/embed/okN5qpQegiQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="sponsor-grid__item">
+                        <div class="sponsor-grid__logo">
+                            <div class="sponsor-grid__logo__center">
                                 <img class="logo" src="assets/imgs/logo_GEOPLANETA.png" alt="Logo GeoPlaneta">
                             </div>
                         </div>
@@ -448,12 +493,19 @@
                             <div class="sponsor-grid__description">
                                 <h4>Esri España</h4>
                                 <p>
-                                    <a href="https://www.esri.es/">Esri España</a> es una empresa tecnológica,
-                                    innovadora, orientada al desarrollo de soluciones y
-                                    servicios en el marco de los Sistemas de Información Geográfica (SIG).
-                                    Incorpora tecnología de última generación y nos formamos con el fin de lograr la
-                                    mejor solución a los problemas e interrogantes de nuestros clientes para abordar
-                                    numerosos mercados verticales.
+                                    Esri, líder del mercado mundial de software de Sistemas de Información Geográfica
+                                    (GIS, por sus siglas en inglés), location intelligence y cartografía, ayuda a sus
+                                    clientes a desarrollar todo el potencial de los datos para mejorar los resultados
+                                    operativos y empresariales. Fundada en 1969 en Redlands, California (EE.UU.), el
+                                    software de Esri está presente en más de 350.000 organizaciones de todo el mundo y
+                                    en más de 200.000 instituciones de América, Asia y el Pacífico, Europa, África y
+                                    Oriente Medio, entre las que se encuentran empresas de la lista Fortune 500,
+                                    organismos gubernamentales, organizaciones sin ánimo de lucro y universidades.
+                                    Esri cuenta con oficinas regionales, distribuidores internacionales y socios que
+                                    prestan asistencia local en más de 100 países de los seis continentes. Con su
+                                    compromiso pionero con la tecnología de la información geoespacial, Esri diseña las
+                                    soluciones más innovadoras para la transformación digital, el Internet de las cosas
+                                    (IoT) y la analítica avanzada. Visítanos en <a href="https://www.esri.es/">esri.es</a>
                                 </p>
                                 <div class="iframe">
                                     <iframe width="320" height="180" src="https://www.youtube.com/embed/XCunGvo-ljk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -515,6 +567,10 @@
                 </div>
             </div>
 
+            <p class="text-center mt-3 small juega">
+                ¿Quieres unirte a los colaboradores?, escríbenos a info@geovoluntarios.org.
+            </p>
+
         </div>
 
     </section>
@@ -542,25 +598,25 @@
                                 <!-- Portfolio Modal - Text-->
                                 <div class="mb-5 text-left">
 
-                                        <h2><strong>Participantes:</strong></h2>
-                                        <p>El concurso está abierto a jugadores/as jóvenes y adultos/as, de cualquier nivel de formación. El juego está expresado en español.</p>
-                                        <h2><strong>Inscripción y fechas a recordar</strong>:</h2>
-                                        <p>Inscripción: <strong> <em> La inscripción es gratuita </em>.</strong></p>
-                                        <p>El plazo de inscripción estará abierto hasta el día <em> 7 de abril. </em></p>
-                                        <p>Para jugar y concursar, los jugadores/as deben acceder a la <strong>hoja de inscripción (<a href="https://docs.google.com/spreadsheets/d/133QV_QVrhE5lCBv8H13miwkHr5R5sPxCXyy_C4TaOAI/edit?usp=sharing">aquí</a>),</strong> seleccionar el día y hora de juego que prefieren, e inscribirse en la sesión de juego correspondiente.</p>
-                                        <p>Las sesiones <strong>se juegan de forma cooperativa en una reunión on-line y cada grupo obtiene una única puntuación conjunta</strong> con la que compite con la obtenida por los grupos de jugadores/as de otras sesiones. <strong>Cada sesión de juego admite un máximo de 8 jugadores/as</strong></p>
-                                        <p><strong>Las sesiones de juego se celebrarán en formato on-line en distintos tramos horarios de los días 8 y 9 de abril de 2021</strong>. <strong>Los participantes inscritos recibirán una invitación a la sesión on-line</strong> en la que se desarrollará el juego en grupo.</p>
-                                        <p>La<strong> resolución de los enigmas</strong> del juego y los ganadores del concurso <strong>se harán públicos el día 10 de abril, </strong>una vez finalizadas todas las sesiones de juego.</p>
-                                        <h2><strong>Premios:</strong></h2>
-                                        <p>Los grupos ganadores recibirán como premio un conjunto de obsequios vinculados a la Geografía:</p>
-                                        <ul>
-                                            <li>Libros y Atlas de Geo-Planeta: libros relacionados con viajes, descubrimientos, rutas y otras temáticas geográficas, y atlas de enfoque singular.</li>
-                                            <li>Libros de Lunwerg&ndash;Planeta relacionados con propuestas de gamificación de contenidos geográfico (Escape-Maps)</li>
-                                            <li>Suscripción gratuita durante un año a los juegos educativos y cuadernos descargables de Didactalia Más.</li>
-                                            <li>Obsequio de la librería especializada en temática geográfica Mapas y Compañía.</li>
-                                        </ul>
+                                    <h2><strong>Participantes:</strong></h2>
+                                    <p>El concurso está abierto a jugadores/as jóvenes y adultos/as, de cualquier nivel de formación. El juego está expresado en español.</p>
+                                    <h2><strong>Inscripción y fechas a recordar</strong>:</h2>
+                                    <p>Inscripción: <strong> <em> La inscripción es gratuita </em>.</strong></p>
+                                    <p>El plazo de inscripción estará abierto hasta el día <em> 7 de abril. </em></p>
+                                    <p>Para jugar y concursar, los jugadores/as deben acceder a la <strong>hoja de inscripción (<a href="https://docs.google.com/spreadsheets/d/133QV_QVrhE5lCBv8H13miwkHr5R5sPxCXyy_C4TaOAI/edit?usp=sharing">aquí</a>),</strong> seleccionar el día y hora de juego que prefieren, e inscribirse en la sesión de juego correspondiente.</p>
+                                    <p>Las sesiones <strong>se juegan de forma cooperativa en una reunión on-line y cada grupo obtiene una única puntuación conjunta</strong> con la que compite con la obtenida por los grupos de jugadores/as de otras sesiones. <strong>Cada sesión de juego admite un máximo de 8 jugadores/as</strong></p>
+                                    <p><strong>Las sesiones de juego se celebrarán en formato on-line en distintos tramos horarios de los días 8 y 9 de abril de 2021</strong>. <strong>Los participantes inscritos recibirán una invitación a la sesión on-line</strong> en la que se desarrollará el juego en grupo.</p>
+                                    <p>La<strong> resolución de los enigmas</strong> del juego y los ganadores del concurso <strong>se harán públicos el día 10 de abril, </strong>una vez finalizadas todas las sesiones de juego.</p>
+                                    <h2><strong>Premios:</strong></h2>
+                                    <p>Los grupos ganadores recibirán como premio un conjunto de obsequios vinculados a la Geografía:</p>
+                                    <ul>
+                                        <li>Libros y Atlas de Geo-Planeta: libros relacionados con viajes, descubrimientos, rutas y otras temáticas geográficas, y atlas de enfoque singular.</li>
+                                        <li>Libros de Lunwerg&ndash;Planeta relacionados con propuestas de gamificación de contenidos geográfico (Escape-Maps)</li>
+                                        <li>Suscripción gratuita durante un año a los juegos educativos y cuadernos descargables de Didactalia Más.</li>
+                                        <li>Obsequio de la librería especializada en temática geográfica Mapas y Compañía.</li>
+                                    </ul>
 
-                                    </div>
+                                </div>
                                 <button class="btn btn-primary" data-dismiss="modal">
                                     <i class="fas fa-times fa-fw"></i>
                                     Cerrar bases
@@ -597,15 +653,6 @@
             language: 'Español',
             type: 'Web',
             img: 'assets/imgs/didactalia.gif'
-        },
-        {
-            title: 'APPangea',
-            description: 'Aprende Geografía e Historia desde tu móvil o table respondiento a preguntas y compitiendo más personas',
-            url: 'https://appangea.com/',
-            author: 'Desconocido / Docentes',
-            language: 'Español',
-            type: 'Móvil (Android & iOS)',
-            img: 'assets/imgs/appangea.png'
         },
         {
             title: 'GeoSapiens Web',
@@ -654,6 +701,15 @@
             img: 'assets/imgs/mapas-antiguos-ign.gif'
         },
         {
+            title: 'APPangea',
+            description: 'Aprende Geografía e Historia desde tu móvil o table respondiento a preguntas y compitiendo más personas',
+            url: 'https://appangea.com/',
+            author: 'Docentes anónimos',
+            language: 'Español',
+            type: 'Móvil (Android & iOS)',
+            img: 'assets/imgs/appangea.png'
+        },
+        {
             title: 'Un juego de geodésicas',
             description: 'Encuentra la ubicación que sea equidistante a tres ciudades seleccionadas al azar',
             url: 'https://maps.esri.com/jg/GeodesicsGame/index.html',
@@ -682,15 +738,44 @@
         },
         {
             title: 'Rompecabezas',
-            description: 'Configura el puzzle a tu medida; elige ubización, tamaño, dificultad, ...',
+            description: 'Configura el puzle a tu medida; elige ubización, tamaño, dificultad, ...',
             url: 'https://maps.esri.com/rc/puzzle2/index.html',
             author: 'Esri',
             language: 'Inglés',
             type: 'Web',
             img: 'assets/imgs/rompecabezas-esri.gif'
+        },
+        {
+
+            title: 'MapPuzzle.xyz',
+            description: 'Once rompecabezas para poner a prueba tus conocimientos sobre: fronteras mundiales,provincias españolas, estados americanos, ...',
+            url: 'http://mappuzzle.xyz/',
+            author: 'Alejandro Aranda',
+            language: 'Inglés',
+            type: 'Web',
+            img: 'assets/imgs/mappuzle.gif'
         }
         ];
 
+        function shuffle(array) {
+            var currentIndex = array.length, temporaryValue, randomIndex;
+
+            // While there remain elements to shuffle...
+            while (0 !== currentIndex) {
+
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+
+            return array;
+        }
+        shuffle(games);
         games.forEach(elem => {
             const template = Handlebars.compile(`
             <li>
@@ -729,7 +814,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <small>Página creada con ❤️ y la ayuda de voluntarios (<a href="https://www.linkedin.com/in/fabri-moles/">Fabricio Moles</a> y <a href="https://www.linkedin.com/in/f%C3%A9lix-franco-rojas-a23557108/">Félix Franco</a>) partiendo de la plantilla <a href="https://startbootstrap.com/theme/freelancer">Freelancer</a> de Bootstrap.</small>
+                    <small>Página creada con ❤️ y la ayuda de voluntarios (<a href="https://www.linkedin.com/in/fabri-moles/">Fabri Moles</a> y <a href="https://www.linkedin.com/in/f%C3%A9lix-franco-rojas-a23557108/">Félix Franco</a>) partiendo de la plantilla <a href="https://startbootstrap.com/theme/freelancer">Freelancer</a> de Bootstrap.</small>
                 </div>
             </div>
         </div>
