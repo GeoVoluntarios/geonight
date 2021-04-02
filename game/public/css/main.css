@@ -23,3 +23,71 @@ label {
   width: 100%;
   height: 500px;
 }
+
+
+
+#locations .active.active,
+#clues .active li.active{
+    /* text-decoration: underline; */
+    background-color: black;
+    color: white;
+}
+
+#activeClue{
+    margin-top: 1rem;
+    text-align: center;
+}
+#clueText{
+    text-align: center;
+    font-size: 2rem;
+}
+
+#clues ol,
+#activeClue > *,
+#responseBox{
+    display: none;
+}
+#clues ol.active,
+#activeClue .active{
+    display: flex;
+}
+
+#activeClue .active{
+    display: inline-block;
+}
+
+#activeClue img,
+#activeClue iframe{
+    height: 450px;
+    border: 1px solid black;
+    display: none;
+}
+
+#viewDiv{
+    visibility: hidden;
+}
+#viewDiv.active{
+    visibility: visible;
+}
+#locations li,
+#clues li{
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    border: 1px solid black;
+    padding: 0.3rem 1rem;
+    margin: 5px;
+    background-color: rgb(226, 226, 226);
+}
+
+#locations li::after{
+    content: ' ';
+}
+
+#locations,
+#clues,
+#clues ol{
+    margin: 0;
+    padding: 0;
+}
+
