@@ -1,4 +1,5 @@
 var startTime = null;
+var accumulatedError = 0;
 
 const eachElement = (selector, fn) => {
    for (let e of document.querySelectorAll(selector)) {

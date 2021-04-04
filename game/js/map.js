@@ -1,5 +1,6 @@
 import ArcGISMap from "https://js.arcgis.com/4.18/@arcgis/core/Map.js";
-import MapView from "https://js.arcgis.com/4.18/@arcgis/core/views/MapView.js";
+// import MapView from "https://js.arcgis.com/4.18/@arcgis/core/views/MapView.js";
+import SceneView from "https://js.arcgis.com/4.18/@arcgis/core/views/SceneView.js";
 import FeatureLayer from "https://js.arcgis.com/4.18/@arcgis/core/layers/FeatureLayer.js";
 import esriConfig from "https://js.arcgis.com/4.18/@arcgis/core/config.js";
 import {distance} from "https://js.arcgis.com/4.18/@arcgis/core/geometry/geometryEngineAsync.js";
@@ -13,7 +14,13 @@ const map = new ArcGISMap({
     basemap: "topo"
 });
 
-const view = new MapView({
+// const view = new MapView({
+//     container: "viewDiv",
+//     map: map,
+//     center: [-3,40],
+//     zoom: 3
+// });
+const view = new SceneView({
     container: "viewDiv",
     map: map,
     center: [-3,40],
@@ -56,6 +63,11 @@ view.on("click", function(event) {
             <strong>Distancia a ${response.attributes.Name} -> ${res}km</strong>.<br>
             <a href="${window.location.href.split("?testNum")[0]}?testNum=${testNum + 1}">Ver la pregunta ${testNum+1}</a>
             `;
+
+            accumulatedError += parseInt(res);
+            document.querySelector("#team-error span").innerText = accumulatedError + "km"
+
+
             console.log(txtResponse);
             document.getElementById('response').innerHTML = txtResponse;
 

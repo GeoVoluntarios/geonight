@@ -2,14 +2,26 @@
 
 Aplicación desarrollada para la GeoNight organizada en colaboración con la Asociación Española de Geografía (AGE).
 
-# Tareas pendientes
+# Terra Incógnita: Tareas pendientes
 
-* Embeber las pistas del juego
-* Calcular el tiempo en responder
-* Requerir un Login de usuario y guardar tiempo y respuestas de cada un@
-* Mostrar el leaderboard al final
-* Añadir las respuestas reales
+- [x] Embeber las pistas del juego
+- [x] Calcular el tiempo en responder
+- [x] Requerir un Login de usuario y guardar tiempo y respuestas de cada un@
+- [ ] Añadir las respuestas reales
+- [ ] Guardar respuestas ya enviadas
+- [ ] Descativar localizaciones ya respondidas
+- [ ] Calcular error con respecto a la localización seleccioonada
+- [ ] Añadir preguntar final
+- [ ] Enviar respuestas al servidor
+- [ ] Mejorar UI: flechas, responsive, tamaño, ...
+
+Dudas:
+
+- Mostramos la ubicación correcta tras cada respuesta?
+- Si "deslogueas", eliminamos info del equipo e inicio para poder volver a jugar?
+- Mostramos puntos al terminar la partida?
 
 Wishlist:
 
-* Restringir para que sólo la app pueda ver las respuesta
+- Restringir para que sólo la app pueda ver las respuesta
+- Mostrar el leaderboard al final
