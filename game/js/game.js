@@ -137,9 +137,9 @@ const tests = [
 ];
 
 const locationsEl = document.getElementById("locations"),
-      cluesEl = document.getElementById("clues");
-      clueText = document.getElementById("clueText"),
-      cluesDetailsEl = document.getElementById("cluesDetails");
+cluesEl = document.getElementById("clues");
+clueText = document.getElementById("clueText"),
+cluesDetailsEl = document.getElementById("cluesDetails");
 
 
 tests.forEach(function(elem, index){
@@ -187,7 +187,6 @@ tests.forEach(function(elem, index){
 const locations = document.querySelectorAll("#locations li");
 Array.from(locations).forEach(function(el) {
     el.addEventListener('click', function(evt){
-        // console.log(evt.target)
         locationsActive = document.querySelector("#locations .active")
         locationsActive.classList.remove("active");
         evt.target.classList.add("active");
@@ -196,11 +195,7 @@ Array.from(locations).forEach(function(el) {
         newCluesEl = document.querySelector("#clues-location-" + evt.target.dataset.id)
         newCluesEl.classList.add("active");
         newCluesEl.firstChild.click()
-        // cluesEl.className = `location-${evt.target.dataset.id}`;
-        // debugger
         cluesDetailsEl.className = `location-${evt.target.dataset.id}`;
-
-        //cluesEl
     });
 });
 
@@ -240,8 +235,8 @@ Array.from(clues).forEach(function(el) {
         }
 
         clueText.innerHTML = `
-            <small>Sobre la localización ${parseInt(evt.target.dataset.index)+1}:</small><br>
-            ${evt.target.dataset.title}
+        <small>Sobre la localización ${parseInt(evt.target.dataset.index)+1}:</small><br>
+        ${evt.target.dataset.title}
         `;
     });
 });
@@ -253,11 +248,11 @@ var style = document.createElement('style');
 seq.forEach((color, i) => {
 
     style.innerHTML += `
-        .location-${i} li{ background-color: #${color}; }
-        .location-${i} li:not(.active),
-        div.location-${i}{ background-color: #${color}80; }
+    .location-${i} li{ background-color: #${color}; }
+    .location-${i} li:not(.active),
+    div.location-${i}{ background-color: #${color}80; }
 
-        #locations li:nth-child(${(i+1)}){ background-color: #${color}; }
+    #locations li:nth-child(${(i+1)}){ background-color: #${color}; }
     `;
 })
 document.getElementsByTagName('head')[0].appendChild(style);
@@ -265,26 +260,40 @@ document.getElementsByTagName('head')[0].appendChild(style);
 cluesActive = document.querySelector("#clues .active")
 cluesActive.firstChild.click()
 
+
+//Register team name
+function processForm(e) {
+    if (e.preventDefault) e.preventDefault();
+
+    localStorage.setItem('teamName', document.getElementById("teamName").value);
+    localStorage.setItem('startTime', new Date());
+    updateUI()
+    /* do what you want with the form */
+
+    // You must return false to prevent the default form behavior
+    return false;
+}
+
+var form = document.getElementById('registerName');
+if (form.attachEvent) {
+    form.attachEvent("submit", processForm);
+} else {
+    form.addEventListener("submit", processForm);
+}
+
+// Timer
 var counter = 0;
 
-function startTime()
-{
 
-    var today=new Date();
-    var h=today.getHours();
-    var m=today.getMinutes();
-    var s=today.getSeconds();
-    // add a zero in front of numbers<10
-    m=checkTime(m);
-    s=checkTime(s);
-    document.getElementById('txt').innerHTML=h+":"+m+":"+s;
-    t=setTimeout(function(){startTime()},500);
+function startTimer(){
+    const end = moment(new Date());
+    var duration = moment.duration(end.diff(startTime));
+    var h = parseInt(duration.asHours());
+    var m = parseInt(duration.asMinutes());
+    var s = parseInt(duration.asSeconds())%60;
+
+    document.querySelector("#team-time span").innerText = h+"h "+m+"m "+s+"s";
+    t = setTimeout(function(){startTimer()},1000);
 }
 
-function checkTime(i)
-{
-    if (i<10){
-        i = "0" + i;
-    }
-    return i;
-}
+

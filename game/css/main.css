@@ -1,5 +1,5 @@
-body{
-    background-color: #e8e8e8;
+body {
+  background-color: #e8e8e8;
 }
 .hidden {
   display: none;
@@ -13,131 +13,137 @@ label {
   min-height: 115px;
 }
 
-
 .logo {
   background-image: url(https://geovoluntarios.org/wp-content/uploads/2021/01/geovoluntarios-bordered.png);
   width: 2rem;
   height: 2.25rem;
   background-repeat: no-repeat;
-  background-size: cover
+  background-size: cover;
 }
 
-#viewDiv{
+#viewDiv {
   width: 100%;
   height: 500px;
 }
 
-.mt-9{
-    margin-top: 9rem;
+.mt-9 {
+  margin-top: 9rem;
 }
-.mt-11{
-    margin-top: 11rem;
+.mt-11 {
+  margin-top: 11rem;
 }
 
 #locations,
 #clues .active li.active {
-    color: white;
+  color: white;
 }
-#clues .active li{
-    flex: 1;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    min-height: 60px;
+#clues .active li {
+  flex: 1;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 60px;
 }
-#locations li{
-    opacity: .5;
+#locations li {
+  opacity: 0.5;
 }
 #locations .active.active,
-#clues .active li.active{
-    /* text-decoration: underline; */
-    /* background-color: black; */
-    opacity: 1;
+#clues .active li.active {
+  /* text-decoration: underline; */
+  /* background-color: black; */
+  opacity: 1;
 }
 
-
-#activeClue{
-    margin-top: 1rem;
-    text-align: center;
+#activeClue {
+  margin-top: 1rem;
+  text-align: center;
 }
-#clueText{
-    text-align: center;
-    font-size: 2rem;
+#clueText {
+  text-align: center;
+  font-size: 2rem;
 }
 
 #clues ol,
 #activeClue > *,
-#responseBox{
-    display: none;
+#responseBox {
+  display: none;
 }
 #clues ol.active,
-#activeClue .active{
-    display: flex;
-    align-items: stretch;
+#activeClue .active {
+  display: flex;
+  align-items: stretch;
 }
 
-#activeClue .active{
-    display: inline-block;
+#activeClue .active {
+  display: inline-block;
 }
 
 #activeClue img,
-#activeClue iframe{
-    max-height: 450px;
-    max-width:100%;
-    /* border: 1px solid black; */
-    display: none;
+#activeClue iframe {
+  max-height: 450px;
+  max-width: 100%;
+  /* border: 1px solid black; */
+  display: none;
 }
 
-#viewDiv{
-    visibility: hidden;
+#viewDiv {
+  visibility: hidden;
 }
-#viewDiv.active{
-    visibility: visible;
+#viewDiv.active {
+  visibility: visible;
 }
 #locations li,
-#clues li{
-    cursor: pointer;
-    list-style: none;
-    display: inline-block;
-    border: 1px solid #ccc;
-    padding: 0.3rem 1rem;
-    margin: 0;
-    text-align: center;
-    /* background-color: rgb(226, 226, 226); */
+#clues li {
+  cursor: pointer;
+  list-style: none;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 0.3rem 1rem;
+  margin: 0;
+  text-align: center;
+  /* background-color: rgb(226, 226, 226); */
 }
-#clues ol:before{
-    min-height: 60px;
-    vertical-align: middle;
-}
-
-#locations li{
-    margin-right: 5px;
-    padding: .5rem 1rem;
-}
-#cluesDetails{
-    padding: 1rem;
-    color: white;
-}
-#locations li::after{
-    content: ' ';
+#clues ol:before {
+  min-height: 60px;
+  vertical-align: middle;
 }
 
+#locations li {
+  margin-right: 5px;
+  padding: 0.5rem 1rem;
+}
+#cluesDetails {
+  padding: 1rem;
+  color: white;
+}
+#locations li::after {
+  content: ' ';
+}
 
 #locations,
 #clues,
-#clues ol{
-    margin: 0;
-    padding: 0;
+#clues ol {
+  margin: 0;
+  padding: 0;
 }
 
-
-#locations{
-    margin-top: 2rem;
+#locations {
+  margin-top: 2rem;
 }
 
-#clueText{
-    font-size: 1.3rem;
+#clueText {
+  font-size: 1.3rem;
 }
-#clueText small{
-    font-size: .9rem;
+#clueText small {
+  font-size: 0.9rem;
+}
+
+#team-data {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  border-bottom: 4px solid #28286d;
+  padding-bottom: 1rem;
+}
+#team-data span {
+  font-weight: normal;
 }
