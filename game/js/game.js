@@ -219,19 +219,16 @@ Array.from(clues).forEach(function(el) {
             activeClueActive.classList.remove("active");
         }
 
-        if(clue !== undefined){
-            if(clue.indexOf("youtube.com") !== -1){
-                clueEl = document.querySelector("#activeClue iframe");
-            }else{
-                clueEl = document.querySelector("#activeClue img");
-            }
-            clueEl.src = evt.target.dataset.clue;
-            clueEl.classList.add("active");
-            if(viewDivEl.classList.contains("active")){
-                viewDivEl.classList.remove("active");
-            }
+
+        if(clue.indexOf("youtube.com") !== -1){
+            clueEl = document.querySelector("#activeClue iframe");
         }else{
-            viewDivEl.classList.add("active");
+            clueEl = document.querySelector("#activeClue img");
+        }
+        clueEl.src = evt.target.dataset.clue;
+        clueEl.classList.add("active");
+        if(viewDivEl.classList.contains("active")){
+            viewDivEl.classList.remove("active");
         }
 
         clueText.innerHTML = `
@@ -241,6 +238,39 @@ Array.from(clues).forEach(function(el) {
     });
 });
 
+const showMap = () => {
+    var viewDivEl = document.querySelector("#viewDiv");
+
+    document.getElementById("activeClue").classList.add("hidden");
+    document.getElementById("clueText").classList.add("hidden");
+    document.getElementById("locations").classList.add("hidden");
+    document.getElementById("cluesDetails").classList.add("hidden");
+    document.getElementById("locatePlace").classList.add("hidden");
+    document.getElementById("returnToClues").classList.remove("hidden");
+    viewDivEl.classList.add("active");
+    viewDivEl.style.position="relative";
+}
+
+const showClues = () => {
+    var viewDivEl = document.querySelector("#viewDiv");
+
+    document.getElementById("activeClue").classList.remove("hidden");
+    document.getElementById("clueText").classList.remove("hidden");
+    document.getElementById("locations").classList.remove("hidden");
+    document.getElementById("cluesDetails").classList.remove("hidden");
+    document.getElementById("locatePlace").classList.remove("hidden");
+    document.getElementById("returnToClues").classList.add("hidden");
+    viewDivEl.classList.remove("active");
+    viewDivEl.style.position="absolute";
+}
+
+document.getElementById("locatePlace").addEventListener('click', function(evt){
+    showMap();
+});
+
+document.getElementById("returnToClues").addEventListener('click', function(evt){
+    showClues();
+});
 //Dinamically create color palette style
 
 var seq = palette('mpn65', tests.length);
