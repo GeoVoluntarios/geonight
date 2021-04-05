@@ -13,7 +13,9 @@ Aplicación desarrollada para la GeoNight organizada en colaboración con la Aso
 - [ ] Calcular error con respecto a la localización seleccioonada
 - [ ] Añadir preguntar final
 - [ ] Enviar respuestas al servidor
-- [ ] Mejorar UI: flechas, responsive, tamaño, ...
+- [ ] Actualizar vídeos de pistas
+- [ ] Mejorar UI: flechas, tamaño iframe, responsive, tamaño, ...
+- [ ] Cambiar datos de auth0 con datos de Terra Incógnita
 
 Dudas:
 
