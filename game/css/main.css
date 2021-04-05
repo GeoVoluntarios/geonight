@@ -65,8 +65,7 @@ label {
 }
 
 #clues ol,
-#activeClue > *,
-#responseBox {
+#activeClue > * {
   display: none;
 }
 #clues ol.active,
@@ -147,4 +146,18 @@ label {
 }
 #team-data span {
   font-weight: normal;
+}
+
+#locations li.deactivate {
+  background-color: #ccc !important;
+  color: black;
+  text-decoration: line-through;
+  cursor: initial;
+}
+#finalForm:not(.hidden) {
+  display: flex;
+  justify-content: center;
+}
+#finalForm form {
+  text-align: left;
 }

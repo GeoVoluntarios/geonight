@@ -132,8 +132,6 @@
                     </div>
                 </div>
             </nav>
-
-
         </div>
 
         <div
@@ -210,7 +208,9 @@
                             <button
                                type="submit"
                                class="btn btn-primary mt-2 btn-block"
-                            >Comenzar</button>
+                            >
+                                Comenzar
+                            </button>
                         </form>
                     </div>
 
@@ -252,10 +252,141 @@
                     <iframe></iframe>
                 </div>
                 <div
+                   id="finalForm"
+                   class="hidden"
+                >
+                    <form action="#">
+                        <p>
+                            ¿Qué relación une a las 5 localizaciones que has identificado?
+                        </p>
+                        <div class="custom-control custom-radio">
+                            <input
+                               type="radio"
+                               id="customRadio1"
+                               name="testFinal"
+                               class="custom-control-input"
+                            >
+                            <label
+                               class="custom-control-label"
+                               for="customRadio1"
+                            >
+                                Magallanes
+                            </label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input
+                               type="radio"
+                               id="customRadio2"
+                               name="testFinal"
+                               class="custom-control-input"
+                               value="Elcano"
+                            >
+                            <label
+                               class="custom-control-label"
+                               for="customRadio2"
+                            >
+                                Elcano
+                            </label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input
+                               type="radio"
+                               id="customRadio3"
+                               name="testFinal"
+                               class="custom-control-input"
+                               value="La vuelta al mundo"
+                            >
+                            <label
+                               class="custom-control-label"
+                               for="customRadio3"
+                            >
+                                La vuelta al mundo
+                            </label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input
+                               type="radio"
+                               id="customRadio4"
+                               name="testFinal"
+                               class="custom-control-input"
+                               value="Circunvalación"
+                            >
+                            <label
+                               class="custom-control-label"
+                               for="customRadio4"
+                            >
+                                Circunvalación
+                            </label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input
+                               type="radio"
+                               id="customRadio5"
+                               name="testFinal"
+                               class="custom-control-input"
+                               value="La vuelta al mundo"
+                            >
+                            <label
+                               class="custom-control-label"
+                               for="customRadio5"
+                            >
+                                La vuelta al mundo
+                            </label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input
+                               type="radio"
+                               id="customRadio6"
+                               name="testFinal"
+                               class="custom-control-input"
+                               value="Circunavegación"
+                            >
+                            <label
+                               class="custom-control-label"
+                               for="customRadio6"
+                            >
+                                Circunavegación
+                            </label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input
+                               type="radio"
+                               id="customRadio7"
+                               name="testFinal"
+                               class="custom-control-input"
+                               value="Expedición"
+                            >
+                            <label
+                               class="custom-control-label"
+                               for="customRadio7"
+                            >
+                                Expedición
+                            </label>
+                        </div>
+                        <input
+                           type="submit"
+                           class="btn btn-primary btn-block mt-3"
+                           id="btnEndGame"
+                           value="ENVIAR"
+                        >
+                    </form>
+                </div>
+                <div
+                   id="responseBox"
+                   class="hidden text-center mb-1"
+                >
+                    Haz clic en el mapa donde creas que se encuentra esta localización
+                    <span id="response"></span>
+                </div>
+                <div
                    id="viewDiv"
                    data-location="0"
-                ></div>
-                <div class="text-center mt-3">
+                >
+                </div>
+                <div
+                   class="text-center mt-3"
+                   id="game-buttons"
+                >
                     <button
                        class="btn btn-primary"
                        id="locatePlace"
@@ -276,21 +407,20 @@
                    id="cluesDetails"
                    class="location-0"
                 >
-
                     <div id="clues">
                     </div>
                 </div>
 
-
-                <div id="responseBox">
-                    Haz clic en el mapa donde creas que se encuentra la ciudad.
-                    <span id="response"></span>
-                </div>
-
-
-
             </div>
 
+            <div
+               id="finalResult"
+               class="hidden"
+            >
+                <p>
+                    Vuestro resultado final es: <spain id="finalPoints"></spain>
+                </p>
+            </div>
         </div>
     </div>
 
@@ -305,7 +435,6 @@
        type="module"
        src="js/game.js"
     ></script>
-    <!-- <script src="js/game.js"></script> -->
     <script src="https://js.arcgis.com/4.18/"></script>
 </body>
 

@@ -7,15 +7,16 @@ Aplicación desarrollada para la GeoNight organizada en colaboración con la Aso
 - [x] Embeber las pistas del juego
 - [x] Calcular el tiempo en responder
 - [x] Requerir un Login de usuario y guardar tiempo y respuestas de cada un@
-- [ ] Añadir las respuestas reales
+- [x] Añadir las respuestas reales
+- [x] Descativar localizaciones ya respondidas
+- [x] Calcular error con respecto a la localización seleccioonada
+- [x] Añadir preguntar final
 - [ ] Guardar respuestas ya enviadas
-- [ ] Descativar localizaciones ya respondidas
-- [ ] Calcular error con respecto a la localización seleccioonada
-- [ ] Añadir preguntar final
 - [ ] Enviar respuestas al servidor
 - [ ] Actualizar vídeos de pistas
 - [ ] Mejorar UI: flechas, tamaño iframe, responsive, tamaño, ...
 - [ ] Cambiar datos de auth0 con datos de Terra Incógnita
+- [ ] Pedir nombres de los miembros del equipo al principio
 
 Dudas:
 
