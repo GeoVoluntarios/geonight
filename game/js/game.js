@@ -1,3 +1,15 @@
+import ArcGISMap from "https://js.arcgis.com/4.18/@arcgis/core/Map.js";
+// import MapView from "https://js.arcgis.com/4.18/@arcgis/core/views/MapView.js";
+import SceneView from "https://js.arcgis.com/4.18/@arcgis/core/views/SceneView.js";
+import FeatureLayer from "https://js.arcgis.com/4.18/@arcgis/core/layers/FeatureLayer.js";
+import esriConfig from "https://js.arcgis.com/4.18/@arcgis/core/config.js";
+import {distance} from "https://js.arcgis.com/4.18/@arcgis/core/geometry/geometryEngineAsync.js";
+import {project} from "https://js.arcgis.com/4.18/@arcgis/core/geometry/projection.js";
+import Graphic from "https://js.arcgis.com/4.18/@arcgis/core/Graphic.js";
+import GraphicsLayer from "https://js.arcgis.com/4.18/@arcgis/core/layers/GraphicsLayer.js";
+
+
+
 const tests = [
     [{
         type: "🌎 Hemisferio",
@@ -138,8 +150,7 @@ const tests = [
 
 const locationsEl = document.getElementById("locations"),
 cluesEl = document.getElementById("clues");
-clueText = document.getElementById("clueText"),
-cluesDetailsEl = document.getElementById("cluesDetails");
+
 
 
 tests.forEach(function(elem, index){
@@ -183,21 +194,25 @@ tests.forEach(function(elem, index){
     cluesEl.appendChild(ol);
 });
 
+const locations = document.querySelectorAll("#locations li"),
+cluesDetailsEl = document.getElementById("cluesDetails");
+
 // Adding dynamic behaviour to locations menu
-const locations = document.querySelectorAll("#locations li");
 Array.from(locations).forEach(function(el) {
     el.addEventListener('click', function(evt){
-        locationsActive = document.querySelector("#locations .active")
+        const locationsActive = document.querySelector("#locations .active")
         locationsActive.classList.remove("active");
         evt.target.classList.add("active");
-        cluesActive = document.querySelector("#clues ol.active")
+        const cluesActive = document.querySelector("#clues ol.active")
         cluesActive.classList.remove("active");
-        newCluesEl = document.querySelector("#clues-location-" + evt.target.dataset.id)
+        const newCluesEl = document.querySelector("#clues-location-" + evt.target.dataset.id)
         newCluesEl.classList.add("active");
         newCluesEl.firstChild.click()
         cluesDetailsEl.className = `location-${evt.target.dataset.id}`;
     });
 });
+
+const clueText = document.getElementById("clueText");
 
 // Adding dynamic behaviour to clues menu
 const clues = document.querySelectorAll("#clues li");
@@ -207,13 +222,13 @@ Array.from(clues).forEach(function(el) {
         var clueEl;
         var clue = evt.target.dataset.clue;
 
-        cluesActive = document.querySelector("#clues .active li.active")
+        let cluesActive = document.querySelector("#clues .active li.active")
         if(cluesActive){
             cluesActive.classList.remove("active");
         }
         evt.target.classList.add("active");
 
-        activeClueActive = document.querySelector("#activeClue .active")
+        let activeClueActive = document.querySelector("#activeClue .active")
 
         if(activeClueActive){
             activeClueActive.classList.remove("active");
@@ -264,8 +279,12 @@ const showClues = () => {
     viewDivEl.style.position="absolute";
 }
 
-document.getElementById("locatePlace").addEventListener('click', function(evt){
+let response = '';
+
+document.getElementById("locatePlace").addEventListener('click', function(evt, obj){
     showMap();
+
+
 });
 
 document.getElementById("returnToClues").addEventListener('click', function(evt){
@@ -287,8 +306,12 @@ seq.forEach((color, i) => {
 })
 document.getElementsByTagName('head')[0].appendChild(style);
 
-cluesActive = document.querySelector("#clues .active")
+// var activateFirstClue = function() {
+
+// }
+let cluesActive = document.querySelector("#clues .active")
 cluesActive.firstChild.click()
+
 
 
 //Register team name
@@ -315,7 +338,7 @@ if (form.attachEvent) {
 var counter = 0;
 
 
-function startTimer(){
+window.startTimer = function(){
     const end = moment(new Date());
     var duration = moment.duration(end.diff(startTime));
     var h = parseInt(duration.asHours());
@@ -323,7 +346,124 @@ function startTimer(){
     var s = parseInt(duration.asSeconds())%60;
 
     document.querySelector("#team-time span").innerText = h+"h "+m+"m "+s+"s";
-    t = setTimeout(function(){startTimer()},1000);
+    setTimeout(function(){startTimer()},1000);
 }
 
+/*INIT MAP*/
 
+// esriConfig.apiKey = "AAPKb2ab4249fa8b48218ea1d3f993d86e30GG1q0cy5ivCIPXKbo-wo-fj3tO-ZFJp0hq7tTriKC-DUaM8vud4GclOQGtSoAq7D";
+
+const map = new ArcGISMap({
+    basemap: "topo"
+});
+
+const view = new SceneView({
+    container: "viewDiv",
+    map: map,
+    center: [-3,40],
+    zoom: 3
+});
+
+const graphicsLayer = new GraphicsLayer();
+map.add(graphicsLayer);
+
+const layer = new FeatureLayer({
+    url: "https://services.arcgis.com/Q6ZFRRvMTlsTTFuP/arcgis/rest/services/geonightplaces/FeatureServer",
+});
+
+layer.queryFeatures().then(function(results){
+
+    if(results.features.length < 1){
+        console.warn("No se pudieron cargar las respuestas");
+    }else{
+        window.clueResponse = results.features;
+        console.log("Respuestas cargadas", results.features)
+    }
+});
+
+view.on("click", function(event) {
+
+    const activeLocation = document.querySelector("#locations .active").dataset.id;
+    document.getElementById("viewDiv").setAttribute("data-location", activeLocation);
+
+    let activeClue = parseInt(document.querySelector("#locations .active").dataset.id)
+
+    let response = clueResponse.find(el => {
+        if(el.attributes.Order === activeClue){
+            console.log("Encontrado! = ", el.toJSON())
+        }
+
+        return el.attributes.Order === activeClue
+    });
+
+    console.log("event = ", event)
+    if(!response){
+        console.error("Faltan los datos de esta localización en la BD");
+        return false;
+
+    }
+    const evtProjected = project(response.geometry, {wkid:event.mapPoint.spatialReference.wkid})
+    const promise = distance(evtProjected, event.mapPoint, "kilometers")
+    promise.then(function(res){
+        const txtResponse = `
+        <br>Respuesta a la pregunta ${activeClue}: <br>
+        <strong>Distancia a ${response.attributes.Name} -> ${res}km</strong>.<br>
+        `;
+
+        accumulatedError += parseInt(res);
+        document.querySelector("#team-error span").innerText = accumulatedError + "km"
+
+
+        console.log(txtResponse);
+        document.getElementById('response').innerHTML = txtResponse;
+
+        // map.add(layer)
+        graphicsLayer.removeAll()
+
+        const point = {
+            type: "point",
+            x: event.mapPoint.x,
+            y: event.mapPoint.y,
+            spatialReference: { wkid: 102100}
+        };
+
+        const simpleMarkerSymbol = {
+            type: "simple-marker",
+            color: [226, 119, 40],
+            outline: {
+                color: [255, 255, 255],
+                width: 1
+            }
+        };
+
+        const pointGraphic = new Graphic({
+            geometry: point,
+            symbol: simpleMarkerSymbol
+        });
+
+        graphicsLayer.add(pointGraphic);
+        /*
+
+        //Focus to extent
+        const fullExtent = [response, pointGraphic];
+        view.goTo(fullExtent)
+        */
+
+        // .then(function () {
+        //     // if (!view.extent.contains(fullExtent))
+        //     //     view.zoom -= 1;
+        // });
+
+        // auth0 && auth0.getUser().then(user => {
+        //     console.log("User=", user)
+        // })
+        console.log("Save response")
+// debugger
+        let activeEl = document.querySelector(`#locations [data-id="${activeClue}"]`);
+        activeEl.classList.add("deactivate");
+        document.getElementById("returnToClues").click();
+        activeEl.nextSibling.click();
+
+    })
+
+});
