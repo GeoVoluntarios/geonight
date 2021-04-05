@@ -1063,8 +1063,58 @@
                             </div>
                         </div>
                     </div>
+                    <div class="sponsor-grid__item">
+                        <div class="sponsor-grid__logo">
+                            <div class="sponsor-grid__logo__center">
+                                <img
+                                   src="assets/imgs/logo_IGEAR_horizontal.png"
+                                   alt="Logo IGEAR"
+                                >
+                            </div>
+                        </div>
+                        <div class="sponsor-grid__expander">
+                            <div class="sponsor-grid__description">
+                                <h4>IGEAR</h4>
+                                <p>
+                                    <a href="https://www.aragon.es/-/instituto-geografico-de-aragon-igear">IGEAR</a> es
+                                    el Instituto Geográfico de Aragón. Es el
+                                    órgano responsable de la
+                                    programación y elaboración de la cartografía básica y derivada de la Comunidad
+                                    Autónoma de Aragón, así como la coordinación de la cartografía temática, la
+                                    teledetección, las bases de datos geográficos, la red GNSS (Global Navigation
+                                    Satellite System) y la información documental sobre ordenación del territorio.
+                                    Además es un servicio de apoyo a todas las unidades administrativas del Gobierno de
+                                    Aragón, del resto de administraciones públicas y de los ciudadanos, en todo lo
+                                    relacionado con la información y documentación geográfica sobre ordenación del
+                                    territorio aragonés.
+                                </p>
+                                <div class="iframe">
+                                    <iframe
+                                       width="560"
+                                       height="315"
+                                       src="https://www.youtube.com/embed/CH_ALpqF2-0"
+                                       title="YouTube video player"
+                                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                       allowfullscreen
+                                    ></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <script>
+
+                document.querySelectorAll('.sponsor-grid').forEach(elem => {
+                    // debugger
+
+                    for (var i = elem.children.length; i >= 0; i--) {
+                        elem.appendChild(elem.children[Math.random() * i | 0]);
+                    }
+                })
+
+            </script>
 
             <p class="text-center mt-3 small juega">
                 ¿Quieres unirte a los colaboradores?, escríbenos a info@geovoluntarios.org.
