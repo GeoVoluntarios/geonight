@@ -354,9 +354,10 @@ function responseLastQuestion(e) {
     var duration = moment.duration(end.diff(startTime));
     let factor = 1;
     if(document.querySelector('[name="testFinal"]:checked').value === "Magallanes"){
-        factor = 1.2;
+        factor = 0.8;
     }
-    document.getElementById("finalPoints").innerText = 100000000000 - (accumulatedError * duration.asSeconds()) * factor
+    // 100.000.000.000
+    document.getElementById("finalPoints").innerText = (parseInt(accumulatedError)) * duration.asSeconds() * factor;
     document.getElementById("finalResult").classList.remove("hidden");
     document.getElementById("finalForm").classList.add("hidden")
 

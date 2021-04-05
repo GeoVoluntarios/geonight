@@ -14,9 +14,11 @@ Aplicación desarrollada para la GeoNight organizada en colaboración con la Aso
 - [ ] Guardar respuestas ya enviadas
 - [ ] Enviar respuestas al servidor
 - [ ] Actualizar vídeos de pistas
-- [ ] Mejorar UI: flechas, tamaño iframe, responsive, tamaño, ...
+- [ ] Mejorar UI: flechas, tamaño iframe, responsive, tamaño, (añadir links a imágenes para ver en grande)...
+- [ ] Mejorar instrucciones del principio (añadir screenshot de la interfaz)
 - [ ] Cambiar datos de auth0 con datos de Terra Incógnita
 - [ ] Pedir nombres de los miembros del equipo al principio
+- [ ] Parar reloj, gracias y volver a la web
 
 Dudas:
 
