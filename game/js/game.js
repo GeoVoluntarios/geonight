@@ -348,6 +348,7 @@ function processForm(e) {
     if (e.preventDefault) e.preventDefault();
 
     localStorage.setItem('teamName', document.getElementById("teamName").value);
+    localStorage.setItem('teamMembers', document.getElementById("teamMembers").value);
     localStorage.setItem('startTime', new Date());
     updateUI()
     /* do what you want with the form */
@@ -355,7 +356,7 @@ function processForm(e) {
     // You must return false to prevent the default form behavior
     return false;
 }
-
+console.log("Hola")
 var form = document.getElementById('registerName');
 if (form.attachEvent) {
     form.attachEvent("submit", processForm);
@@ -364,21 +365,18 @@ if (form.attachEvent) {
 }
 
 
-//Send last question
-function responseLastQuestion(e) {
-    if (e.preventDefault) e.preventDefault();
+function loadFinalResults(){
 
-    //Stop timer
-    clearTimeout(startStatus)
-
-    const end = moment(new Date());
+    const end = moment(new Date(localStorage.getItem('end')));
     var duration = moment.duration(end.diff(startTime));
+    // debugger
     let factor = 1;
-    if(document.querySelector('[name="testFinal"]:checked').value === "Magallanes"){
+
+    if(localStorage.getItem('testFinal') === "Magallanes"){
         factor = 0.8;
     }
-    // debugger
 
+    const accumulatedError = parseInt(localStorage.getItem('accumulatedError'))
     const teamName = localStorage.getItem('teamName');
     document.getElementById("finalPoints").innerHTML = `
     <h1 style="font-size: 2rem;text-align: center;margin-bottom: 2rem;">
@@ -390,7 +388,7 @@ function responseLastQuestion(e) {
     <ul>
     <li>A la hora de localizar las ubicaciones habéis cometido un <strong>error acumulado de: ${(parseInt(accumulatedError))} km</strong></li>
     <li>Habéis tardado: <strong>${parseInt(duration.asSeconds())} segundos</strong></li>
-    <li><strong>${factor === 0.8? 'Habéis': 'No habéis'}</strong> habéis acertado la última pregunta</li>
+    <li><strong>${factor === 0.8? 'Habéis': 'No habéis'}</strong> acertado la última pregunta</li>
     </ul>
     <p>
     Recordemos la fórmula a aplicar:
@@ -416,9 +414,25 @@ function responseLastQuestion(e) {
     <a href="../" class="btn btn-primary">En la página principal encontraréis más juegos</a>
     </p>
     `;
-    document.getElementById("finalResult").classList.remove("hidden");
-    document.getElementById("finalForm").classList.add("hidden")
+}
 
+//Send last question
+function responseLastQuestion(e) {
+    if (e.preventDefault) e.preventDefault();
+
+    //Stop timer
+    clearTimeout(startStatus)
+
+    // debugger;
+
+    localStorage.setItem('end', new Date());
+    localStorage.setItem('testFinal', document.querySelector('[name="testFinal"]:checked').value);
+    // debugger
+
+
+    show("#finalResult");
+    hide("#finalForm, #content-game");
+    loadFinalResults();
 
     //100.000 - (Error acumulado (Distancias en KM) x Tº empleado para la prueba (en segundos)) * Factor
     /* do what you want with the form */
@@ -458,13 +472,27 @@ const selectNextLocation = function(){
     }
 };
 
-const showLastQuestion = function(){
+const hideLocations = function(){
     hide("#clueText, #activeClue, #locations, #cluesDetails, #viewDiv, #responseBox, #team-data");
-    document.querySelector("#game-buttons :not(.hidden)").classList.add("hidden")
-    document.getElementById('finalForm').classList.remove("hidden")
-    document.getElementById("viewDiv").remove("active")
+}
+
+const showLastQuestion = function(cond){
+    if(cond){
+        // Show last question
+        hide("#game-buttons :not(.hidden)");
+        show("#finalForm")
+        document.getElementById("viewDiv").classList.remove("active")
+    }else{
+        // Hide last question
+        hide("#finalForm");
+    }
+
 };
 
+const showResults = function(){
+
+    show('#finalResult');
+}
 
 
 
@@ -506,14 +534,22 @@ layer.queryFeatures().then(function(results){
         // debugger
         // Deactivate previous responses (if refresh)
         const keys = Object.keys(respuestas);
+
         if(clueResponse.length === keys.length){
-            showLastQuestion();
+            if(!localStorage.getItem('testFinal')){
+                hideLocations();
+                showLastQuestion(true);
+            }else{
+                hideLocations();
+                loadFinalResults();
+                showResults();
+            }
         }else{
             keys.forEach(id => {
                 document.querySelector(`#locations [data-id="${parseInt(id)}"]`).classList.add("deactivate")
             })
             selectNextLocation();
-            show("#locations, #cluesDetails, #game-buttons, #clueText, #activeClue")
+            show("#locations, #cluesDetails, #game-buttons, #clueText, #activeClue, #team-data")
 
         }
     }
@@ -564,6 +600,7 @@ view.on("click", function(event) {
             localStorage.setItem('respuestas', JSON.stringify(respuestas));
 
             accumulatedError += parseInt(res);
+            localStorage.setItem('accumulatedError', accumulatedError);
             const errorEl = document.querySelector("#team-error span");
 
             if(accumulatedError !== parseInt(res)){
@@ -638,7 +675,8 @@ view.on("click", function(event) {
             }
 
             if(!moreLocations){
-                showLastQuestion();
+                hideLocations();
+                showLastQuestion(true);
             }else{
                 document.getElementById("returnToClues").click();
             }

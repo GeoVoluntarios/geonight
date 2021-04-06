@@ -22,7 +22,7 @@ const updateUI = async () => {
          user = JSON.parse(localStorage.getItem('user'));
          isAuthenticated = true;
       }
-
+    //   debugger
       if (isAuthenticated) {
          eachElement(".profile-image", (e) => (e.src = user.picture));
          eachElement(".user-name", (e) => (e.innerText = user.name));
@@ -31,7 +31,7 @@ const updateUI = async () => {
          eachElement(".auth-visible", (e) => e.classList.remove("hidden"));
 
          const teamName = localStorage.getItem('teamName');
-
+// debugger
          if(teamName){
             showContent("content-game");
             document.querySelector("#team-name span").innerText = teamName;

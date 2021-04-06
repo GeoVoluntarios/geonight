@@ -206,9 +206,15 @@
                                type="text"
                                class="form-control"
                                id="teamName"
-                               aria-describedby="emailHelp"
                                required
                             >
+                            <label for="teamMembers">Introduce los nombres y apellidos de los miembros de
+                                equipo:</label>
+                            <textarea
+                               class="form-control"
+                               id="teamMembers"
+                               required
+                            ></textarea>
                             <button
                                type="submit"
                                class="btn btn-primary mt-2 btn-block"
@@ -227,7 +233,7 @@
                class="page hidden"
             >
                 <div
-                   class="row"
+                   class="row hidden"
                    id="team-data"
                 >
                     <div
@@ -449,6 +455,7 @@
        type="module"
        src="js/game.js"
     ></script>
+    <script>console.log("Hola")</script>
     <script src="https://js.arcgis.com/4.18/"></script>
 </body>
 

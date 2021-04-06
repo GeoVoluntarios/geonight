@@ -13,25 +13,20 @@ Aplicación desarrollada para la GeoNight organizada en colaboración con la Aso
 - [x] Añadir preguntar final
 - [x] Parar reloj, gracias y volver a la web
 - [x] Guardar respuestas ya enviadas
+- [x] Comprobar el estado de la aplicación al cargar (si ya se ha terminado no dejar jugar más)
+- [x] Pedir nombres de los miembros del equipo al principio
 - [ ] Enviar respuestas al servidor
+- [ ] Actualizar vídeos de pistas
 - [ ] Mejorar UI:
   - [x] Arreglar Tamaño iframe
   - [x] Añadir links a imágenes para ver en grande
   - [ ] Añadir flechas de navegación entre pistas
-  - [ ] Mejorar diseño para resolución de 1024x768
-  - [ ] Hacer responsive
 - [ ] Mejorar instrucciones del principio (añadir screenshot de la interfaz)
-- [ ] Actualizar vídeos de pistas
 - [ ] Cambiar datos de auth0 con datos de Terra Incógnita
-- [ ] Pedir nombres de los miembros del equipo al principio
-
-Dudas:
-
-- Mostramos la ubicación correcta tras cada respuesta?
-- Si "deslogueas", eliminamos info del equipo e inicio para poder volver a jugar?
-- Mostramos puntos al terminar la partida?
 
 Wishlist:
 
-- Restringir para que sólo la app pueda ver las respuesta
-- Mostrar el leaderboard al final
+- [ ] Restringir para que sólo la app pueda ver las respuesta
+- [ ] Mostrar el leaderboard al final
+- [ ] Hacer responsive
+- [ ] Mejorar diseño para resolución de 1024x768
