@@ -8,7 +8,19 @@ import {project} from "https://js.arcgis.com/4.18/@arcgis/core/geometry/projecti
 import Graphic from "https://js.arcgis.com/4.18/@arcgis/core/Graphic.js";
 import GraphicsLayer from "https://js.arcgis.com/4.18/@arcgis/core/layers/GraphicsLayer.js";
 
+const hide = function(selectors){
+    document.querySelectorAll(selectors).forEach(elem => {
+        elem.classList.add("hidden");
+    });
+}
+const show = function(selectors){
+    document.querySelectorAll(selectors).forEach(elem => {
+        elem.classList.remove("hidden");
+    });
+}
 
+let startStatus = null;
+const respuestas = localStorage.getItem('respuestas')?JSON.parse(localStorage.getItem('respuestas')) : {};
 
 const tests = [
     [{
@@ -87,8 +99,8 @@ const tests = [
     },
     {
         type: "👥 Población y 💃 Cultura",
-        title: "su población y cultura",
-        clue: "https://www.youtube.com/embed/iywqEfwqYhQ"
+        title: "su población y cultura (quita el \"mute\")",
+        clue: "https://www.youtube.com/embed/iywqEfwqYhQ?autoplay=1&mute=1&enablejsapi=1"
     },
     {
         type: "🏞️ Paisaje (natural)",
@@ -112,8 +124,8 @@ const tests = [
     },
     {
         type: "👥 Toponimia y Población",
-        title: "toponímia y población. Lee el siguiente texto",
-        clue: "https://www.youtube.com/embed/fRESy0env-U"
+        title: "toponímia y población. Lee el siguiente texto y quita el mute",
+        clue: "https://www.youtube.com/embed/fRESy0env-U?autoplay=1&mute=1&enablejsapi=1"
     },
     {
         type: "🌳 Recursos naturales y 💰 Economía",
@@ -132,8 +144,8 @@ const tests = [
     },
     {
         type: "🌧 Clima",
-        title: "El clima en la zona...",
-        clue: "https://www.youtube.com/embed/xuAYjP3jcVs"
+        title: "El clima en la zona... (quita el \"mute\")",
+        clue: "https://www.youtube.com/embed/xuAYjP3jcVs?autoplay=1&mute=1&enablejsapi=1"
     },
     {
         type: "🏞️ Paisaje (natural)",
@@ -239,11 +251,19 @@ Array.from(clues).forEach(function(el) {
 
         if(clue.indexOf("youtube.com") !== -1){
             clueEl = document.querySelector("#activeClue iframe");
+            clueEl.src = evt.target.dataset.clue;
+            const clueDivEl = document.querySelector("#activeClue div");
+            clueDivEl.classList.add("active");
         }else{
-            clueEl = document.querySelector("#activeClue img");
+            clueEl = document.querySelector("#activeClue iframe");
+            clueEl.src = "";
+            const clueAEl = document.querySelector("#activeClue a");
+            const clueImgEl = document.querySelector("#activeClue img");
+            clueImgEl.src = clueAEl.href =  evt.target.dataset.clue;
+            clueAEl.classList.add("active");
         }
-        clueEl.src = evt.target.dataset.clue;
-        clueEl.classList.add("active");
+
+
         if(viewDivEl.classList.contains("active")){
             viewDivEl.classList.remove("active");
         }
@@ -348,7 +368,8 @@ if (form.attachEvent) {
 function responseLastQuestion(e) {
     if (e.preventDefault) e.preventDefault();
 
-
+    //Stop timer
+    clearTimeout(startStatus)
 
     const end = moment(new Date());
     var duration = moment.duration(end.diff(startTime));
@@ -356,8 +377,45 @@ function responseLastQuestion(e) {
     if(document.querySelector('[name="testFinal"]:checked').value === "Magallanes"){
         factor = 0.8;
     }
-    // 100.000.000.000
-    document.getElementById("finalPoints").innerText = (parseInt(accumulatedError)) * duration.asSeconds() * factor;
+    // debugger
+
+    const teamName = localStorage.getItem('teamName');
+    document.getElementById("finalPoints").innerHTML = `
+    <h1 style="font-size: 2rem;text-align: center;margin-bottom: 2rem;">
+    Enhorabuena equipo ${teamName},
+    ¡habéis terminado la partida!
+    </h1>
+    <iframe src="https://giphy.com/embed/l4q8cJzGdR9J8w3hS" width="" height="" frameborder="0" class="giphy-embed" allowfullscreen="" style="float: right;width: 290px;margin: 0px 0 1rem 1rem;"></iframe>
+    <p>En resumen:</p>
+    <ul>
+    <li>A la hora de localizar las ubicaciones habéis cometido un <strong>error acumulado de: ${(parseInt(accumulatedError))} km</strong></li>
+    <li>Habéis tardado: <strong>${parseInt(duration.asSeconds())} segundos</strong></li>
+    <li><strong>${factor === 0.8? 'Habéis': 'No habéis'}</strong> habéis acertado la última pregunta</li>
+    </ul>
+    <p>
+    Recordemos la fórmula a aplicar:
+    </p>
+    <blockquote>
+    Penalización = Error acumulado (Distancia en KM) x Tº empleado para la prueba (en segundos) x Factor de
+    ponderación (0.8 si se acierta si la última pregunta, 1 sino)
+    </blockquote>
+    <p>
+    Por tanto: Error acumulado (${accumulatedError}) x Tº empleado para la prueba (${parseInt(duration.asSeconds())}) x Factor de
+    ponderación (${factor}):
+    </p>
+    <p class="big">
+    ${(+parseFloat(parseInt(accumulatedError)) * parseInt(duration.asSeconds()) * factor).toFixed(2)}
+    </p>
+    <p>
+    Recordad, la entrega de premios será el ....
+    </p>
+    <p>
+    ¡Gracias por participar!, si tenéis ganas de seguir jugando:
+    </p>
+    <p class="text-center">
+    <a href="../" class="btn btn-primary">En la página principal encontraréis más juegos</a>
+    </p>
+    `;
     document.getElementById("finalResult").classList.remove("hidden");
     document.getElementById("finalForm").classList.add("hidden")
 
@@ -377,9 +435,6 @@ if (form.attachEvent) {
 }
 
 // Timer
-var counter = 0;
-
-
 window.startTimer = function(){
     const end = moment(new Date());
     var duration = moment.duration(end.diff(startTime));
@@ -388,8 +443,31 @@ window.startTimer = function(){
     var s = parseInt(duration.asSeconds())%60;
 
     document.querySelector("#team-time span").innerText = h+"h "+m+"m "+s+"s";
-    setTimeout(function(){startTimer()},1000);
+    startStatus = setTimeout(function(){startTimer()},1000);
 }
+
+
+const selectNextLocation = function(){
+    const nextLocation = document.querySelectorAll(`#locations li:not(.deactivate)`)[0];
+    if(nextLocation){
+        nextLocation.click()
+        return true;
+    }else{
+        console.log("Formulario final")
+        return false;
+    }
+};
+
+const showLastQuestion = function(){
+    hide("#clueText, #activeClue, #locations, #cluesDetails, #viewDiv, #responseBox, #team-data");
+    document.querySelector("#game-buttons :not(.hidden)").classList.add("hidden")
+    document.getElementById('finalForm').classList.remove("hidden")
+    document.getElementById("viewDiv").remove("active")
+};
+
+
+
+
 
 /*INIT MAP*/
 
@@ -424,8 +502,24 @@ layer.queryFeatures().then(function(results){
             console.warn("No concididen las localizaciones en la interfaz con las localizaciones en el servicio")
         }
         console.log("Respuestas cargadas", results.features)
+
+        // debugger
+        // Deactivate previous responses (if refresh)
+        const keys = Object.keys(respuestas);
+        if(clueResponse.length === keys.length){
+            showLastQuestion();
+        }else{
+            keys.forEach(id => {
+                document.querySelector(`#locations [data-id="${parseInt(id)}"]`).classList.add("deactivate")
+            })
+            selectNextLocation();
+            show("#locations, #cluesDetails, #game-buttons, #clueText, #activeClue")
+
+        }
     }
 });
+
+
 
 view.on("click", function(event) {
 
@@ -433,6 +527,11 @@ view.on("click", function(event) {
     document.getElementById("viewDiv").setAttribute("data-location", activeLocation);
 
     let activeClue = parseInt(document.querySelector("#locations .active").dataset.id)
+
+    if(typeof(clueResponse) === undefined){
+        alert("Vuelve a intentarlo en unos segundos")
+        return false;
+    }
 
     let response = clueResponse.find(el => {
         if(el.attributes.Orden === activeClue){
@@ -459,8 +558,24 @@ view.on("click", function(event) {
             <strong>Distancia a ${response.attributes.Name} -> ${res}km</strong>.<br>
             `;
 
+            respuestas[activeClue] = event.mapPoint.toJSON();
+
+            // Save responses to local storage
+            localStorage.setItem('respuestas', JSON.stringify(respuestas));
+
             accumulatedError += parseInt(res);
-            document.querySelector("#team-error span").innerText = accumulatedError + "km"
+            const errorEl = document.querySelector("#team-error span");
+
+            if(accumulatedError !== parseInt(res)){
+                errorEl.innerText = `${accumulatedError} km (+${parseInt(res)} km)`
+            }else{
+                errorEl.innerText = `${accumulatedError} km`
+            }
+            errorEl.classList.add("highlight");
+            setTimeout(function(){
+                errorEl.classList.toggle("highlight");
+            }, 3000)
+
 
 
             console.log(txtResponse);
@@ -513,29 +628,17 @@ view.on("click", function(event) {
             // debugger
             let activeEl = document.querySelector(`#locations [data-id="${activeClue}"]`);
             activeEl.classList.add("deactivate");
-            let locationsCompleted = false;
+            let moreLocations;
             if(activeEl.nextSibling && !activeEl.classList.contains("deactivate")){
                 activeEl.nextSibling.click();
             }else{
                 //Buscamos otra no activated
-                const nextLocation = document.querySelectorAll(`#locations li:not(.deactivate)`)[0]
-                if(nextLocation){
-                    nextLocation.click()
-                }else{
-                    console.log("Formulario final")
-                    locationsCompleted = true
-                }
+                moreLocations = selectNextLocation()
 
             }
 
-            if(locationsCompleted){
-                document.querySelectorAll("#clueText, #activeClue, #locations, #cluesDetails, #viewDiv, #responseBox").forEach(elem => {
-                    elem.classList.add("hidden");
-                });
-                document.querySelector("#game-buttons :not(.hidden)").classList.add("hidden")
-                document.getElementById('finalForm').classList.remove("hidden")
-                document.getElementById("viewDiv").remove("active")
-
+            if(!moreLocations){
+                showLastQuestion();
             }else{
                 document.getElementById("returnToClues").click();
             }

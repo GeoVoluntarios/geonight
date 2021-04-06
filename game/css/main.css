@@ -65,7 +65,8 @@ label {
 }
 
 #clues ol,
-#activeClue > * {
+#activeClue a,
+#activeClue div {
   display: none;
 }
 #clues ol.active,
@@ -74,15 +75,22 @@ label {
   align-items: stretch;
 }
 
-#activeClue .active {
+#activeClue .active,
+#activeClue .img.active {
   display: inline-block;
 }
 
 #activeClue img,
-#activeClue iframe {
+#activeClue div {
   max-height: 450px;
-  max-width: 100%;
+  max-width: 800px;
+
+  /*
+  */
   /* border: 1px solid black; */
+}
+#activeClue div,
+#activeClue a {
   display: none;
 }
 
@@ -160,4 +168,55 @@ label {
 }
 #finalForm form {
   text-align: left;
+}
+
+.highlight {
+  background: #e8e8e8;
+  animation: mymove 3s 1;
+}
+
+@keyframes mymove {
+  from {
+    background-color: yellow;
+  }
+  to {
+    background-color: #e8e8e8;
+  }
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: '\201C''\201D''\2018''\2019';
+}
+blockquote:before {
+  /* color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em; */
+}
+blockquote p {
+  display: inline;
+}
+.big {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.resp-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+.resp-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }

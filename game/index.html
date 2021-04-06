@@ -170,10 +170,12 @@
                             </ul>
                             <h2>Sistema de puntuación:</h2>
                             <p>
-                                La puntuación se calculara a partir de la siguiente fórmula: <br>
-                                Puntuación final = 100.000 -
-                                (Error acumulado (Distancias en KM) x Tº empleado para la prueba (en segundos)) * Factor
-                                ponderación (1.2 so acierta si la última pregunta, 1 sino).
+                                Por la dinámica a seguir, en este juego no se consiguen puntos sino una penalización, y
+                                <strong>ganará quien obtenga la menor penalización</strong>.
+                                La penalización se calcula de la siguiente manera: <br>
+                                Penalización = Error acumulado (Distancia en KM) x Tº empleado para la prueba (en
+                                segundos) x Factor de
+                                ponderación (0.8 si se acierta si la última pregunta, 1 sino).
                             </p>
                             <h2>¿Listos para empezar?</h2>
                             <p>Regístrate e introduce tu nombre de equipo</p>
@@ -205,7 +207,6 @@
                                class="form-control"
                                id="teamName"
                                aria-describedby="emailHelp"
-                               placeholder="Eratosthenes"
                                required
                             >
                             <button
@@ -249,10 +250,31 @@
                         Tiempo: <span></span>
                     </div>
                 </div>
-                <div id="clueText"></div>
-                <div id="activeClue">
-                    <img>
-                    <iframe></iframe>
+                <div
+                   id="clueText"
+                   class="hidden"
+                ></div>
+                <div
+                   id="activeClue"
+                   class="hidden"
+                >
+                    <a
+                       href=""
+                       class="img"
+                       target="_blank"
+                    >
+                        <img>
+                    </a>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                           class="embed-responsive-item"
+                           width="1600"
+                           height="900"
+                           frameborder="0"
+                           allowfullscreen
+                        ></iframe>
+                    </div>
+
                 </div>
                 <div
                    id="finalForm"
@@ -268,6 +290,7 @@
                                id="customRadio1"
                                name="testFinal"
                                class="custom-control-input"
+                               value="Magallanes"
                             >
                             <label
                                class="custom-control-label"
@@ -363,7 +386,7 @@
                    id="responseBox"
                    class="hidden text-center mb-1"
                 >
-                    Haz clic en el mapa donde creas que se encuentra esta localización
+                    Haz clic en el globo donde creas que se encuentra esta localización
                     <span id="response"></span>
                 </div>
                 <div
@@ -372,7 +395,7 @@
                 >
                 </div>
                 <div
-                   class="text-center mt-3"
+                   class="text-center mt-3 hidden"
                    id="game-buttons"
                 >
                     <button
@@ -388,12 +411,15 @@
                         VOLVER A LAS PISTAS
                     </button>
                 </div>
-                <ol id="locations">
+                <ol
+                   id="locations"
+                   class="hidden"
+                >
 
                 </ol>
                 <div
                    id="cluesDetails"
-                   class="location-0"
+                   class="location-0 hidden"
                 >
                     <div id="clues">
                     </div>
@@ -405,9 +431,9 @@
                id="finalResult"
                class="hidden"
             >
-                <p>
-                    Vuestra final es: <spain id="finalPoints"></spain>
-                </p>
+
+                <div id="finalPoints"></div>
+
             </div>
         </div>
     </div>
