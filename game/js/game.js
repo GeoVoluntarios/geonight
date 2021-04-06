@@ -99,7 +99,7 @@ const tests = [
     },
     {
         type: "👥 Población y 💃 Cultura",
-        title: "su población y cultura (quita el \"mute\")",
+        title: "su población y cultura (activa el 🔊)",
         clue: "https://www.youtube.com/embed/iywqEfwqYhQ?autoplay=1&mute=1&enablejsapi=1"
     },
     {
@@ -124,7 +124,7 @@ const tests = [
     },
     {
         type: "👥 Toponimia y Población",
-        title: "toponímia y población. Lee el siguiente texto y quita el mute",
+        title: "toponímia y población. Lee el siguiente texto y activa el 🔊",
         clue: "https://www.youtube.com/embed/fRESy0env-U?autoplay=1&mute=1&enablejsapi=1"
     },
     {
@@ -144,7 +144,7 @@ const tests = [
     },
     {
         type: "🌧 Clima",
-        title: "El clima en la zona... (quita el \"mute\")",
+        title: "El clima en la zona... (activa el 🔊)",
         clue: "https://www.youtube.com/embed/xuAYjP3jcVs?autoplay=1&mute=1&enablejsapi=1"
     },
     {
