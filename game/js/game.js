@@ -636,6 +636,9 @@ view.on("click", function(event) {
             // Save responses to local storage
             localStorage.setItem('locationResponses', JSON.stringify(locationResponses));
 
+            if(accumulatedError === 0 && localStorage.getItem('accumulatedError')){
+                accumulatedError = parseInt(localStorage.getItem('accumulatedError'))
+            }
             accumulatedError += parseInt(res);
             localStorage.setItem('accumulatedError', accumulatedError);
             const errorEl = document.querySelector("#team-error span");

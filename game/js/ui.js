@@ -31,10 +31,12 @@ const updateUI = async () => {
          eachElement(".auth-visible", (e) => e.classList.remove("hidden"));
 
          const teamName = localStorage.getItem('teamName');
+         const accumulatedError = localStorage.getItem('accumulatedError');
 // debugger
          if(teamName){
             showContent("content-game");
             document.querySelector("#team-name span").innerText = teamName;
+            document.querySelector("#team-error span").innerText = accumulatedError;
             startTime = moment(localStorage.getItem('startTime'));
             startTimer();
          }else{
