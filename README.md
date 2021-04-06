@@ -15,7 +15,7 @@ Aplicación desarrollada para la GeoNight organizada en colaboración con la Aso
 - [x] Guardar respuestas ya enviadas
 - [x] Comprobar el estado de la aplicación al cargar (si ya se ha terminado no dejar jugar más)
 - [x] Pedir nombres de los miembros del equipo al principio
-- [ ] Enviar respuestas al servidor
+- [x] Enviar respuestas al servidor
 - [ ] Actualizar vídeos de pistas
 - [ ] Mejorar UI:
   - [x] Arreglar Tamaño iframe

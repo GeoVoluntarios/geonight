@@ -20,7 +20,7 @@ const show = function(selectors){
 }
 
 let startStatus = null;
-const respuestas = localStorage.getItem('respuestas')?JSON.parse(localStorage.getItem('respuestas')) : {};
+const locationResponses = localStorage.getItem('locationResponses')?JSON.parse(localStorage.getItem('locationResponses')) : {};
 
 const tests = [
     [{
@@ -350,13 +350,32 @@ function processForm(e) {
     localStorage.setItem('teamName', document.getElementById("teamName").value);
     localStorage.setItem('teamMembers', document.getElementById("teamMembers").value);
     localStorage.setItem('startTime', new Date());
+
+    // console.log('user.length=',localStorage.getItem('user').length);
+    // console.log('teamName.length=',localStorage.getItem('teamName').length);
+    // console.log('teamMembers.length=',localStorage.getItem('teamMembers').length);
+    // console.log('startTime.length=',localStorage.getItem('startTime').length);
+    resultsTable.applyEdits({
+        addFeatures: [
+            {
+                attributes:{
+                    captain: localStorage.getItem('user'),
+                    teamName: localStorage.getItem('teamName'),
+                    teamMembers: localStorage.getItem('teamMembers'),
+                    startTime: localStorage.getItem('startTime')
+                }
+            }
+        ]
+    }).then(res => {
+        console.log("Equipo registrado!, ID: ", res.addFeatureResults[0].objectId)
+        localStorage.setItem('teamObjectId', res.addFeatureResults[0].objectId);
+    });
     updateUI()
     /* do what you want with the form */
 
     // You must return false to prevent the default form behavior
     return false;
 }
-console.log("Hola")
 var form = document.getElementById('registerName');
 if (form.attachEvent) {
     form.attachEvent("submit", processForm);
@@ -367,7 +386,7 @@ if (form.attachEvent) {
 
 function loadFinalResults(){
 
-    const end = moment(new Date(localStorage.getItem('end')));
+    const end = moment(new Date(localStorage.getItem('endTime')));
     var duration = moment.duration(end.diff(startTime));
     // debugger
     let factor = 1;
@@ -423,12 +442,27 @@ function responseLastQuestion(e) {
     //Stop timer
     clearTimeout(startStatus)
 
-    // debugger;
-
-    localStorage.setItem('end', new Date());
+    localStorage.setItem('endTime', new Date());
     localStorage.setItem('testFinal', document.querySelector('[name="testFinal"]:checked').value);
-    // debugger
 
+    resultsTable.applyEdits({
+        addFeatures: [
+            {
+                attributes:{
+                    captain: localStorage.getItem('user'),
+                    teamName: localStorage.getItem('teamName'),
+                    teamMembers: localStorage.getItem('teamMembers'),
+                    startTime: localStorage.getItem('startTime'),
+                    locationResponses: localStorage.getItem('locationResponses'),
+                    accumulatedError: localStorage.getItem('accumulatedError'),
+                    endTime: localStorage.getItem('endTime'),
+                    testFinal: localStorage.getItem('testFinal')
+                }
+            }
+        ]
+    }).then(res => {
+        console.log("Datos resgistrados!, id: ", res.addFeatureResults[0].objectId)
+    });
 
     show("#finalResult");
     hide("#finalForm, #content-game");
@@ -519,6 +553,9 @@ const layer = new FeatureLayer({
     url: "https://services.arcgis.com/Q6ZFRRvMTlsTTFuP/arcgis/rest/services/Kayak_mundial/FeatureServer",
 });
 
+const tableService = "https://services.arcgis.com/Q6ZFRRvMTlsTTFuP/arcgis/rest/services/Terra_Incognita_public_service/FeatureServer/0";
+const resultsTable = new FeatureLayer(tableService)
+
 layer.queryFeatures().then(function(results){
 
     if(results.features.length < 1){
@@ -529,11 +566,11 @@ layer.queryFeatures().then(function(results){
         if(numLocalizacionesUI !== results.features.length){
             console.warn("No concididen las localizaciones en la interfaz con las localizaciones en el servicio")
         }
-        console.log("Respuestas cargadas", results.features)
+        // console.log("Respuestas cargadas", results.features)
 
         // debugger
         // Deactivate previous responses (if refresh)
-        const keys = Object.keys(respuestas);
+        const keys = Object.keys(locationResponses);
 
         if(clueResponse.length === keys.length){
             if(!localStorage.getItem('testFinal')){
@@ -594,10 +631,10 @@ view.on("click", function(event) {
             <strong>Distancia a ${response.attributes.Name} -> ${res}km</strong>.<br>
             `;
 
-            respuestas[activeClue] = event.mapPoint.toJSON();
+            locationResponses[activeClue] = event.mapPoint.toJSON();
 
             // Save responses to local storage
-            localStorage.setItem('respuestas', JSON.stringify(respuestas));
+            localStorage.setItem('locationResponses', JSON.stringify(locationResponses));
 
             accumulatedError += parseInt(res);
             localStorage.setItem('accumulatedError', accumulatedError);

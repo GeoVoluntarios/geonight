@@ -51,5 +51,5 @@ const updateUI = async () => {
       return;
    }
 
-   console.log("UI updated");
+//    console.log("UI updated");
 };
