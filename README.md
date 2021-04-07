@@ -16,6 +16,7 @@ Aplicación desarrollada para la GeoNight organizada en colaboración con la Aso
 - [x] Comprobar el estado de la aplicación al cargar (si ya se ha terminado no dejar jugar más)
 - [x] Pedir nombres de los miembros del equipo al principio
 - [x] Enviar respuestas al servidor
+- [x] Cambiar pregunta final -> Abierta y comparar similitud con respuestas válidas
 - [ ] Actualizar vídeos de pistas
 - [ ] Mejorar UI:
   - [x] Arreglar Tamaño iframe
@@ -26,6 +27,7 @@ Aplicación desarrollada para la GeoNight organizada en colaboración con la Aso
 
 Wishlist:
 
+- [ ] Mostrar el menú de navegación de pistas por pasos y arriba // o añadir instrucciones al principio
 - [ ] Restringir para que sólo la app pueda ver las respuesta
 - [ ] Mostrar el leaderboard al final
 - [ ] Hacer responsive

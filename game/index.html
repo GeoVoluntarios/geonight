@@ -289,7 +289,13 @@
                         <p>
                             ¿Qué relación une a las 5 localizaciones que has identificado?
                         </p>
-                        <div class="custom-control custom-radio">
+                        <input
+                           type="text"
+                           id="inputTxt"
+                           class="form-control"
+                           required
+                        >
+                        <!-- <div class="custom-control custom-radio">
                             <input
                                type="radio"
                                id="customRadio1"
@@ -378,7 +384,7 @@
                             >
                                 Expedición
                             </label>
-                        </div>
+                        </div> -->
                         <input
                            type="submit"
                            class="btn btn-primary btn-block mt-3"
@@ -447,6 +453,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="//unpkg.com/string-similarity/umd/string-similarity.min.js"></script>
     <script src="js/ui.js"></script>
     <script src="js/app.js"></script>
     <script src="js/palette.js"></script>

@@ -5,7 +5,6 @@ import FeatureLayer from "https://js.arcgis.com/4.18/@arcgis/core/layers/Feature
 import esriConfig from "https://js.arcgis.com/4.18/@arcgis/core/config.js";
 import {distance} from "https://js.arcgis.com/4.18/@arcgis/core/geometry/geometryEngineAsync.js";
 import {project} from "https://js.arcgis.com/4.18/@arcgis/core/geometry/projection.js";
-import Graphic from "https://js.arcgis.com/4.18/@arcgis/core/Graphic.js";
 import GraphicsLayer from "https://js.arcgis.com/4.18/@arcgis/core/layers/GraphicsLayer.js";
 
 const hide = function(selectors){
@@ -384,56 +383,78 @@ if (form.attachEvent) {
 }
 
 
-function loadFinalResults(){
+
+
+const loadFinalResults = function(){
 
     const end = moment(new Date(localStorage.getItem('endTime')));
     var duration = moment.duration(end.diff(startTime));
     // debugger
     let factor = 1;
 
-    if(localStorage.getItem('testFinal') === "Magallanes"){
+    // Logic for old radio button
+    // if(localStorage.getItem('testFinal') === "Magallanes"){
+    //     factor = 0.8;
+    // }
+
+    // Logic for new input text using string similarity
+    const testFinal = JSON.parse(localStorage.getItem('testFinal'));
+    if(testFinal.isSimilar){
         factor = 0.8;
     }
+
+
 
     const accumulatedError = parseInt(localStorage.getItem('accumulatedError'))
     const teamName = localStorage.getItem('teamName');
     document.getElementById("finalPoints").innerHTML = `
-    <h1 style="font-size: 2rem;text-align: center;margin-bottom: 2rem;">
-    Enhorabuena equipo ${teamName},
-    ¡habéis terminado la partida!
-    </h1>
-    <iframe src="https://giphy.com/embed/l4q8cJzGdR9J8w3hS" width="" height="" frameborder="0" class="giphy-embed" allowfullscreen="" style="float: right;width: 290px;margin: 0px 0 1rem 1rem;"></iframe>
-    <p>En resumen:</p>
-    <ul>
-    <li>A la hora de localizar las ubicaciones habéis cometido un <strong>error acumulado de: ${(parseInt(accumulatedError))} km</strong></li>
-    <li>Habéis tardado: <strong>${parseInt(duration.asSeconds())} segundos</strong></li>
-    <li><strong>${factor === 0.8? 'Habéis': 'No habéis'}</strong> acertado la última pregunta</li>
-    </ul>
-    <p>
-    Recordemos la fórmula a aplicar:
-    </p>
-    <blockquote>
-    Penalización = Error acumulado (Distancia en KM) x Tº empleado para la prueba (en segundos) x Factor de
-    ponderación (0.8 si se acierta si la última pregunta, 1 sino)
-    </blockquote>
-    <p>
-    Por tanto: Error acumulado (${accumulatedError}) x Tº empleado para la prueba (${parseInt(duration.asSeconds())}) x Factor de
-    ponderación (${factor}):
-    </p>
-    <p class="big">
-    ${(+parseFloat(parseInt(accumulatedError)) * parseInt(duration.asSeconds()) * factor).toFixed(2)}
-    </p>
-    <p>
-    Recordad, la entrega de premios será el ....
-    </p>
-    <p>
-    ¡Gracias por participar!, si tenéis ganas de seguir jugando:
-    </p>
-    <p class="text-center">
-    <a href="../" class="btn btn-primary">En la página principal encontraréis más juegos</a>
-    </p>
+        <h1 style="font-size: 2rem;text-align: center;margin-bottom: 2rem;">
+        Enhorabuena equipo ${teamName},
+        ¡habéis terminado la partida!
+        </h1>
+        <iframe src="https://giphy.com/embed/l4q8cJzGdR9J8w3hS" width="" height="" frameborder="0" class="giphy-embed" allowfullscreen="" style="float: right;width: 290px;margin: 0px 0 1rem 1rem;"></iframe>
+        <p>En resumen:</p>
+        <ul>
+        <li>A la hora de localizar las ubicaciones habéis cometido un <strong>error acumulado de: ${(parseInt(accumulatedError))} km</strong></li>
+        <li>Habéis tardado: <strong>${parseInt(duration.asSeconds())} segundos</strong></li>
+        <li><strong>${factor === 0.8? 'Habéis': 'No habéis'}</strong> acertado la última pregunta</li>
+        </ul>
+        <p>
+        Recordemos la fórmula a aplicar:
+        </p>
+        <blockquote>
+        Penalización = Error acumulado (Distancia en KM) x Tº empleado para la prueba (en segundos) x Factor de
+        ponderación (0.8 si se acierta si la última pregunta, 1 sino)
+        </blockquote>
+        <p>
+        Por tanto: Error acumulado (${accumulatedError}) x Tº empleado para la prueba (${parseInt(duration.asSeconds())}) x Factor de
+        ponderación (${factor}):
+        </p>
+        <p class="big">
+        ${(+parseFloat(parseInt(accumulatedError)) * parseInt(duration.asSeconds()) * factor).toFixed(2)}
+        </p>
+        <p>
+        Recordad, la entrega de premios será el ....
+        </p>
+        <p>
+        ¡Gracias por participar!, si tenéis ganas de seguir jugando:
+        </p>
+        <p class="text-center">
+        <a href="../" class="btn btn-primary">En la página principal encontraréis más juegos</a>
+        </p>
     `;
 }
+
+
+const validResponses = [
+    "Magallanes",
+    "Elcano",
+    "La vuelta al mundo",
+    "Circunvalación",
+    "Circunavegación",
+    "Expedición"
+];
+const inputTxt = document.getElementById("inputTxt");
 
 //Send last question
 function responseLastQuestion(e) {
@@ -443,7 +464,29 @@ function responseLastQuestion(e) {
     clearTimeout(startStatus)
 
     localStorage.setItem('endTime', new Date());
-    localStorage.setItem('testFinal', document.querySelector('[name="testFinal"]:checked').value);
+
+    // Logic for string similarity
+
+    const inputValue = inputTxt.value.toLocaleLowerCase();
+
+    const testFinal = {
+        inputValue,
+        validResponses: []
+    };
+    validResponses.forEach(validStr => {
+
+        validStr = validStr.toLocaleLowerCase()
+        const distance = stringSimilarity.compareTwoStrings(validStr, inputValue);
+        if (distance >= .8) {
+            testFinal.isSimilar = true;
+            testFinal.validResponses.push({
+                validStr,
+                distance: distance.toFixed(2)
+            })
+        }
+    });
+
+    localStorage.setItem('testFinal', JSON.stringify(testFinal));
 
     resultsTable.applyEdits({
         addFeatures: [
