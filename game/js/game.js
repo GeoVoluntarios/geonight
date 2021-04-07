@@ -24,137 +24,147 @@ const locationResponses = localStorage.getItem('locationResponses')?JSON.parse(l
 const tests = [
     [{
         type: "🌎 Hemisferio",
-        title: "se encuentra en este hemisferio",
+        title: "¿En qué hemisferio se sitúa el lugar a descubrir?",
         clue: "clues/location 1/1.jpg"
     },
     {
-        type: "💎 Geología",
-        title: "el material geológico que conforma el sustrato del lugar",
+        type: "💎 Sustrato geológico",
+        title: "¿Qué material geológico conforma el sustrato del lugar?",
         clue: "clues/location 1/2.jpg"
     },
     {
         type: "👥 Población y 💃 Cultura",
-        title: "y la diversidad de su población",
+        title: "La diversidad de su población",
         clue: "clues/location 1/3.jpg"
     },
     {
         type: "🌳 Recursos naturales",
-        title: "los recursos naturales de su entorno",
+        title: "¿Qué recursos naturales tiene el entorno?",
         clue: "clues/location 1/4.jpg"
     },
     {
         type: "⚠️ Riesgos",
-        title: "y su zona sufren principalmente de los siguientes riesgos ambientales",
+        title: "¿Cuál es el principal riesgo ambiental en la zona?",
         clue: "clues/location 1/5.jpg"
     },
     {
-        type: "🏞️ Paisaje (natural)",
-        title: "su paisaje cultivado está conformado por...",
+        type: "🏞️ Paisaje cultivado",
+        title: "El paisaje cultivado está conformado por...",
         clue: "clues/location 1/6.jpg"
     },
     {
-        type: "🏙️ Paisaje (humano)",
-        title: "y el aspecto de la ciudad",
+        type: "🏙️ Paisaje urbano",
+        title: "¿Un paseo por la ciudad?",
         clue: "clues/location 1/7.jpg"
     }],[{
-        type: "🌎 Hemisferio",
-        title: "se encuentra en este hemisferio",
+        type: "🌎 Latitud",
+        title: "¿En qué zona latitudinal se sitúa la siguiente localización?",
         clue: "clues/location 2/1.jpg"
     },
     {
         type: "🌧 Clima",
-        title: "y el clima en la zona, observa la previsión horaria de lluvias",
+        title: "Previsión  horaria de lluvias...",
         clue: "clues/location 2/2.jpg"
     },
     {
-        type: "💎 Geología",
-        title: "las rocas que conforman el sustrato geológico del lugar",
+        type: "💎 Sustrato geológico",
+        title: "Rocas que conforman el sustrato geológico del lugar",
         clue: "clues/location 2/3.jpg"
     },
     {
-        type: "🏞️ Paisaje (natural)",
-        title: "y su fondo marino",
+        type: "🌊 Paisaje submarino",
+        title: "A poca profundidad...",
         clue: "clues/location 2/4.jpg"
     },
     {
         type: "👥 Población y 💃 Cultura",
-        title: "su población y mestizaje. Lee el siguiente texto sobre el idioma y las influencias culturales en el lugar",
+        title: "Influencias culturales en el idioma del lugar...",
         clue: "clues/location 2/5.jpg"
     },
     {
         type: "⚠️ Riesgos",
-        title: "y el principal riesgo ambiental en la zona",
+        title: "Un importante riesgo ambiental en la zona",
         clue: "clues/location 2/6.jpg"
     }],
     [{
         type: "🌎 Hemisferio",
-        title: "se encuentra en este hemisferio",
+        title: "¿En qué hemisferio se sitúa el lugar a descubrir?",
         clue: "clues/location 3/1.jpg"
     },
     {
-        type: "💰 Economía",
-        title: "y sus recursos económicos",
+        type: "💰 Recursos económicos",
+        title: "Y sus recursos económicos",
         clue: "clues/location 3/2.jpg"
     },
     {
         type: "👥 Población y 💃 Cultura",
-        title: "su población y cultura (activa el 🔊)",
+        title: "Es tierra de cantes de ida y vuelta. Escucha... (activa el 🔊)",
         clue: "https://www.youtube.com/embed/iywqEfwqYhQ?autoplay=1&mute=1&enablejsapi=1"
     },
     {
-        type: "🏞️ Paisaje (natural)",
-        title: "el paisaje del entorno",
+        type: "🏞️ Paisaje",
+        title: "El paisaje del entorno",
         clue: "clues/location 3/4.jpg"
     },
     {
         type: "⚠️ Riesgos",
-        title: "sus riesgos ambientales",
+        title: "Uno de los principales riesgos ambientales de la región es...",
         clue: "clues/location 3/5.jpg"
     }],
     [{
-        type: "🌎 Hemisferio",
-        title: "se encuentra en este hemisferio",
+        type: "🌎 Hemisferio y latitud",
+        title: "¿En qué hemisferio y latitud se sitúa el lugar a descubrir?",
         clue: "clues/location 4/1.jpg"
     },
     {
         type: "🌧 Clima",
-        title: "característica del clima en la zona...",
-        clue: "clues/location 4/2.jpg"
+        title: "Efectos del clima en la zona. Escucha... (activa el 🔊)",
+        clue: "clues/location 4/3.jpg"
     },
     {
-        type: "👥 Toponimia y Población",
-        title: "toponímia y población. Lee el siguiente texto y activa el 🔊",
+        type: "👥 Toponímia y Población",
+        title: "Un relato descriptivo (lee el siguiente texto y activa el 🔊)",
         clue: "https://www.youtube.com/embed/fRESy0env-U?autoplay=1&mute=1&enablejsapi=1"
     },
     {
-        type: "🌳 Recursos naturales y 💰 Economía",
-        title: "recursos naturales y economía",
-        clue: "clues/location 4/4.jpg"
+        type: "🌳 Recursos naturales y 💰 económicos",
+        title: "Los recursos naturales ayudan a mantener y generar calor",
+        clue: "clues/location 4/5.jpg"
     },
     {
-        type: "🏞️ Paisaje (natural)",
-        title: "El paisaje natural está conformado por ….",
-        clue: "clues/location 4/5.jpg"
+        type: "🏞️ Paisaje",
+        title: "El paisaje natural está conformado por tres elementos...",
+        clue: "clues/location 4/6.jpg"
+    },
+    {
+        type: "📌 Ubicación",
+        title: "Un reto para los marineros",
+        clue: "clues/location 4/2.jpg"
     }],
     [{
         type: "🌎 Hemisferio",
-        title: "🌎 ¿En que hemisferio se sitúa el lugar a descubrir?",
+        title: "¿En qué hemisferio se sitúa el lugar a descubrir?",
         clue: "clues/location 5/1.jpg"
     },
     {
         type: "🌧 Clima",
-        title: "El clima en la zona... (activa el 🔊)",
+        title: "El clima en la zona es... (activa el 🔊)",
         clue: "https://www.youtube.com/embed/xuAYjP3jcVs?autoplay=1&mute=1&enablejsapi=1"
     },
     {
-        type: "🏞️ Paisaje (natural)",
-        title: "¿Un paseo por el paisaje natural del entorno?",
+        type: "🐻 Fauna",
+        title: "Estos animales son casi domésticos en la zona...",
         clue: "clues/location 5/3.jpg"
+    },
+    {
+        type: "🏞️ Paisaje natural",
+        title: "¿Un paseo hacia el cabo entre los matorrales?",
+        clue: "clues/location 5/4.jpg"
     },
     {
         type: "👥 Población y 💃 Cultura",
         title: "Población y culturas",
-        clue: "clues/location 5/4.jpg"
+        clue: "clues/location 5/5.jpg"
     }]
 
 ];
