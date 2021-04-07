@@ -161,11 +161,12 @@
                                 </li>
                                 <li>
                                     Se darán una serie de pistas audiovisuales para cada lugar oculto. Cuando el grupo
-                                    resuelva la ubicación, el/la portavoz debe ubicarla en el mapa.
+                                    resuelva la ubicación, el/la portavoz debe localizarla en el mapa.
                                 </li>
                                 <li>
-                                    Cuando el/la portavoz haga clic en el mapa se enviará automáticamente la respuesta
-                                    (¡atención!). Una vez resuelta una ubicación no se podrá volver a intentar.
+                                    Cuando el/la portavoz haga clic en el mapa se enviará automáticamente la
+                                    respuesta. <strong>¡Atención!</strong>, una vez enviada una ubicación no se podrá
+                                    cambiar.
                                 </li>
                                 <li>
                                     Antes de terminar el juego habrá una última pregunta relativa al conjunto de
@@ -174,7 +175,7 @@
                                 <li>
                                     La puntuación se calcula en razón del error acumulado, que aumenta según pasa el
                                     tiempo de resolución y es proporcional al error de localización (distancia desde la
-                                    respuesta pinchada en el mapa hasta el punto de localización correcto) . Las
+                                    respuesta pinchada en el mapa hasta el punto de localización correcto). Las
                                     puntuaciones más altas son indicativas de un mayor error, y las más bajas, de mayor
                                     acierto.
                                 </li>
@@ -182,11 +183,11 @@
                             <h2>Sistema de puntuación:</h2>
                             <p>
                                 La puntuación final se calculará a partir de la siguiente fórmula:<br>
-                                Error de localización (km) * Tº empleado (s) * pregunta final (0.8 si se acierta si la
-                                última pregunta, 1 sino).
+                                Error de localización (km) * Tº empleado (s) * pregunta final (0.8 si se acierta, 1
+                                si no).
                             </p>
                             <h2>¿Listos para empezar?</h2>
-                            <p>Regístrate e introduce tu nombre de equipo</p>
+                            <p>Regístrate, introduce el nombre de equipo y de los componentes</p>
                             <div class="nav-item auth-invisible">
                                 <button
                                    id="qsLoginBtn"
@@ -209,7 +210,7 @@
                     <div class="col text-center">
                         <form id="registerName">
 
-                            <label for="teamName">Introduce el nombre de tu equipo</label>
+                            <label for="teamName">Introduce el nombre del equipo</label>
                             <input
                                type="text"
                                class="form-control"

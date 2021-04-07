@@ -99,7 +99,7 @@ const tests = [
     {
         type: "👥 Población y 💃 Cultura",
         title: "Es tierra de cantes de ida y vuelta. Escucha... (activa el 🔊)",
-        clue: "https://www.youtube.com/embed/iywqEfwqYhQ?autoplay=1&mute=1&enablejsapi=1"
+        clue: "https://www.youtube.com/embed/gCMkDUtV16Q?autoplay=1&mute=1&enablejsapi=1"
     },
     {
         type: "🏞️ Paisaje",
@@ -119,12 +119,12 @@ const tests = [
     {
         type: "🌧 Clima",
         title: "Efectos del clima en la zona. Escucha... (activa el 🔊)",
-        clue: "clues/location 4/3.jpg"
+        clue: "https://www.youtube.com/embed/Bw0jfmZ8k94?autoplay=1&mute=1&enablejsapi=1"
     },
     {
         type: "👥 Toponímia y Población",
         title: "Un relato descriptivo (lee el siguiente texto y activa el 🔊)",
-        clue: "https://www.youtube.com/embed/fRESy0env-U?autoplay=1&mute=1&enablejsapi=1"
+        clue: "https://www.youtube.com/embed/uB5uflsseQw?autoplay=1&mute=1&enablejsapi=1"
     },
     {
         type: "🌳 Recursos naturales y 💰 económicos",
@@ -149,7 +149,7 @@ const tests = [
     {
         type: "🌧 Clima",
         title: "El clima en la zona es... (activa el 🔊)",
-        clue: "https://www.youtube.com/embed/xuAYjP3jcVs?autoplay=1&mute=1&enablejsapi=1"
+        clue: "https://www.youtube.com/embed/0OybJ0mS5pw?autoplay=1&mute=1&enablejsapi=1"
     },
     {
         type: "🐻 Fauna",
@@ -437,20 +437,21 @@ const loadFinalResults = function(){
         ponderación (0.8 si se acierta si la última pregunta, 1 sino)
         </blockquote>
         <p>
-        Por tanto: Error acumulado (${accumulatedError}) x Tº empleado para la prueba (${parseInt(duration.asSeconds())}) x Factor de
+        Por tanto: Error de localización (${accumulatedError} km) x Tº empleado (${parseInt(duration.asSeconds())} s) x Factor de
         ponderación (${factor}):
         </p>
         <p class="big">
         ${(+parseFloat(parseInt(accumulatedError)) * parseInt(duration.asSeconds()) * factor).toFixed(2)}
         </p>
         <p>
-        Recordad, la entrega de premios será el ....
+        Recordad, la entrega de premios será el viernes 9 de Abril a las 23:00. Guarda el siguiente enlace...
         </p>
         <p>
         ¡Gracias por participar!, si tenéis ganas de seguir jugando:
         </p>
         <p class="text-center">
-        <a href="../" class="btn btn-primary">En la página principal encontraréis más juegos</a>
+        <a href="../" class="btn btn-primary">En la página principal encontraréis más juegos</a> |
+        Descargar respuestas (pendiente)
         </p>
     `;
 }
@@ -458,6 +459,7 @@ const loadFinalResults = function(){
 
 const validResponses = [
     "Magallanes",
+    "Magayanes",
     "Elcano",
     "La vuelta al mundo",
     "Circunvalación",
