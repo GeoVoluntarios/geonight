@@ -17,12 +17,12 @@ Aplicación desarrollada para la GeoNight organizada en colaboración con la Aso
 - [x] Pedir nombres de los miembros del equipo al principio
 - [x] Enviar respuestas al servidor
 - [x] Cambiar pregunta final -> Abierta y comparar similitud con respuestas válidas
-- [ ] Actualizar vídeos de pistas
+- [x] Actualizar vídeos de pistas
 - [ ] Mejorar UI:
   - [x] Arreglar Tamaño iframe
   - [x] Añadir links a imágenes para ver en grande
-  - [ ] Añadir flechas de navegación entre pistas
-- [ ] Mejorar instrucciones del principio (añadir screenshot de la interfaz)
+  - [ ] Añadir animación al poner ratón sobre la pista
+- [x] Mejorar instrucciones del principio (añadir screenshot de la interfaz)
 - [ ] Cambiar datos de auth0 con datos de Terra Incógnita
 
 Wishlist:
@@ -32,3 +32,4 @@ Wishlist:
 - [ ] Mostrar el leaderboard al final
 - [ ] Hacer responsive
 - [ ] Mejorar diseño para resolución de 1024x768
+- [ ] UI: Añadir flechas de navegación entre pistas
