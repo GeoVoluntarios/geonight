@@ -294,6 +294,7 @@ const showMap = () => {
     document.getElementById("locations").classList.add("hidden");
     document.getElementById("cluesDetails").classList.add("hidden");
     document.getElementById("locatePlace").classList.add("hidden");
+    document.querySelector(".card-flip").classList.add("hidden");
     document.getElementById("returnToClues").classList.remove("hidden");
     viewDivEl.classList.add("active");
     responseBoxEl.classList.remove("hidden");
@@ -310,6 +311,7 @@ const showClues = () => {
     document.getElementById("locations").classList.remove("hidden");
     document.getElementById("cluesDetails").classList.remove("hidden");
     document.getElementById("locatePlace").classList.remove("hidden");
+    document.querySelector(".card-flip").classList.remove("hidden");
     document.getElementById("returnToClues").classList.add("hidden");
     viewDivEl.classList.remove("active");
     responseBoxEl.classList.add("hidden");
