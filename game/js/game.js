@@ -446,9 +446,6 @@ const loadFinalResults = function(){
     ${(+parseFloat(parseInt(accumulatedError)) * parseInt(duration.asSeconds()) * factor).toFixed(2)}
     </p>
     <p>
-    Recordad, la entrega de premios será el viernes 9 de Abril a las 23:00. Guarda el siguiente enlace...
-    </p>
-    <p>
     ¡Gracias por participar!, si tenéis ganas de seguir jugando:
     </p>
     <p class="text-center">
