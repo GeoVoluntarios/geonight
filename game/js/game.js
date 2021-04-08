@@ -256,6 +256,10 @@ Array.from(clues).forEach(function(el) {
         if(activeClueActive){
             activeClueActive.classList.remove("active");
         }
+        let activeCard = document.querySelector(".card-flip.active")
+        if(activeCard){
+            activeCard.classList.remove("active");
+        }
 
 
         if(clue.indexOf("youtube.com") !== -1){
