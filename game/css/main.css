@@ -97,7 +97,7 @@ label {
 .card-flip iframe {
   display: none;
 }
-.card-flip:hover iframe {
+.card-flip.active iframe {
   display: block !important;
   margin: 0 auto;
   width: 70%;

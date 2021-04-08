@@ -100,84 +100,6 @@ h2,
 }
 
 /*
-Flip card
-*/
-.card-flip {
-  background: none;
-  border: none;
-  padding: 0;
-}
-.card-flip .card {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transition: transform 300ms;
-  transition-timing-function: linear;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
-.card-flip .card:first-of-type {
-  transform: rotateY(0deg);
-}
-.card-flip .card:last-of-type {
-  transform: rotateY(180deg);
-  position: absolute;
-  top: 0;
-  display: flex;
-}
-.card-flip:hover .card:first-of-type {
-  transform: rotateY(-180deg);
-}
-.card-flip:hover .card:last-of-type {
-  transform: rotateY(0deg);
-}
-
-.card-img,
-.card-img-top,
-.card-img-bottom {
-  min-width: 100%;
-  height: 28vh;
-
-  max-height: 188px;
-  background-size: cover;
-}
-.card-title {
-  background-color: #00000073;
-  width: 100%;
-  text-align: center;
-  padding: 0.75rem 1.25rem;
-}
-.card-img-overlay {
-  padding: 0;
-}
-h4,
-.h4 {
-  font-size: 1rem;
-}
-
-.card .card-text {
-  font-size: 0.85rem;
-}
-strong.title {
-  font-size: 1rem;
-}
-.card .btn-bar {
-  margin-top: 0.7rem;
-  display: inline-block;
-}
-.text-black {
-  color: black;
-}
-
-.card.bg-primary {
-  background-color: #fec605 !important;
-}
-.card,
-.card-img {
-  border-radius: 0;
-}
-
-/*
 SPONSORS
 */
 
@@ -467,10 +389,10 @@ Flip card
   top: 0;
   display: flex;
 }
-.card-flip:hover .card:first-of-type {
+.card-flip.active .card:first-of-type {
   transform: rotateY(-180deg);
 }
-.card-flip:hover .card:last-of-type {
+.card-flip.active .card:last-of-type {
   transform: rotateY(0deg);
 }
 .card-img,

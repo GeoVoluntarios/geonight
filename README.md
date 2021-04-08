@@ -25,6 +25,7 @@ Aplicación desarrollada para la GeoNight organizada en colaboración con la Aso
 - [x] Mejorar instrucciones del principio (añadir screenshot de la interfaz)
 - [x] Cambiar datos de auth0 con datos de Terra Incógnita
 - [ ] Descargar las respuestas
+- [ ] TOS
 
 Bugs:
 
@@ -32,6 +33,7 @@ Bugs:
 
 Wishlist:
 
+- [ ] UI: Flip al hacer clic
 - [ ] Grabar vídeo explicando cómo compartir con audio
 - [ ] Mostrar el menú de navegación de pistas por pasos y arriba // o añadir instrucciones al principio
 - [ ] Restringir para que sólo la app pueda ver las respuesta

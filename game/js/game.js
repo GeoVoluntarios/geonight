@@ -784,3 +784,12 @@ view.on("click", function(event) {
     }
 
 });
+
+document.querySelectorAll(".card-flip > .card").forEach(elem => {
+    elem.addEventListener('click', function(evt){
+        // debugger
+        if(evt.target.nodeName === 'DIV'){
+            document.querySelector(".card-flip").classList.toggle("active");
+        }
+    })
+})
