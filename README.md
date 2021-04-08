@@ -26,7 +26,7 @@ Aplicación desarrollada para la GeoNight organizada en colaboración con la Aso
 - [x] Cambiar datos de auth0 con datos de Terra Incógnita
 - [x] UI: Flip al hacer clic
 - [x] Acumulado no se muestra nada más registrate
-- [ ] Descargar las respuestas
+- [x] Descargar las respuestas
 - [ ] TOS
 
 Wishlist:
@@ -39,4 +39,4 @@ Wishlist:
 - [ ] Mejorar diseño para resolución de 1024x768
 - [ ] UI: Añadir flechas de navegación entre pistas
 - [ ] Comprobar si se ha guardado bien el resultado (comprobar si falla)
-- [ ] Lista con la gente que ha participado
+- [x] Lista con la gente que ha participado
