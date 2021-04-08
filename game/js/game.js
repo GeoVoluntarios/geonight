@@ -420,41 +420,42 @@ const loadFinalResults = function(){
     const accumulatedError = parseInt(localStorage.getItem('accumulatedError'))
     const teamName = localStorage.getItem('teamName');
     document.getElementById("finalPoints").innerHTML = `
-        <h1 style="font-size: 2rem;text-align: center;margin-bottom: 2rem;">
-        Enhorabuena equipo ${teamName},
-        ¡habéis terminado la partida!
-        </h1>
-        <iframe src="https://giphy.com/embed/l4q8cJzGdR9J8w3hS" width="" height="" frameborder="0" class="giphy-embed" allowfullscreen="" style="float: right;width: 290px;margin: 0px 0 1rem 1rem;"></iframe>
-        <p>En resumen:</p>
-        <ul>
-        <li>A la hora de localizar las ubicaciones habéis cometido un <strong>error acumulado de: ${(parseInt(accumulatedError))} km</strong></li>
-        <li>Habéis tardado: <strong>${parseInt(duration.asSeconds())} segundos</strong></li>
-        <li><strong>${factor === 0.8? 'Habéis': 'No habéis'}</strong> acertado la última pregunta</li>
-        </ul>
-        <p>
-        Recordemos la fórmula a aplicar:
-        </p>
-        <blockquote>
-        Penalización = Error acumulado (Distancia en KM) x Tº empleado para la prueba (en segundos) x Factor de
-        ponderación (0.8 si se acierta si la última pregunta, 1 sino)
-        </blockquote>
-        <p>
-        Por tanto: Error de localización (${accumulatedError} km) x Tº empleado (${parseInt(duration.asSeconds())} s) x Factor de
-        ponderación (${factor}):
-        </p>
-        <p class="big">
-        ${(+parseFloat(parseInt(accumulatedError)) * parseInt(duration.asSeconds()) * factor).toFixed(2)}
-        </p>
-        <p>
-        Recordad, la entrega de premios será el viernes 9 de Abril a las 23:00. Guarda el siguiente enlace...
-        </p>
-        <p>
-        ¡Gracias por participar!, si tenéis ganas de seguir jugando:
-        </p>
-        <p class="text-center">
-        <a href="../" class="btn btn-primary">En la página principal encontraréis más juegos</a> |
-        Descargar respuestas (pendiente)
-        </p>
+    <h1 style="font-size: 2rem;text-align: center;margin-bottom: 2rem;">
+    Enhorabuena equipo ${teamName},
+    ¡habéis terminado la partida!
+    </h1>
+    <iframe src="https://giphy.com/embed/l4q8cJzGdR9J8w3hS" width="" height="" frameborder="0" class="giphy-embed" allowfullscreen="" style="float: right;width: 290px;margin: 0px 0 1rem 1rem;"></iframe>
+    <p>En resumen:</p>
+    <ul>
+    <li>A la hora de localizar las ubicaciones habéis cometido un <strong>error acumulado de: ${(parseInt(accumulatedError))} km</strong></li>
+    <li>Habéis tardado: <strong>${parseInt(duration.asSeconds())} segundos</strong></li>
+    <li><strong>${factor === 0.8? 'Habéis': 'No habéis'}</strong> acertado la última pregunta</li>
+    </ul>
+    <p>
+    Recordemos la fórmula a aplicar:
+    </p>
+    <blockquote>
+    Penalización = Error acumulado (Distancia en KM) x Tº empleado para la prueba (en segundos) x Factor de
+    ponderación (0.8 si se acierta si la última pregunta, 1 sino)
+    </blockquote>
+    <p>
+    Por tanto: Error de localización (${accumulatedError} km) x Tº empleado (${parseInt(duration.asSeconds())} s) x Factor de
+    ponderación (${factor}):
+    </p>
+    <p class="big">
+    ${(+parseFloat(parseInt(accumulatedError)) * parseInt(duration.asSeconds()) * factor).toFixed(2)}
+    </p>
+    <p>
+    Recordad, la entrega de premios será el viernes 9 de Abril a las 23:00. Guarda el siguiente enlace...
+    </p>
+    <p>
+    ¡Gracias por participar!, si tenéis ganas de seguir jugando:
+    </p>
+    <p class="text-center">
+    <a href="../" class="btn btn-primary">En la página principal encontraréis más juegos</a> |
+    <button class="btn btn-primary" onclick="download_responses()">Descargar respuestas</button> |
+    <a href="https://arcg.is/0rvmnq" class="btn btn-primary">Comprobar si vuestros datos han sido registrados</a>
+    </p>
     `;
 }
 
@@ -567,7 +568,7 @@ const selectNextLocation = function(){
 };
 
 const hideLocations = function(){
-    hide("#clueText, #activeClue, #locations, #cluesDetails, #viewDiv, #responseBox, #team-data");
+    hide("#clueText, #activeClue, #locations, #cluesDetails, #viewDiv, #responseBox, #team-data, .card-flip");
 }
 
 const showLastQuestion = function(cond){
@@ -686,10 +687,10 @@ view.on("click", function(event) {
         const evtProjected = project(response.geometry, {wkid:event.mapPoint.spatialReference.wkid})
         const promise = distance(evtProjected, event.mapPoint, "kilometers")
         promise.then(function(res){
-            const txtResponse = `
-            <br>Respuesta a la pregunta ${activeClue}: <br>
-            <strong>Distancia a ${response.attributes.Name} -> ${res}km</strong>.<br>
-            `;
+            // const txtResponse = `
+            // <br>Respuesta a la pregunta ${activeClue}: <br>
+            // <strong>Distancia a ${response.attributes.Name} -> ${res}km</strong>.<br>
+            // `;
 
             locationResponses[activeClue] = event.mapPoint.toJSON();
 
@@ -715,7 +716,7 @@ view.on("click", function(event) {
 
 
 
-            console.log(txtResponse);
+            // console.log(txtResponse);
             // document.getElementById('response').innerHTML = txtResponse;
 
             // map.add(layer)
@@ -796,3 +797,17 @@ document.querySelectorAll(".card-flip > .card").forEach(elem => {
         }
     })
 })
+
+window.download_responses = function(){
+    let textToSave = {};
+    textToSave = Object.assign(textToSave, localStorage)
+    delete textToSave.user
+    textToSave = JSON.stringify(textToSave, null, 2);
+    var hiddenElement = document.createElement('a');
+
+    hiddenElement.href = 'data:attachment/text,' + encodeURI(textToSave);
+    hiddenElement.target = '_blank';
+    const filename = localStorage.getItem('teamName').replace(/[^a-z0-9]/gi, '_').toLowerCase();;
+    hiddenElement.download = `${filename}_terra_incognita_respuestas.json`;
+    hiddenElement.click();
+}
