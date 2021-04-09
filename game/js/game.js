@@ -599,7 +599,7 @@ const selectNextLocation = function(){
 };
 
 const hideLocations = function(){
-    hide("#clueText, #activeClue, #locations, #cluesDetails, #viewDiv, #responseBox, #team-data, .card-flip");
+    hide("#clueText, #activeClue, #locations, #cluesDetails, #viewDiv, #responseBox, .card-flip");
 }
 
 const showLastQuestion = function(cond){
