@@ -326,11 +326,12 @@
                                    class="hidden"
                                 >
                                     <a
-                                       href=""
-                                       class="img"
+                                       href="#"
+                                       class="img modal-hover-opacity"
                                        target="_blank"
+                                       onclick="return false"
                                     >
-                                        <img>
+                                        <img id="myModalImg">
                                     </a>
                                     <div class="iframe-container">
                                         <iframe
@@ -518,6 +519,19 @@
 
             </div>
         </div>
+    </div>
+
+    <div
+       class="modal"
+       id="myModal"
+    ><span
+           class="close"
+           onclick="document.getElementById('myModal').style.display='none'"
+        >&times;</span><img
+           class="modal-content"
+           id="img01"
+        />
+        <div id="caption"></div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
