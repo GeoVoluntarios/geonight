@@ -27,11 +27,17 @@ Aplicación desarrollada para la GeoNight organizada en colaboración con la Aso
 - [x] UI: Flip al hacer clic
 - [x] Acumulado no se muestra nada más registrate
 - [x] Descargar las respuestas
+- [x] Añadir zoom a imagen
+- [ ] Añadir [catch a applyEdits](https://developers.arcgis.com/javascript/latest/sample-code/editing-applyedits/) por si falla al guardar
 - [ ] TOS
 
 Wishlist:
 
+- [ ] Refactorizar código JS
+- [ ] Pasar a Web Components (¿con Jorge del Casar?)
+- [ ] [Limpiar CSS](https://www.keycdn.com/blog/remove-unused-css) (o rehacerlo ¿[con NucliWeb](https://twitter.com/nucliweb)?)
 - [ ] Grabar vídeo explicando cómo compartir con audio
+- [ ] [Borrar cookies](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/remove) para evitar [error 403 auth0](https://youtu.be/U_KdvBMzsTk)
 - [ ] Mostrar el menú de navegación de pistas por pasos y arriba // o añadir instrucciones al principio
 - [ ] Restringir para que sólo la app pueda ver las respuesta
 - [ ] Mostrar el leaderboard al final
