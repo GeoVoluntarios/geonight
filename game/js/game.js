@@ -643,7 +643,7 @@ map.add(graphicsLayer);
 
 const layer = new FeatureLayer({
     //2021 featureLayer
-    url: "https://services.arcgis.com/Q6ZFRRvMTlsTTFuP/arcgis/rest/services/Kayak_mundial/FeatureServer",
+    //url: "https://services.arcgis.com/Q6ZFRRvMTlsTTFuP/arcgis/rest/services/Kayak_mundial/FeatureServer",
     //2022 featureLayer
     url: "https://services3.arcgis.com/yum1Vj4yy66uf4G0/arcgis/rest/services/Kayak-mundial/FeatureServer",
 
