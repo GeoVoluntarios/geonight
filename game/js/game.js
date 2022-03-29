@@ -644,8 +644,14 @@ const loadFinalResults = function(){
     `;
 }
 
-
 const validResponses = [
+    "Cambio climático",
+    "Riesgos",
+    "Calentamiento global",
+    "Elevación",
+    "Temperatura"
+];
+/*[
     "Magallanes",
     "Magayanes",
     "Elcano",
@@ -656,7 +662,7 @@ const validResponses = [
     "Circunvalación",
     "Circunavegación",
     "Expedición"
-];
+];*/
 const inputTxt = document.getElementById("inputTxt");
 
 //Send last question
@@ -798,8 +804,10 @@ map.add(graphicsLayer);
 const layer = new FeatureLayer({
     //2021 featureLayer
     //url: "https://services.arcgis.com/Q6ZFRRvMTlsTTFuP/arcgis/rest/services/Kayak_mundial/FeatureServer",
-    //2022 featureLayer
-    url: "https://services3.arcgis.com/yum1Vj4yy66uf4G0/arcgis/rest/services/Kayak-mundial/FeatureServer",
+    //2022 featureLayer (Marta)
+    //url: "https://services3.arcgis.com/yum1Vj4yy66uf4G0/arcgis/rest/services/Kayak-mundial/FeatureServer",
+    //2022 featureLayer (Raul)
+    url: "https://services.arcgis.com/Q6ZFRRvMTlsTTFuP/ArcGIS/rest/services/Kayak_mundial_2022/FeatureServer"
 
 });
 
