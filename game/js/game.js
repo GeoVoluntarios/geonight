@@ -1,11 +1,12 @@
-import ArcGISMap from "https://js.arcgis.com/4.18/@arcgis/core/Map.js";
-// import MapView from "https://js.arcgis.com/4.18/@arcgis/core/views/MapView.js";
-import SceneView from "https://js.arcgis.com/4.18/@arcgis/core/views/SceneView.js";
-import FeatureLayer from "https://js.arcgis.com/4.18/@arcgis/core/layers/FeatureLayer.js";
-import esriConfig from "https://js.arcgis.com/4.18/@arcgis/core/config.js";
-import {distance} from "https://js.arcgis.com/4.18/@arcgis/core/geometry/geometryEngineAsync.js";
-import {project} from "https://js.arcgis.com/4.18/@arcgis/core/geometry/projection.js";
-import GraphicsLayer from "https://js.arcgis.com/4.18/@arcgis/core/layers/GraphicsLayer.js";
+import ArcGISMap from "https://js.arcgis.com/4.23/@arcgis/core/Map.js";
+// import MapView from "https://js.arcgis.com/4.23/@arcgis/core/views/MapView.js";
+import SceneView from "https://js.arcgis.com/4.23/@arcgis/core/views/SceneView.js";
+import FeatureLayer from "https://js.arcgis.com/4.23/@arcgis/core/layers/FeatureLayer.js";
+import Polyline from "https://js.arcgis.com/4.23/@arcgis/core/geometry/Polyline.js";
+import esriConfig from "https://js.arcgis.com/4.23/@arcgis/core/config.js";
+import {distance, geodesicLength, nearestVertex} from "https://js.arcgis.com/4.23/@arcgis/core/geometry/geometryEngineAsync.js";
+import {project} from "https://js.arcgis.com/4.23/@arcgis/core/geometry/projection.js";
+import GraphicsLayer from "https://js.arcgis.com/4.23/@arcgis/core/layers/GraphicsLayer.js";
 
 const hide = function(selectors){
     document.querySelectorAll(selectors).forEach(elem => {
@@ -795,7 +796,12 @@ const view = new SceneView({
     container: "viewDiv",
     map: map,
     center: [-3,40],
-    zoom: 3
+    zoom: 3,
+    environment: {
+        lighting: {
+            type: "virtual"    // autocasts as new VirtualLighting()
+        }
+    }
 });
 
 const graphicsLayer = new GraphicsLayer();
@@ -881,14 +887,45 @@ view.on("click", function(event) {
 
     if(event.mapPoint){
         //Ensure no click on space
-        const evtProjected = project(response.geometry, {wkid:event.mapPoint.spatialReference.wkid})
-        const promise = distance(evtProjected, event.mapPoint, "kilometers")
+        const evtProjected = project(response.geometry, {wkid:event.mapPoint.spatialReference.wkid});
+        
+        // const evtProjected = project(response.geometry, {wkid: 4326});
+        // const mapPoint = project(event.mapPoint, {wkid: 4326});  
+        // const {
+        //     coordinate,
+        //     distance
+        //    } = nearestVertex(evtProjected, mapPoint);
+        // console.log(`coordinate: ${coordinate},
+        // distance: ${distance}`)
+          
+        // TODO: first element shouldn't be the centroid but the nearest vertex
+        const paths = [
+              [
+                [
+                    response.geometry.centroid.x,
+                    response.geometry.centroid.y,
+                ],
+                [
+                  event.mapPoint.x,
+                  event.mapPoint.y
+                ]
+              ]
+            ];
+
+        let line = new Polyline({
+            hasZ: false,
+            hasM: true,
+            paths: paths,
+            spatialReference: { wkid: 102100 }
+        });
+        //const promise = distance(evtProjected, event.mapPoint, "kilometers")
+        const promise = geodesicLength(line, "kilometers");
+        
         promise.then(function(res){
             // const txtResponse = `
             // <br>Respuesta a la pregunta ${activeClue}: <br>
             // <strong>Distancia a ${response.attributes.Name} -> ${res}km</strong>.<br>
             // `;
-
             locationResponses[activeClue] = event.mapPoint.toJSON();
 
             // Save responses to local storage
