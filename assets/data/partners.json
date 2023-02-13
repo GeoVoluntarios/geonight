@@ -1,5 +1,9 @@
 {
   "all": [{
+      "id": "esri-inc",
+      "image": "assets/imgs/Esri-logo.png",
+      "language": ["English"]
+    }, {
       "id": "ign-es",
       "image": "assets/imgs/logo_instituito_geografico_nacional-670x670_tr.png",
       "language": ["Español"]

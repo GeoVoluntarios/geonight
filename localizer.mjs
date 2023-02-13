@@ -112,6 +112,12 @@ try {
             updateDataFile('partners.json',
               ['name', 'html']);
             break;
+
+          case 'assets/data/media.json':
+            /* Update games.json files */
+            updateDataFile('media.json',
+              ['name', 'html']);
+            break;
         }
 
       }

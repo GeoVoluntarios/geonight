@@ -51,15 +51,32 @@ const translateSite = async () => {
       fields: ['title', 'description', 'url', 'author']
     });
 
+    load_listing(lngStr, i18next.language, {
+      type: "media",
+      targetEl: "media-appearances",
+      template: "listing-template",
+      fields: ['name', 'html']
+    }).then(success => {
+      if (success) {
+        console.log("Partner grid loaded successfully")
+        // If no media appearances -> hide section
+        if (document.querySelectorAll("#media-appearances > div").length === 0) {
+          document.querySelectorAll('[data-i18n="media-appearences"]').forEach(el => el.style.display = "none");
+        }
+      } else {
+        console.error("Partner grid could not be initialized")
+      }
+    });
+
 
     load_listing(lngStr, i18next.language, {
       type: "partners",
       targetEl: "partners",
-      template: "partners-template",
+      template: "listing-template",
       fields: ['name', 'html']
     }).then(success => {
       if (success) {
-        console.log("Success")
+        console.log("Partners loaded successfully")
         startSponsorGrid();
       } else {
         console.error("Partner grid could not be initialized")

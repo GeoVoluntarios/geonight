@@ -8,6 +8,7 @@
   "watchFiles": [
     "index.html",
     "assets/data/games.json",
-    "assets/data/partners.json"
+    "assets/data/partners.json",
+    "assets/data/media.json"
   ]
 }
