@@ -118,6 +118,12 @@ try {
             updateDataFile('media.json',
               ['name', 'html']);
             break;
+
+          case 'assets/data/organizers.json':
+            /* Update games.json files */
+            updateDataFile('organizers.json',
+              ['name', 'html']);
+            break;
         }
 
       }

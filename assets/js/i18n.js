@@ -68,6 +68,19 @@ const translateSite = async () => {
       }
     });
 
+    load_listing(lngStr, i18next.language, {
+      type: "organizers",
+      targetEl: "organizers",
+      template: "listing-template",
+      fields: ['name', 'html']
+    }).then(success => {
+      if (success) {
+        console.log("Organizers grid loaded successfully")
+      } else {
+        console.error("Organizers grid could not be initialized")
+      }
+    });
+
 
     load_listing(lngStr, i18next.language, {
       type: "partners",
