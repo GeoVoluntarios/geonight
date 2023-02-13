@@ -1,7 +1,7 @@
 import i18next from 'https://cdn.jsdelivr.net/npm/i18next@22.4.9/+esm'
 
 
-let config = await fetch("../../config.json");
+let config = await fetch("../config.json");
 config = await config.json();
 window._CONFIG = config;
 
