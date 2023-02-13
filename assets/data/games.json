@@ -1,5 +1,5 @@
 {
-  "games": [{
+  "all": [{
       "id": "didactalia",
       "language": ["English", "Español", "Português", "Català", "Euskara", "Galego", "Français", "Deutsch", "Italiano"],
       "type": "Web",

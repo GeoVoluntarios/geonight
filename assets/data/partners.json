@@ -1,0 +1,129 @@
+{
+  "all": [{
+      "id": "ign-es",
+      "image": "assets/imgs/logo_instituito_geografico_nacional-670x670_tr.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "sge",
+      "image": "assets/imgs/logo_sociedad_geografica_espanyola.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "didactalia",
+      "image": "assets/imgs/logo_DidactaliaRojobarras-768x106.png",
+      "language": ["Español", "English"]
+    },
+    {
+      "id": "geovoluntarios",
+      "image": "assets/imgs/logo_geovoluntarios.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "geoplaneta",
+      "image": "assets/imgs/logo_GEOPLANETA.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "lunwerg",
+      "image": "assets/imgs/logo_LUNWERG-POSITIVO.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "mapasycia",
+      "image": "assets/imgs/logo_libreria_mapasycia.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "esri-es",
+      "image": "assets/imgs/logo_esri_espania.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "agron",
+      "image": "assets/imgs/logo_CMYK-color-tagline-768x346.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "nosolosig",
+      "image": "assets/imgs/logo_nosolosig.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "geografia-en-red",
+      "image": "assets/imgs/logo-geografia-en-red.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "gis-and-beers",
+      "image": "assets/imgs/logo_gis_and_beers.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "sig-de-letras",
+      "image": "assets/imgs/logo_sigdeletras.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "geoinnova",
+      "image": "assets/imgs/logo_geoinnova.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "play-and-go",
+      "image": "assets/imgs/logo_play_and_go_ experience.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "geografia-infinita",
+      "image": "assets/imgs/logo_geografia_Infinita.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "mapping-gis",
+      "image": "assets/imgs/logo_mappinggis.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "igear",
+      "image": "assets/imgs/logo_IGEAR_horizontal.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "tyc-gis",
+      "image": "assets/imgs/logo-tycgis.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "geopois",
+      "image": "assets/imgs/logo_geopois.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "colegio-geografos-es",
+      "image": "assets/imgs/logo_colegio_geografos.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "unigis",
+      "image": "assets/imgs/logo_unigis.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "abtemas",
+      "image": "assets/imgs/logo_abtemas.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "tysgal",
+      "image": "assets/imgs/logo-tysgal.png",
+      "language": ["Español"]
+    },
+    {
+      "id": "idee-es",
+      "image": "assets/imgs/logo_idee_negro.png",
+      "language": ["Español"]
+    }
+
+  ]
+}

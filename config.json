@@ -4,5 +4,10 @@
   "langs": [
     ["en-US", "English"],
     ["es-ES", "Español"]
+  ],
+  "watchFiles": [
+    "index.html",
+    "assets/data/games.json",
+    "assets/data/partners.json"
   ]
 }

@@ -42,7 +42,31 @@ const translateSite = async () => {
     initPage();
 
     const lngStr = _CONFIG.langs.find(el => el[0] === i18next.language)[1];
-    load_games(lngStr, LANGS.indexOf(i18next.language), i18next.language)
+    // load_games(lngStr, LANGS.indexOf(i18next.language), i18next.language)
+
+    load_listing(lngStr, i18next.language, {
+      type: "games",
+      targetEl: "games",
+      template: "game-template",
+      fields: ['title', 'description', 'url', 'author']
+    });
+
+
+    load_listing(lngStr, i18next.language, {
+      type: "partners",
+      targetEl: "partners",
+      template: "partners-template",
+      fields: ['name', 'html']
+    }).then(success => {
+      if (success) {
+        console.log("Success")
+        startSponsorGrid();
+      } else {
+        console.error("Partner grid could not be initialized")
+      }
+    });
+
+
   } catch (err) {
     throw err;
   }
