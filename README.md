@@ -2,6 +2,26 @@
 
 Aplicación desarrollada para la GeoNight organizada en colaboración con la Asociación Española de Geografía (AGE).
 
+# Localization
+
+Locations are stored in folder specified in config.json (`localePath`).
+
+Add data-i18n="UNIQUE-ID".
+
+## Update translations
+
+1. Run the following command: `npm run update:po`
+2. Go to https://poeditor.com/projects/import?id=594851
+3. And upload locale/en-us/translation.po
+4. Add the translations
+5. Download each language (except english)
+6. Move to the right folder
+7. Convert po files to i18n: `npm run i18n`
+
+## Change UI language
+
+Use `?lng=es`
+
 # Terra Incógnita: Tareas pendientes
 
 - [x] Embeber las pistas del juego

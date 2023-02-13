@@ -1,0 +1,570 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: GeoNight\n"
+"Language: es\n"
+
+#: 
+msgid "event-title"
+msgstr "La noche de la Geografía"
+
+#: 
+#, fuzzy
+msgid "event-date"
+msgstr "31 de Marzo - 1 de Abril 2022"
+
+#: 
+msgid "promo-text"
+msgstr "Más de <a href=\"#sobre-la-geonight\" class=\"yellow js-scroll-trigger\">200 eventos simultáneos</a> para disfrutar de la geografía en 40 países de 5 continentes"
+
+#: 
+msgid "game-name"
+msgstr "Juego-Concurso Terra Incógnita"
+
+#: 
+msgid "contest"
+msgstr "Concurso"
+
+#: 
+msgid "play"
+msgstr "Juega"
+
+#: 
+msgid "about-us"
+msgstr "Sobre esta iniciativa"
+
+#: 
+msgid "piaget-quote"
+msgstr "Los niños y niñas no juegan para aprender, aprenden porque juegan."
+
+#: 
+msgid "jean-piaget"
+msgstr "Jean Piaget"
+
+#: 
+msgid "intro-paragraph-1"
+msgstr "Entre los días <strong>31 de Marzo y 1 de Abril</strong> de 2022 se organizarán sesiones de juego grupales (de hasta 10 personas) de <strong>una hora de duración entre las 17 y las 20 (CET) </strong>."
+
+#: 
+msgid "intro-paragraph-2"
+msgstr "<strong>De forma colectiva cada grupo tendrá que desvelar la identidad y localización de una serie de lugares ubicados en distintos puntos del mundo</strong>. Para descubrirlos, se darán pistas de contenido geográfico (características del medio físico y del medio humano, potencialidades, riesgos, problemas ambientales, etc.)."
+
+#: 
+msgid "intro-paragraph-3"
+msgstr "Los grupos ganadores recibirán un conjunto de obsequios vinculados a la Geografía como premio."
+
+#: 
+msgid "subscribe-for-free"
+msgstr "Inscríbete gratuitamente"
+
+#: 
+msgid "contest-rules"
+msgstr "Bases del concurso"
+
+#: 
+msgid "play-paragraph"
+msgstr "Además de con el concurso, <strong class=\"yellow\">puedes seguir poniendo a prueba tus conocimientos en Geografía</strong> con los siguientes juegos."
+
+#: 
+msgid "missing-a-game"
+msgstr "¿Conoces algún juego que no esté listado aquí?, por favor escríbenos a info@geovoluntarios.org."
+
+#: 
+msgid "about-the-initiative"
+msgstr "<h2>Sobre esta iniciativa</h2> <p> La <a href=\"https://es.wikipedia.org/wiki/Geograf%C3%ADa\">Geografía</a> es la ciencia apasionante que mueve el mundo y anecdóticamente bastante desconocida por la mayoría de las personas. <strong class=\"bg-yellow\">Si paras a cualquiera por la calle y le preguntas: \"¿sabes <a href=\"https://www.age-geografia.es/site/somos-geografs/\"\">qué puede hacer una persona titulada en Geografía</a>?\" , habrá pocas que sepan decir algo más que: leer mapas, nombrar capitales, ríos o cosas parecidas.</strong> </p> <p> Las/os profesionales en Geografía están capacitados/as para mucho más, como: saber cómo <a href=\"https://es.wikipedia.org/wiki/Planificaci%C3%B3n_Territorial\" >ordenar el territorio</a>, combatir el cambio climático y sus consecuencias, luchar contra los riesgos naturales y tecnológicos, <a href=\"https://es.wikipedia.org/wiki/Geomarketing\">diseñar estrategias de geomarketing</a>, utilizar herramientas de <a href=\"https://es.wikipedia.org/wiki/Teledetecci%C3%B3n\">teledetección</a> de última generación, encontrar patrones y relaciones entre problemas de humanos y naturales a través del <a href=\"https://es.wikipedia.org/wiki/An%C3%A1lisis_espacial\" >análisis espacial</a>, convirtiéndoles en perfectos aliados para ayudar a lograr los <a href=\"https://www.un.org/sustainabledevelopment/es/objetivos-de-desarrollo-sostenible/\" >Objetivos de Desarrollo Sostenible</a>, y mucho más. </p> <p> Con el objetivo de poner en relieve la geografía y a los/as profesionales de este campo, se celebra <strong class=\"bg-yellow\">La \"Noche de la Geografía\" (<a href=\"https://www.geonight.net/\">geonight.net</a>) una iniciativa internacional en la que una tarde o noche al año <a href=\"https://www.geonight.net/geonight-2021-events-map/\">se organizan eventos simultáneamente en todo el mundo</a></strong>. </p> <p> De esta forma se <strong class=\"bg-yellow\">pretende que cualquier persona tenga la oportunidad de familiarizarse con el enfoque de la disciplina geográfica, su labor de investigación y su utilidad como ciencia aplicada para resolver los grandes retos a los que se enfrenta el planeta</strong>. </p> <p> Concretamente <strong class=\"bg-yellow\">esta página que estás visitando es una <a href=\"https://www.age-geografia.es/site/juega-con-la-age-en-la-noche-de-la-geografia/\">iniciativa lúdica puesta en marcha por la Asociación Española de Geografía</a> en colaboración con otras entidades</strong> para difundir los contenidos de la Geografía, así como fomentar la conexión entre el colectivo de geógrafos/as y aficionados/as a la Geografía de distintas partes del mundo. </p> <p> El juego-concurso Terra Incógnita ha sido creado por la AGE y la Red TransUMAntes de la UMA, y desarrollado desde la comunidad de GeoDevelopers. </p>"
+
+#: 
+msgid "media-appearences"
+msgstr "Apariciones en medios"
+
+#: 
+msgid "media-appearences-rne"
+msgstr ""
+
+#: 
+msgid "media-onda-cero"
+msgstr ""
+
+#: 
+msgid "organized-by"
+msgstr "Organizan"
+
+#: 
+msgid "organized-by-age"
+msgstr "<h4>Asociación Española de Geografía</h4> <p> La <a href=\"https://www.age-geografia.es/site/\">Asociación Española de Geografía</a> es una agrupación de profesionales de la geografía cuya finalidad principal es fomentar y desarrollar la ciencia geográfica española y sus aplicaciones y difundir y dar a conocer los conocimientos geográficos en la sociedad. Desde que se constituyó en 1975, la actuación de la AGE se ha centrado en promover reuniones científicas, coordinar la actuación de la geografía española ante la sociedad y colaborar con otras asociaciones geográficas tanto nacionales como internacionales. Actualmente la AGE agrupa unas 1.090 personas vinculadas con la geografía a través sobre todo de la docencia, la investigación y el ejercicio libre de la profesión de geógrafo/a. Entre las actividades de la AGE destaca la celebración cada dos años de los Congresos generales, de los que son sede los Departamentos de Geografía de las universidades españolas. En los años alternos, la Asociación organiza jornadas de difusión de la geografía, con objeto de acercarla a la sociedad y dar a conocer sus propuestas en asuntos de actualidad. Los/as asociados/as de la AGE reciben una completa información sobre la celebración y resultado de todas las actividades y obtienen ventajas económicas en la participación. </p> <p> Esta iniciativa la organiza a través de su <a href=\"https://www.age-geografia.es/site/geovoluntariado-digital/\">Programa de GeoVoluntariado</a>.</p>\""
+
+#: 
+msgid "organized-by-geodevelopers"
+msgstr "<h4>GeoDevelopers</h4> <p> <a href=\\\"https://www.geodevelopers.org/\\\"> GeoDevelopers </a> es una comunidad de personas que desde 2014 están intercambiando conocimientos sobre el desarrollo de aplicaciones usando datos georeferenciados y mapas, visualización de datos, análisis espacial, etc. </p> <p> En el <a href=\\\"https://www.youtube.com/channel/UC5Kegds6aV88wjdAhqQ5Wsg\\\">canal de Youtube</a> se pueden encontrar las charlas organizadas hasta la fecha, y usando el sistema de mensajería <a href=\\\"https://discord.gg/8pXkBPkvd2\\\">Discord</a> puedes chatear con ellos. </p> <div class=\\\"iframe\\\"> <div class=\\\"iframe\\\"> <iframe width=\\\"320\\\" height=\\\"180\\\" src=\\\"https://www.youtube.com/embed/_vZT9yM0R6Q\\\" title=\\\"YouTube video player\\\" allow=\\\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\\\" allowfullscreen ></iframe> </div> </div>"
+
+#: 
+msgid "partners"
+msgstr "Colaboran"
+
+#: 
+msgid "partners-ign"
+msgstr ""
+
+#: 
+msgid "partners-sge"
+msgstr ""
+
+#: 
+msgid "partners-didactalia"
+msgstr ""
+
+#: 
+msgid "partners-geovoluntarios"
+msgstr ""
+
+#: 
+msgid "partners-geoplaneta"
+msgstr ""
+
+#: 
+msgid "partners-lunwerg"
+msgstr ""
+
+#: 
+msgid "partners-mapas-y-cia"
+msgstr ""
+
+#: 
+msgid "partners-esri"
+msgstr ""
+
+#: 
+msgid "partners-agron"
+msgstr ""
+
+#: 
+msgid "partners-nosolosig"
+msgstr ""
+
+#: 
+msgid "geogragia-en-red"
+msgstr ""
+
+#: 
+msgid "partners-gis-and-beers"
+msgstr ""
+
+#: 
+msgid "partners-sig-de-letras"
+msgstr ""
+
+#: 
+msgid "partners-geoinnova"
+msgstr ""
+
+#: 
+msgid "partners-play-and-go"
+msgstr ""
+
+#: 
+msgid "partners-geogragia-infinita"
+msgstr ""
+
+#: 
+msgid "partners-mapping-gis"
+msgstr ""
+
+#: 
+msgid "partners-igear"
+msgstr ""
+
+#: 
+msgid "partners-tyc-gis"
+msgstr ""
+
+#: 
+msgid "partners-geopois"
+msgstr ""
+
+#: 
+msgid "partners-colegio-geografos"
+msgstr ""
+
+#: 
+msgid "partners-unigis"
+msgstr ""
+
+#: 
+msgid "partners-abtemas"
+msgstr ""
+
+#: 
+msgid "partners-tysgal"
+msgstr ""
+
+#: 
+msgid "partners-idee"
+msgstr ""
+
+#: 
+msgid "join-partners"
+msgstr ""
+
+#: 
+msgid "contest-rules-title"
+msgstr ""
+
+#: 
+msgid "contest-rules-details"
+msgstr ""
+
+#: 
+msgid "close-rules"
+msgstr ""
+
+#: 
+msgid "footer-text"
+msgstr ""
+
+#: 
+msgid "game-author"
+msgstr "Autor"
+
+#: 
+msgid "game-open"
+msgstr "Abrir"
+
+#: 
+msgid "game-didactalia-title"
+msgstr ""
+
+#: 
+msgid "game-didactalia-description"
+msgstr "Más de 500 juegos con mapas físicos, políticos, de gentilicios, ambientales, históricos, ..."
+
+#: 
+msgid "game-didactalia-url"
+msgstr ""
+
+#: 
+msgid "game-didactalia-author"
+msgstr ""
+
+#: 
+msgid "game-geosapiens-web-title"
+msgstr ""
+
+#: 
+msgid "game-geosapiens-web-description"
+msgstr ""
+
+#: 
+msgid "game-geosapiens-web-url"
+msgstr ""
+
+#: 
+msgid "game-geosapiens-web-author"
+msgstr ""
+
+#: 
+msgid "game-geosapiens-app-title"
+msgstr ""
+
+#: 
+msgid "game-geosapiens-app-description"
+msgstr ""
+
+#: 
+msgid "game-geosapiens-app-url"
+msgstr ""
+
+#: 
+msgid "game-geosapiens-app-author"
+msgstr ""
+
+#: 
+msgid "game-escape-room-ign-title"
+msgstr ""
+
+#: 
+msgid "game-escape-room-ign-description"
+msgstr ""
+
+#: 
+msgid "game-escape-room-ign-url"
+msgstr ""
+
+#: 
+msgid "game-escape-room-ign-author"
+msgstr ""
+
+#: 
+msgid "game-geography-games-ign-title"
+msgstr ""
+
+#: 
+msgid "game-geography-games-ign-description"
+msgstr ""
+
+#: 
+msgid "game-geography-games-ign-url"
+msgstr ""
+
+#: 
+msgid "game-geography-games-ign-author"
+msgstr ""
+
+#: 
+msgid "game-old-cartography-ign-title"
+msgstr ""
+
+#: 
+msgid "game-old-cartography-ign-description"
+msgstr ""
+
+#: 
+msgid "game-old-cartography-ign-url"
+msgstr ""
+
+#: 
+msgid "game-old-cartography-ign-author"
+msgstr ""
+
+#: 
+msgid "game-appangea-title"
+msgstr ""
+
+#: 
+msgid "game-appangea-description"
+msgstr ""
+
+#: 
+msgid "game-appangea-url"
+msgstr ""
+
+#: 
+msgid "game-appangea-author"
+msgstr ""
+
+#: 
+msgid "game-thinkmaps-puzzle-title"
+msgstr ""
+
+#: 
+msgid "game-thinkmaps-puzzle-description"
+msgstr ""
+
+#: 
+msgid "game-thinkmaps-puzzle-url"
+msgstr ""
+
+#: 
+msgid "game-thinkmaps-puzzle-author"
+msgstr ""
+
+#: 
+msgid "game-name-that-landmark-title"
+msgstr ""
+
+#: 
+msgid "game-name-that-landmark-description"
+msgstr ""
+
+#: 
+msgid "game-name-that-landmark-url"
+msgstr ""
+
+#: 
+msgid "game-name-that-landmark-author"
+msgstr ""
+
+#: 
+msgid "game-geojigsaw-esri-title"
+msgstr ""
+
+#: 
+msgid "game-geojigsaw-esri-description"
+msgstr ""
+
+#: 
+msgid "game-geojigsaw-esri-url"
+msgstr ""
+
+#: 
+msgid "game-geojigsaw-esri-author"
+msgstr ""
+
+#: 
+msgid "game-mappuzzle-title"
+msgstr ""
+
+#: 
+msgid "game-mappuzzle-description"
+msgstr ""
+
+#: 
+msgid "game-mappuzzle-url"
+msgstr ""
+
+#: 
+msgid "game-mappuzzle-author"
+msgstr ""
+
+#: 
+msgid "game-ideex-explora-title"
+msgstr ""
+
+#: 
+msgid "game-ideex-explora-description"
+msgstr ""
+
+#: 
+msgid "game-ideex-explora-url"
+msgstr ""
+
+#: 
+msgid "game-ideex-explora-author"
+msgstr ""
+
+#: 
+msgid "game-idearagon-geo-oca-title"
+msgstr ""
+
+#: 
+msgid "game-idearagon-geo-oca-description"
+msgstr ""
+
+#: 
+msgid "game-idearagon-geo-oca-url"
+msgstr ""
+
+#: 
+msgid "game-idearagon-geo-oca-author"
+msgstr ""
+
+#: 
+msgid "game-idearagon-geo-boom-title"
+msgstr ""
+
+#: 
+msgid "game-idearagon-geo-boom-description"
+msgstr ""
+
+#: 
+msgid "game-idearagon-geo-boom-url"
+msgstr ""
+
+#: 
+msgid "game-idearagon-geo-boom-author"
+msgstr ""
+
+#: 
+msgid "game-idearagon-geo-paisaje-title"
+msgstr ""
+
+#: 
+msgid "game-idearagon-geo-paisaje-description"
+msgstr ""
+
+#: 
+msgid "game-idearagon-geo-paisaje-url"
+msgstr ""
+
+#: 
+msgid "game-idearagon-geo-paisaje-author"
+msgstr ""
+
+#: 
+msgid "game-idearagon-crea-tu-ciudad-title"
+msgstr ""
+
+#: 
+msgid "game-idearagon-crea-tu-ciudad-description"
+msgstr ""
+
+#: 
+msgid "game-idearagon-crea-tu-ciudad-url"
+msgstr ""
+
+#: 
+msgid "game-idearagon-crea-tu-ciudad-author"
+msgstr ""
+
+#: 
+msgid "game-idearagon-carmen-sandiego-title"
+msgstr ""
+
+#: 
+msgid "game-idearagon-carmen-sandiego-description"
+msgstr ""
+
+#: 
+msgid "game-idearagon-carmen-sandiego-url"
+msgstr ""
+
+#: 
+msgid "game-idearagon-carmen-sandiego-author"
+msgstr ""
+
+#: 
+msgid "game-seterra-title"
+msgstr ""
+
+#: 
+msgid "game-seterra-description"
+msgstr ""
+
+#: 
+msgid "game-seterra-url"
+msgstr ""
+
+#: 
+msgid "game-seterra-author"
+msgstr ""
+
+#: 
+msgid "game-find-the-country-capital-title"
+msgstr ""
+
+#: 
+msgid "game-find-the-country-capital-description"
+msgstr ""
+
+#: 
+msgid "game-find-the-country-capital-url"
+msgstr ""
+
+#: 
+msgid "game-find-the-country-capital-author"
+msgstr ""
+
+#: 
+msgid "game-wordle-title"
+msgstr ""
+
+#: 
+msgid "game-wordle-description"
+msgstr ""
+
+#: 
+msgid "game-wordle-url"
+msgstr ""
+
+#: 
+msgid "game-wordle-author"
+msgstr ""
+
+#: 
+msgid "game-globle-game-title"
+msgstr ""
+
+#: 
+msgid "game-globle-game-description"
+msgstr ""
+
+#: 
+msgid "game-globle-game-url"
+msgstr ""
+
+#: 
+msgid "game-globle-game-author"
+msgstr ""
+

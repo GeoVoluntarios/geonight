@@ -1,0 +1,11 @@
+{
+  "all": [{
+    "id": "rne-es",
+    "image": "assets/imgs/logo_rne.png",
+    "language": ["Español"]
+  }, {
+    "id": "onda-cero-es",
+    "image": "assets/imgs/logo_ondacero.png",
+    "language": ["Español"]
+  }]
+}
