@@ -1,0 +1,86 @@
+{
+  "didactalia": {
+    "title": "Didactalia",
+    "description": "More than 500 games with physical, political, gentilic, environmental, historical maps, ...",
+    "url": "https://mapasinteractivos.didactalia.net/en/community/mapasflashinteractivos/MapasDidactalia",
+    "author": "Didactalia"
+  },
+  "geosapiens-web": {
+    "title": "GeoSapiens Web",
+    "description": "Test your knowledge of geography, physics, politics, and landscape.",
+    "url": "https://educativo.ign.es/geosapiens/htm/en/index.html",
+    "author": "National Geographic Institute of Spain"
+  },
+  "geography-games-ign": {
+    "title": "Geography games",
+    "description": "Six games to practice essential geographic terms for the Spanish University Admission Tests",
+    "url": "https://www.ign.es/web/ign/portal/recursos-educativos/juegos",
+    "author": "National Geographic Institute of Spain"
+  },
+  "old-cartography-ign": {
+    "title": "Old cartography",
+    "description": "Eleven puzzles made with old maps. Configurable difficulty (24 pieces desired).",
+    "url": "https://www.jigsawplanet.com/cartotecaign/mapas-antiguos",
+    "author": "National Geographic Institute of Spain"
+  },
+  "appangea": {
+    "title": "APPangea",
+    "description": "Learn Geography and History from your mobile or tablet by answering questions and competing with other people.",
+    "url": "https://appangea.com/",
+    "author": "Anonymous teachers"
+  },
+  "thinkmaps-puzzle": {
+    "title": "Do you know Europe?",
+    "description": "Drag countries to their correct position on the map",
+    "url": "http://thinkmaps.github.io/Puzzle/index_en.html",
+    "author": "Stephan Mendler"
+  },
+  "geojigsaw-esri": {
+    "title": "Jigsaw Puzzle",
+    "description": "Configure the puzzle to your needs; choose location, size, difficulty, ...",
+    "url": "https://geoxc-apps2.bd.esri.com/Visualization/puzzle2/index.html",
+    "author": "Esri"
+  },
+  "mappuzzle": {
+    "title": "MapPuzzle.xyz",
+    "description": "Eleven puzzles to test your knowledge about: world borders, American states, Spanish provinces, ...",
+    "url": "https://mappuzzle.xyz/?map=world_borders",
+    "author": "Alejandro Aranda"
+  },
+  "seterra": {
+    "title": "Seterra",
+    "description": "Locate countries, capitals, cities, rivers, lakes and much more on a map.",
+    "url": "https://www.seterra.com/",
+    "author": "Seterra geography games"
+  },
+  "find-the-country-capital": {
+    "title": "Find the ...",
+    "description": "Play to find the location of the countries or capitals of Europe.",
+    "url": "https://codepen.io/rzencoder/full/peEExz",
+    "author": "Adam Hamer"
+  },
+  "wordle": {
+    "title": "WORDLE",
+    "description": "Play to find the country represented each day according to its shape in six attempts. Each failure indicates the distance and direction of the country to guess.",
+    "url": "https://worldle.teuteuf.fr/",
+    "author": "@teuteuf"
+  },
+  "globle-game": {
+    "title": "Globle Game",
+    "description": "Play to find the daily mystery country. Each bug is colored indicating the distance to the mystery country.",
+    "url": "https://globle-game.com/",
+    "author": "The Abe Train"
+  },
+  "google-carmen-sandiego": {
+    "title": "Carmen Sandiego",
+    "description": "Use your knowledge to find Carmen Sandiego or any of her countless henchmen.",
+    "url": "https://earth.app.goo.gl/B1Avx5",
+    "author": "Google"
+  },
+  "name-that-landmark": {
+    "title": "Name that landmark",
+    "description": "Scratch quickly and try to find out the name of the monument.",
+    "url": "https://www.geodevelopers.org/NameThatLandmark/",
+    "author": "Esri UK"
+  }
+}

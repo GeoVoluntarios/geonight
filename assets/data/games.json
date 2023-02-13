@@ -1,0 +1,137 @@
+{
+  "games": [{
+      "id": "didactalia",
+      "language": ["English", "Español", "Português", "Català", "Euskara", "Galego", "Français", "Deutsch", "Italiano"],
+      "type": "Web",
+      "img": "assets/imgs/didactalia.gif"
+    },
+    {
+      "id": "geosapiens-web",
+      "language": ["English", "Español"],
+      "type": "Web",
+      "img": "assets/imgs/geosapiens.gif"
+    },
+    {
+      "id": "geosapiens-app",
+      "language": ["Español", "Català", "Euskara", "Galego", "Valencià"],
+      "type": "Móvil (Android & iOS)",
+      "img": "assets/imgs/geosapiens-app-thumb.png"
+    },
+    {
+      "id": "escape-room-ign",
+      "language": ["Español"],
+      "type": "Web",
+      "img": "assets/imgs/scape-room-ign.gif"
+    },
+    {
+      "id": "geography-games-ign",
+      "language": ["Español", "Català", "Euskara", "Galego", "Valencià", "English"],
+      "type": "Web",
+      "img": "assets/imgs/juegos-de-geografia-ign.gif"
+
+    },
+    {
+      "id": "old-cartography-ign",
+      "language": ["English", "Español"],
+      "type": "Web",
+      "img": "assets/imgs/mapas-antiguos-ign.gif"
+    },
+    {
+      "id": "appangea",
+      "language": ["English", "Español"],
+      "type": "Móvil (Android & iOS)",
+      "img": "assets/imgs/appangea.png"
+    },
+    {
+      "id": "thinkmaps-puzzle",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/conoces-europa.gif"
+    },
+    {
+      "id": "name-that-landmark",
+      "language": ["Español", "English"],
+      "type": "Web",
+      "img": "assets/imgs/name_that_landmark.gif"
+    },
+    {
+      "id": "geojigsaw-esri",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/rompecabezas-esri.gif"
+    },
+    {
+      "id": "mappuzzle",
+      "language": ["العربية", "বাংলা", "Euskara", "български", "粵語", "Català", "中文", "čeština", "Dansk", "Nederlands", "English", "Esperant", "eesti", "Suomi", "Français", "Galego", "Deutsch", "Ελληνικά", "Avañe'ẽ", "עברית", "हिन्दी", "Magyar", "Bahasa Indonesia", "Gaeilge", "Italiano", "日本語", "қазақша", "한국어", "Latina", "فارسی", "Polski", "Português", "ਪੰਜਾਬੀ", "Română", "Pусский", "Cрпски / srpski", "Slovenčina", "Español", "Türkçe", "Yкраїнська"],
+      "type": "Web",
+      "img": "assets/imgs/mappuzle.gif"
+    },
+    {
+
+      "id": "ideex-explora",
+      "language": ["Español"],
+      "type": "Web",
+      "img": "assets/imgs/ideex-explora.gif"
+    },
+    {
+
+      "id": "idearagon-geo-oca",
+      "language": ["Español"],
+      "type": "Web",
+      "img": "assets/imgs/igear-geo-oca.gif"
+    },
+    {
+
+      "id": "idearagon-geo-boom",
+      "language": ["Español"],
+      "type": "Web",
+      "img": "assets/imgs/igear-geoboom.gif"
+    },
+    {
+
+      "id": "idearagon-geo-paisaje",
+      "language": ["Español"],
+      "type": "Web",
+      "img": "assets/imgs/igear-geo-paisaje.gif"
+    },
+    {
+
+      "id": "idearagon-crea-tu-ciudad",
+      "language": ["Español"],
+      "type": "Web",
+      "img": "assets/imgs/igear-crea-tu-ciudad.gif"
+    },
+    {
+
+      "id": "google-carmen-sandiego",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/carmen-san-diego.gif"
+    },
+    {
+
+      "id": "seterra",
+      "language": ["English", "Español", "Deutsch", "Français", "Svenska"],
+      "type": "Web",
+      "img": "assets/imgs/seterra.gif"
+    },
+    {
+      "id": "find-the-country-capital",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/svg-map-game.gif"
+    },
+    {
+      "id": "wordle",
+      "language": ["English", "Français", "Español", "Euskara", "Magyar", "Dutch", "Polski", "Português", "Deutsch", "日本", "Corsu"],
+      "type": "Web",
+      "img": "assets/imgs/worldle.gif"
+    },
+    {
+      "id": "globle-game",
+      "language": ["English", "Français", "Español", "Português", "Deutsch", "Magyar", "Italiano", "Svenska", "Polski", "Norsk"],
+      "type": "Web",
+      "img": "assets/imgs/globle.gif"
+    }
+  ]
+}

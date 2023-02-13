@@ -1,0 +1,104 @@
+{
+  "didactalia": {
+    "title": "Didactalia",
+    "description": "More than 500 games with physical, political, gentilic, environmental, historical maps, ...",
+    "url": "https://mapasinteractivos.didactalia.net/comunidad/mapasflashinteractivos/MapasDidactalia?",
+    "author": "Didactalia"
+  },
+  "geosapiens-web": {
+    "title": "GeoSapiens Web",
+    "description": "Pon a prueba tus conocimientos sobre geografía, física, política y paisaje",
+    "url": "https://educativo.ign.es/geosapiens/htm/en/index.html",
+    "author": "Instituto Geográfico Nacional (España)"
+  },
+  "geosapiens-app": {
+    "title": "GeoSapiens App",
+    "description": "Pon a prueba tus conocimientos sobre geografía, física, política y paisaje",
+    "url": "https://www.ign.es/web/dir-aplicaciones-moviles",
+    "author": "Instituto Geográfico Nacional (España)"
+  },
+  "escape-room-ign": {
+    "title": "La leyenda de las joyas perdidas",
+    "description": "Escape Room Virtual de dificultad media y duración aproximada de 90minutos",
+    "url": "http://educativo.ign.es/escape-room/",
+    "author": "Instituto Geográfico Nacional (España)"
+  },
+  "geography-games-ign": {
+    "title": "Juegos de geografía",
+    "description": "Seis juegos para practicar los términos geográficos imprescindibles para la EBAU/EVAU",
+    "url": "https://www.ign.es/web/ign/portal/recursos-educativos/juegos",
+    "author": "Instituto Geográfico Nacional (España)"
+  },
+  "old-cartography-ign": {
+    "title": "Cartografía antigua",
+    "description": "Once puzles hechos con mapas antiguos. Dificultad configurable (dese 24 piezas)",
+    "url": "https://www.jigsawplanet.com/cartotecaign/mapas-antiguos",
+    "author": "Instituto Geográfico Nacional (España)"
+  },
+  "appangea": {
+    "title": "APPangea",
+    "description": "Aprende Geografía e Historia desde tu móvil o table respondiento a preguntas y compitiendo más personas",
+    "url": "https://appangea.com/",
+    "author": "Docentes anónimos"
+  },
+  "name-that-landmark": {
+    "title": "Nombra ese monumento",
+    "description": "Rasca rápido e intenta averiguar el nombre del monumento",
+    "url": "https://hhkaos.github.io/name-that-landmark/",
+    "author": "Esri UK"
+  },
+  "ideex-explora": {
+    "title": "IDE Explora",
+    "description": "Elige una comarca del mapa extremeño y explórala a través de imágenes y audios",
+    "url": "http://www.ideex.es/idedidactica/ideexplora/index.html",
+    "author": "IDE de Extremadura"
+  },
+  "idearagon-geo-oca": {
+    "title": "Geo Oca",
+    "description": "Responde acertadamante las preguntas y mueve tu ficha. Juega en modo individual o multijugador",
+    "url": "https://idearagon.aragon.es/geojuegos/htm/es/geo-oca.html",
+    "author": "IDE de Aragón"
+  },
+  "idearagon-geo-boom": {
+    "title": "Geo Boom",
+    "description": "El juego consiste en una batería de 10 preguntas interactivas de ámbito geográfico en formato BOMBA",
+    "url": "https://idearagon.aragon.es/geojuegos/htm/es/geo-boom.html",
+    "author": "IDE de Aragón"
+  },
+  "idearagon-geo-paisaje": {
+    "title": "Geo Paisaje",
+    "description": "Localiza sobre el mapa de Aragón dónde se encuentra el paisaje que se muestra en la foto",
+    "url": "https://idearagon.aragon.es/geojuegos/htm/es/geo-boom.html",
+    "author": "IDE de Aragón"
+  },
+  "idearagon-crea-tu-ciudad": {
+    "title": "Crea tu ciudad",
+    "description": "Crear tu ciudad añadiendo: carreteras, terrenos, colocar edificios e incluso decorar la ciudad ...",
+    "url": "https://idearagon.aragon.es/geojuegos/htm/es/creatuciudad.html",
+    "author": "IDE de Aragón"
+  },
+  "seterra": {
+    "title": "Seterra",
+    "description": "Localiza países, capitales, ciudades, ríos, lagos y mucho más en un mapa.",
+    "url": "https://www.seterra.com/es/",
+    "author": "Juegos de geografía de Seterra"
+  },
+  "wordle": {
+    "title": "WORDLE",
+    "description": "Juega a encontrar el país representado cada día según su forma en seis intentos. Cada fallo indica la distancia y la dirección del país a adivinar.",
+    "url": "https://worldle.teuteuf.fr/",
+    "author": "@teuteuf"
+  },
+  "globle-game": {
+    "title": "Globle Game",
+    "description": "Juega a encontrar el país misterioso diario. Cada fallo se colorea indicando la distancia al país misterioso.",
+    "url": "https://globle-game.com/",
+    "author": "The Abe Train"
+  },
+  "mappuzzle": {
+    "title": "MapPuzzle.xyz",
+    "description": "Once rompecabezas para poner a prueba tus conocimientos sobre: fronteras mundiales,provincias españolas, estados americanos, ...",
+    "url": "https://mappuzzle.xyz/?map=world_borders",
+    "author": "Alejandro Aranda"
+  }
+}

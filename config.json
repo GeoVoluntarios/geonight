@@ -1,0 +1,8 @@
+{
+  "localePath": "assets/locale",
+  "defaultLanguage": "en-US",
+  "langs": [
+    ["en-US", "English"],
+    ["es-ES", "Español"]
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "geonight",
+  "version": "1.0.0",
+  "description": "Aplicación desarrollada para la GeoNight organizada en colaboración con la Asociación Española de Geografía (AGE).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update:po": "node localizer.mjs --update:po",
+    "update:i18n": "node localizer.mjs --update:i18n"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeoVoluntarios/geonight.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeoVoluntarios/geonight/issues"
+  },
+  "homepage": "https://github.com/GeoVoluntarios/geonight#readme",
+  "dependencies": {
+    "i18next": "^22.4.9",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "node-html-parser": "^6.1.4"
+  },
+  "devDependencies": {
+    "chalk": "^5.2.0",
+    "child_process": "^1.0.2",
+    "i18next-conv": "^13.1.1",
+    "play-sound": "^1.1.5"
+  }
+}
