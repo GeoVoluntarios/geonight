@@ -33,7 +33,10 @@ async function load_listing(lng, lng_code, options) {
             const str = template({
               elem: elem
             });
-            entriesEl.insertAdjacentHTML('beforeend', str);
+            // If element do not already exists
+            if (!document.querySelector(`#${elem.id}`)) {
+              entriesEl.insertAdjacentHTML('beforeend', str);
+            }
           }
         };
         resolve(true);

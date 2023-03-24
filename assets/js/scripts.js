@@ -101,7 +101,18 @@ function initPage() {
       });
     }
   })(jQuery); // End of use strict
+}
 
+function loadAllGames() {
+  _CONFIG.langs.forEach(el => {
+    // el[0]: en-US
+    // el[1]: English
 
-
+    load_listing(el[1], el[0], {
+      type: "games",
+      targetEl: "games",
+      template: "game-template",
+      fields: ['title', 'description', 'url', 'author']
+    });
+  });
 }
