@@ -35,11 +35,6 @@
       "language": ["Español"]
     },
     {
-      "id": "esri-es",
-      "image": "assets/imgs/logo_esri_espania.png",
-      "language": ["Español"]
-    },
-    {
       "id": "agron",
       "image": "assets/imgs/logo_CMYK-color-tagline-768x346.png",
       "language": ["Español"]
@@ -127,6 +122,15 @@
     {
       "id": "nao-casanova",
       "image": "assets/imgs/logo-nao-casanova.jpeg",
+      "language": ["Español", "English"]
+    },
+    {
+      "id": "geodevelopers-es",
+      "image": "assets/imgs/logo_geodev_nuevo.png",
+      "language": ["Español", "English"]
+    }, {
+      "id": "age-es",
+      "image": "assets/imgs/logo_age.png",
       "language": ["Español", "English"]
     }
 

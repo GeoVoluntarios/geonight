@@ -2,14 +2,6 @@
   "all": [{
     "id": "esri-inc",
     "image": "assets/imgs/Esri-logo.png",
-    "language": ["English"]
-  }, {
-    "id": "geodevelopers-es",
-    "image": "assets/imgs/logo_geodev_nuevo.png",
-    "language": ["Español"]
-  }, {
-    "id": "age-es",
-    "image": "assets/imgs/logo_age.png",
-    "language": ["Español"]
+    "language": ["English", "Español"]
   }]
 }

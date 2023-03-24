@@ -522,3 +522,7 @@ body {
 .mt-12 {
   margin-top: 14rem
 }
+
+.acenter {
+  text-align: center;
+}

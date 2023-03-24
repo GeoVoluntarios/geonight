@@ -100,8 +100,12 @@ function initPage() {
         }
       });
     }
+
+    $('#showAllGames').click(loadAllGames);
   })(jQuery); // End of use strict
 }
+
+
 
 function loadAllGames() {
   _CONFIG.langs.forEach(el => {
@@ -115,4 +119,5 @@ function loadAllGames() {
       fields: ['title', 'description', 'url', 'author']
     });
   });
+  $('#showAllGames').hide();
 }

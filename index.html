@@ -101,7 +101,6 @@
       <a class="navbar-brand js-scroll-trigger"
          href="#page-top">
         GeoNight
-        <!--<span class="subtitle">by AGE</span>-->
       </a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded"
               type="button"
@@ -116,13 +115,6 @@
       <div class="collapse navbar-collapse"
            id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <!--<li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-               href="#concurso"
-               data-i18n="contest">
-              Contest
-            </a>
-          </li>-->
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
                href="#juegos"
@@ -178,73 +170,6 @@
     </div>
   </header>
 
-  <!--   <section class="page-section"
-           id="concurso">
-    <div class="container">
-      <div class="row mb1">
-        <div class="col-md-12">
-          <h2 data-i18n="game-name">Terra Incognita Game-Contest</h2>
-        </div>
-      </div>
-      <div class="row mb1">
-        <div class="col-md-8">
-          <blockquote class="blockquote">
-            <p class="mb-0">
-              <em><small data-i18n="piaget-quote">
-                  Children do not play to learn, they learn because they
-                  play.
-                </small></em>
-            </p>
-            <footer class="blockquote-footer">
-              <small data-i18n="jean-piaget">
-                Jean Piaget
-              </small>
-            </footer>
-          </blockquote>
-
-          <p data-i18n="intro-paragraph-1">
-            Between <strong>March 31 and April 1,</strong> 20022, group game sessions (up to 10 people) will be
-            organized for
-            <strong>one hour from 5:00 p.m. to 8:00 p.m. (CET)</strong>.
-          </p>
-          <p data-i18n="intro-paragraph-2">
-            <strong>
-              Collectively each group will have to reveal the identity
-              and location of a series of places located in different points of the world.
-            </strong>
-            To discover them, geographic content clues will be given (characteristics of the physical
-            environment and the human environment, potentialities, risks, environmental problems, etc.).
-          </p>
-          <p data-i18n="intro-paragraph-3">
-            The winning groups will receive a set of gifts linked to Geography as a prize.
-          </p>
-        </div>
-        <div class="col-md-4">
-          <img src="assets/imgs/videoconference.jpeg"
-               alt="Icono de videoconferencia">
-        </div>
-      </div>
-      <p id="contest-buttons">
-
-        <a href="https://docs.google.com/forms/d/1aEyp15LtpqtR8oXwYNW3DiveaGrxERiV2PEm7P3CKos/viewform?edit_requested=true"
-           class="btn btn-primary btn-lg mr1"
-           target="_blank"
-           data-i18n="subscribe-for-free">
-          Sign up for free
-        </a>
-        <a href="#"
-           class="btn btn-secondary btn-lg"
-           data-toggle="modal"
-           data-target="#contestBasis"
-           data-i18n="contest-rules">
-          Contest rules
-        </a>
-
-      </p>
-
-    </div>
-  </section> -->
-
   <section class="page-section"
            id="juegos">
     <div class="container">
@@ -272,6 +197,10 @@
       <!-- TODO: add filters to show/hide games in other languages-->
       <!-- TODO: Filter by education grade -->
       <ul id="games"></ul>
+      <div class="acenter">
+        <button class="btn-primary"
+                id="showAllGames">Show games in all languages</button>
+      </div>
       <p class="text-center mt-3 small juega"
          data-i18n="missing-a-game">
         If you know of a game that is not listed here, please message us at info@geovoluntarios.org.
@@ -391,121 +320,6 @@
     </div>
 
   </section>
-
-
-  <!-- Contest rules Modal-->
-  <!--
-  <div class="portfolio-modal modal fade"
-       id="contestBasis"
-       tabindex="-1"
-       role="dialog"
-       aria-labelledby="contestBasisLabel"
-       aria-hidden="true">
-    <div class="modal-dialog modal-xl"
-         role="document">
-      <div class="modal-content">
-        <button class="close"
-                type="button"
-                data-dismiss="modal"
-                aria-label="Close">
-          <span aria-hidden="true"><i class="fas fa-times"></i></span>
-        </button>
-        <div class="modal-body text-center">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"
-                    id="contestBasisLabel"
-                    data-i18n="contest-rules-title">
-                  Contest rules
-                </h2>
-
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-                </div>
-
-                <div class="mb-5 text-left"
-                     data-i18n="contest-rules-details">
-
-                  <h2>
-                    <strong>Participants:</strong>
-                  </h2>
-                  <p>
-                    The contest is open to young and adult players, of any level of education. The game is in
-                    English.
-                  </p>
-                  <h2>
-                    <strong>Registration and dates to remember:</strong>
-                  </h2>
-                  <p>
-                    Registration: <strong>Registration is free of charge </strong>.
-                  </p>
-
-                  <p>
-                    The registration period will be open until <strong>13th of April </strong>.
-                  </p>
-                  <p>
-                    To play and compete, players must access the <strong>registration form ( <a target="_blank"
-                         href="https://docs.google.com/forms/d/1aEyp15LtpqtR8oXwYNW3DiveaGrxERiV2PEm7P3CKos/viewform?edit_requested=true">here</a>)
-                    </strong>, select their preferred day and time of play, and register for the corresponding game
-                    session.
-                  </p>
-                  <p>
-                    The sessions <strong>are played cooperatively
-                      in an on-line meeting and each group obtains a single joint score</strong> to compete with that
-                    obtained by groups of players from other sessions. <strong>Each game session admits a maximum of
-                      10 players</strong>.
-                  </p>
-                  <p>
-                    <strong>
-                      The game sessions will be held in an on-line format in different time slots on 13th and
-                      14th of April, 2023. Registered participants will receive an invitation to the on-line
-                      session
-                    </strong> in which the group game will take place.
-                  </p>
-                  <p>
-                    The <strong>resolution of the game riddles</strong> and the winners of the contest <strong>will be
-                      made public in a joint session with all the players on April 14 at 10 p.m.
-                      after the end of all the game sessions</strong> and coinciding with the celebration of Geo-Night
-                    around the world. <strong>The invitation to the Final Game-Contest Session</strong> will be
-                    attached to the <strong>registration form</strong> on the day of celebration.
-                  </p>
-                  <h2>
-                    <strong>Prizes:</strong>
-                  </h2>
-                  <p>
-                    The winning groups will receive as a prize a set of gifts linked to
-                    Geography:
-                  </p>
-                  <ul>
-                    <li>
-                      Books and atlases from Geo-Planeta: books related to travel, discoveries, routes and other
-                      geographic themes, and atlases with a singular approach
-                    </li>
-                    <li>
-                      Books from Lunwerg & Planeta related to gamification proposals of geographic content
-                      (Escape-Maps)
-                    </li>
-                    <li>
-                      Gift from the bookstore specialized in geographic themes Mapas y Compañía.
-                    </li>
-                  </ul>
-                </div>
-                <button class="btn btn-primary"
-                        data-dismiss="modal">
-                  <i class="fas fa-times fa-fw"
-                     data-i18n="close-rules"></i>
-                  Close rules
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
 
   <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
   <div class="scroll-to-top d-lg-none position-fixed">
