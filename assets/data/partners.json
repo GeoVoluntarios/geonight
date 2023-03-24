@@ -123,6 +123,11 @@
       "id": "idee-es",
       "image": "assets/imgs/logo_idee_negro.png",
       "language": ["Español"]
+    },
+    {
+      "id": "nao-casanova",
+      "image": "assets/imgs/logo-nao-casanova.jpeg",
+      "language": ["Español", "English"]
     }
 
   ]

@@ -1,16 +1,41 @@
 # GeoNight
 
-Aplicación desarrollada para la GeoNight organizada en colaboración con la Asociación Española de Geografía (AGE).
+Website originally developed for the GeoNight organized in collaboration with the Spanish Association of Geography (AGE).
 
 # Localization
 
 Locations are stored in folder specified in config.json (`localePath`).
 
-Add data-i18n="UNIQUE-ID".
+## Static content
 
-## Update translations
+In order to add new text to the `index.html` the tag element containing the text just need to have an attribute (`data-i18n`)
+making sure its unique is unique, for example:
 
-1. Run the following command: `npm run update:po`
+```html
+<small data-i18n="jean-piaget">
+  Jean Piaget
+</small>
+```
+
+## Dynamic content
+
+Games, media appearances, organizers and partners are loaded dynamically through JSON files store at [assets/data](/assets//data).
+
+In order to add new partners to any specific language you have to add a new entry to the file in `assets/data`, and then
+the locale files will be generated automatically.
+
+> **Warning**: do not add entries manually in the "locale" folder. Entries will be added and removed automatically if 
+you have the `npm run update:po` script running.
+
+
+## Generate translation files
+
+Just by running `npm run update:po`, the app will keep listening any changes in the main files and updating the 
+translations files as needed.
+
+## Update
+
+1. 
 2. Go to https://poeditor.com/projects/import?id=594851
 3. And upload locale/en-us/translation.po
 4. Add the translations
@@ -20,49 +45,7 @@ Add data-i18n="UNIQUE-ID".
 
 ## Change UI language
 
-Use `?lng=es`
+Use "locale" codes, e.g. `?lng=es-ES`.
 
-# Terra Incógnita: Tareas pendientes
-
-- [x] Embeber las pistas del juego
-- [x] Calcular el tiempo en responder
-- [x] Requerir un Login de usuario y guardar tiempo y respuestas de cada un@
-- [x] Añadir las respuestas reales
-- [x] Descativar localizaciones ya respondidas
-- [x] Calcular error con respecto a la localización seleccioonada
-- [x] Añadir preguntar final
-- [x] Parar reloj, gracias y volver a la web
-- [x] Guardar respuestas ya enviadas
-- [x] Comprobar el estado de la aplicación al cargar (si ya se ha terminado no dejar jugar más)
-- [x] Pedir nombres de los miembros del equipo al principio
-- [x] Enviar respuestas al servidor
-- [x] Cambiar pregunta final -> Abierta y comparar similitud con respuestas válidas
-- [x] Actualizar vídeos de pistas
-- [ ] Mejorar UI:
-  - [x] Arreglar Tamaño iframe
-  - [x] Añadir links a imágenes para ver en grande
-  - [x] Añadir animación al poner ratón sobre la pista
-- [x] Mejorar instrucciones del principio (añadir screenshot de la interfaz)
-- [x] Cambiar datos de auth0 con datos de Terra Incógnita
-- [x] UI: Flip al hacer clic
-- [x] Acumulado no se muestra nada más registrate
-- [x] Descargar las respuestas
-- [x] Añadir zoom a imagen
-- [ ] Añadir [catch a applyEdits](https://developers.arcgis.com/javascript/latest/sample-code/editing-applyedits/) por si falla al guardar
-- [ ] TOS
-
-Wishlist:
-
-- [ ] Refactorizar código JS
-- [ ] Pasar a Web Components (¿con Jorge del Casar?)
-- [ ] [Limpiar CSS](https://www.keycdn.com/blog/remove-unused-css) (o rehacerlo ¿[con NucliWeb](https://twitter.com/nucliweb)?)
-- [ ] Grabar vídeo explicando cómo compartir con audio
-- [ ] [Borrar cookies](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/remove) para evitar [error 403 auth0](https://youtu.be/U_KdvBMzsTk)
-- [ ] Mostrar el menú de navegación de pistas por pasos y arriba // o añadir instrucciones al principio
-- [ ] Restringir para que sólo la app pueda ver las respuesta
-- [ ] Mostrar el leaderboard al final
-- [ ] Hacer responsive
-- [ ] Mejorar diseño para resolución de 1024x768
-- [ ] UI: Añadir flechas de navegación entre pistas
-- [ ] Comprobar si se ha guardado bien el resultado (comprobar si falla)
-- [x] Lista con la gente que ha participado
+https://geovoluntarios.github.io/geonight/index.html?lng=es-ES
+Open: [English version](https://geovoluntarios.github.io/geonight/index.html?lng=en-US) | [Spanish version]()

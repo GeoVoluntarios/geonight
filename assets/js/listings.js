@@ -31,10 +31,13 @@ async function load_listing(lng, lng_code, options) {
 
             const entriesEl = document.getElementById(options.targetEl);
             const str = template({
-              elem: elem
+              elem: {
+                ...elem,
+                type: options.type
+              }
             });
             // If element do not already exists
-            if (!document.querySelector(`#${elem.id}`)) {
+            if (!document.querySelector(`#${options.type}-${elem.id}`)) {
               entriesEl.insertAdjacentHTML('beforeend', str);
             }
           }

@@ -98,5 +98,9 @@
   "idee-es": {
     "name": "IDEE España",
     "html": "<h4>IDEE</h4> <p> La <a href=\"https://www.idee.es/\">Infraestructura de Datos Espaciales de España (IDEE)</a> es el resultado de la integración de todas las IDE establecidas por los productores oficiales de datos, tanto a nivel estatal como autonómico y local, y de todo tipo de infraestructuras sectoriales y privadas. </p>"
+  },
+  "nao-casanova": {
+    "name": "Nao Casanova",
+    "html": "<h4>Nao Casanova</h4><p><a href=\"https://twitter.com/NaoCasanova\">@NaoCasanova</a> es una ingeniera de caminos, canales y puertos que trabaja en una consultoría de ingenería, y autora del libro \"<a href=\"https://www.amazon.es/EL-AMIGO-ESTUDIANTE-MATEM%C3%81TICAS-Volumen-ebook/dp/B084JJ2YZY/ref=sr_1_1?qid=1679654099&refinements=p_27%3ANao+Casanova&s=digital-text&sr=1-1&text=Nao+Casanova\">Las Plumas del Diablo</a>\". Es muy twittera muy activa que usa la red como lugar en el que \"tomar notas en público\", de este modo comparte todo tipo de cosas, desde cosas que quiere aprender, repasar o cosas que le hacen gracia.</p><p>Desde aquí queremos darle un agradecimiento público porque <a href=\"https://twitter.com/NaoCasanova/status/1538514141253623808?t=NYLrWNckARhX2rV8b0ZCuA&s=19\">uno de sus hilos en Twitter</a> no ha servido de gran ayuda para ampliar el catálogo de juegos listados en esta página.</p>"
   }
 }

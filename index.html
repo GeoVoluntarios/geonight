@@ -32,7 +32,7 @@
 
   <!-- COMMON TAGS -->
   <meta charset="utf-8">
-  <title>GeoNight (by AGE), the night of Geography</title>
+  <title>GeoNight, the night of Geography</title>
 
   <!-- Search Engine -->
   <meta name="description"
@@ -42,7 +42,7 @@
 
   <!-- Schema.org for Google -->
   <meta itemprop="name"
-        content="GeoNight (by AGE), the night of Geography">
+        content="GeoNight, the night of Geography">
   <meta itemprop="description"
         content="A playful initiative that brings together a multitude of games to test your knowledge of geography.">
   <meta itemprop="image"
@@ -52,13 +52,13 @@
   <meta name="twitter:card"
         content="summary with large image">
   <meta name="twitter:title"
-        content="GeoNight (by AGE), the night of Geography">
+        content="GeoNight, the night of Geography">
   <meta name="twitter:description"
         content="A playful initiative that brings together a multitude of games to test your knowledge of geography.">
 
   <!-- Open Graph general (Facebook, Pinterest & Google+) -->
   <meta name="og:title"
-        content="GeoNight (by AGE), the night of Geography">
+        content="GeoNight, the night of Geography">
   <meta name="og:description"
         content="A playful initiative that brings together a multitude of games to test your knowledge of geography.">
   <meta name="og:image"
@@ -100,7 +100,8 @@
     <div class="container">
       <a class="navbar-brand js-scroll-trigger"
          href="#page-top">
-        GeoNight <span class="subtitle">by AGE</span>
+        GeoNight
+        <!--<span class="subtitle">by AGE</span>-->
       </a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded"
               type="button"
@@ -115,13 +116,13 @@
       <div class="collapse navbar-collapse"
            id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item mx-0 mx-lg-1">
+          <!--<li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
                href="#concurso"
                data-i18n="contest">
               Contest
             </a>
-          </li>
+          </li>-->
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
                href="#juegos"
@@ -177,7 +178,7 @@
     </div>
   </header>
 
-<!--   <section class="page-section"
+  <!--   <section class="page-section"
            id="concurso">
     <div class="container">
       <div class="row mb1">
@@ -244,7 +245,7 @@
     </div>
   </section> -->
 
-  <section class="page-section bg-port-gore"
+  <section class="page-section"
            id="juegos">
     <div class="container">
       <!-- Portfolio Section Heading-->
@@ -279,7 +280,7 @@
   </section>
 
 
-  <section class="page-section"
+  <section class="page-section bg-port-gore"
            id="sobre-la-geonight">
     <div class="container">
       <div data-i18n="about-the-initiative">
@@ -321,7 +322,7 @@
           With the aim of highlighting geography and professionals in
           this field,
           <strong class="bg-yellow">
-           "Geography Night" 
+            "Geography Night"
             (<a href="https://www.geonight.net/">geonight.net</a>) is an international initiative in which one evening
             or night a year events are organized simultaneously
             around the world
@@ -347,7 +348,7 @@
           promote the connection between the group of geographers and
           geography enthusiasts from different parts of the world.
         </p>
-<!--         <p>
+        <!--         <p>
           The game-contest Terra Incógnita has been created by the AGE
           and the TransUMAntes Network of the UMA, and developed by
           the Spanish GeoDevelopers community.
@@ -392,7 +393,8 @@
   </section>
 
 
-<!-- Contest rules Modal--> <!-- 
+  <!-- Contest rules Modal-->
+  <!--
   <div class="portfolio-modal modal fade"
        id="contestBasis"
        tabindex="-1"
@@ -417,13 +419,13 @@
                     data-i18n="contest-rules-title">
                   Contest rules
                 </h2>
-                <!-- Icon Divider-->
+
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
                   <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                   <div class="divider-custom-line"></div>
                 </div>
-                <!-- Modal - Text-->
+
                 <div class="mb-5 text-left"
                      data-i18n="contest-rules-details">
 
@@ -523,11 +525,11 @@
               <a href="https://www.linkedin.com/in/fabri-moles/">Fabri Moles</a>,
               <a href="https://www.linkedin.com/in/martavillalobos/">Marta Villalobos</a>, and
               <a href="https://www.linkedin.com/in/f%C3%A9lix-franco-rojas-a23557108/">Félix Franco</a>
-              ) built using 
+              ) built using
               <a href="https://startbootstrap.com/theme/freelancer">Freelancer</a>.
-              <br/>
+              <br />
               Source
-                code is available on 
+              code is available on
               <a href="https://github.com/geovoluntarios/geonight/">GitHub
               </a>.
             </small>
@@ -541,7 +543,7 @@
   <!-- GAME TEMPLATE -->
   <div id="game-template"
        style="display:none">
-    <li id="{{elem.id}}">
+    <li id="{{elem.type}}-{{elem.id}}">
       <figure class="card card-flip">
         <div class="card text-white">
           <div class="card-img img-fluid"
