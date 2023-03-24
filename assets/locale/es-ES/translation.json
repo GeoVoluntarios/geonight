@@ -13,5 +13,6 @@
     "join-partners": "Si quieres unirte a los colaboradores, escríbenos a info@geovoluntarios.org.",
     "footer-text": "<p> <small> Sitio web creado con ❤️ y con la ayuda de voluntarios ( <a href=\"https://www.linkedin.com/in/fabri-moles/\"> Fabri Moles </a>, <a href=\"https://www.linkedin.com/in/martavillalobos/\"> Marta Villalobos </a> y <a href=\"https://www.linkedin.com/in/f%C3%A9lix-franco-rojas-a23557108/\"> Félix Franco </a> ) partiendo de la plantilla <a href=\"https://startbootstrap.com/theme/freelancer\"> Freelancer </a> de Bootstrap. <br> <a href=\"https://github.com/geovoluntarios/geonight/\"> Código fuente disponible en GitHub </a> </small> </p>",
     "game-author": "Autor",
-    "game-open": "Abrir"
+    "game-open": "Abrir",
+    "show-all-games": "Mostrar los juegos en otros idiomas"
 }

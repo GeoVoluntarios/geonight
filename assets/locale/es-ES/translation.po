@@ -69,3 +69,7 @@ msgstr "Autor"
 msgid "game-open"
 msgstr "Abrir"
 
+#: 
+msgid "show-all-games"
+msgstr "Mostrar los juegos en otros idiomas"
+

@@ -526,3 +526,7 @@ body {
 .acenter {
   text-align: center;
 }
+
+.page-section:not(.bg-port-gore) .yellow {
+  color: #1bbc9c
+}
