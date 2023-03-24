@@ -25,7 +25,7 @@
   },
   "appangea": {
     "title": "APPangea",
-    "description": "Learn Geography and History from your mobile or tablet by answering questions and competing with other people.",
+    "description": "Learn Geography and History from your mobile or tablet device by answering questions and competing with other people.",
     "url": "https://appangea.com/",
     "author": "Anonymous teachers"
   },
@@ -37,13 +37,13 @@
   },
   "geojigsaw-esri": {
     "title": "Jigsaw Puzzle",
-    "description": "Configure the puzzle to your needs; choose location, size, difficulty, ...",
+    "description": "Configure the puzzle to your needs by choosing the location, size, difficulty, ...",
     "url": "https://geoxc-apps2.bd.esri.com/Visualization/puzzle2/index.html",
     "author": "Esri"
   },
   "mappuzzle": {
     "title": "MapPuzzle.xyz",
-    "description": "Eleven puzzles to test your knowledge about: world borders, American states, Spanish provinces, ...",
+    "description": "Eleven puzzles to test your knowledge about world borders, American states, Spanish provinces, ...",
     "url": "https://mappuzzle.xyz/?map=world_borders",
     "author": "Alejandro Aranda"
   },
@@ -55,7 +55,7 @@
   },
   "find-the-country-capital": {
     "title": "Find the ...",
-    "description": "Play to find the location of the countries or capitals of Europe.",
+    "description": "Play to find the locations of countries or capitals in Europe.",
     "url": "https://codepen.io/rzencoder/full/peEExz",
     "author": "Adam Hamer"
   },
@@ -79,7 +79,7 @@
   },
   "name-that-landmark": {
     "title": "Name that landmark",
-    "description": "Scratch quickly and try to find out the name of the monument.",
+    "description": "Scratch quickly to determine the name of the monument.",
     "url": "https://www.geodevelopers.org/NameThatLandmark/",
     "author": "Esri UK"
   },
