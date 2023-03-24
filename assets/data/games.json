@@ -73,6 +73,18 @@
       "img": "assets/imgs/ideex-explora.gif"
     },
     {
+      "id": "ideex-aventura",
+      "language": ["Español"],
+      "type": "Web",
+      "img": "assets/imgs/ideex-aventura.gif"
+    },
+    {
+      "id": "ideex-quiz",
+      "language": ["Español"],
+      "type": "Web",
+      "img": "assets/imgs/ideex-quiz.gif"
+    },
+    {
       "id": "idearagon-geo-oca",
       "language": ["Español"],
       "type": "Web",
@@ -125,6 +137,127 @@
       "language": ["English", "Français", "Español", "Português", "Deutsch", "Magyar", "Italiano", "Svenska", "Polski", "Norsk"],
       "type": "Web",
       "img": "assets/imgs/globle.gif"
+    },
+    {
+      "id": "geoguessr",
+      "language": ["English"],
+      "type": "Web, Mobile (Android & iOS)",
+      "img": "assets/imgs/geoguessr.gif"
+    },
+    {
+      "id": "new-gis-idearagon",
+      "language": ["Español"],
+      "type": "Web",
+      "img": "assets/imgs/igear-new-gis.gif"
+    },
+    {
+      "id": "interactivemaps-idearagon",
+      "language": ["Español"],
+      "type": "Web",
+      "img": "assets/imgs/igear-interativemaps.gif"
+    },
+    {
+      "id": "city-guesser",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/city-guesser.gif"
+    },
+    {
+      "id": "posio",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/posio.gif"
+    },
+    {
+      "id": "quizzity",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/quizzity.gif"
+    },
+    {
+      "id": "planemad",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/planemad.gif"
+    },
+    {
+      "id": "click-that-hood",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/click-that-hood.gif"
+    },
+    {
+      "id": "quiz-map-world-city-soviet-cold-war-spy",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/quiz-map-world-city-soviet-cold-war-spy.gif"
+    },
+    {
+      "id": "the-view-from-above",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/the-view-from-above.gif"
+    },
+    {
+      "id": "back-off-your-hand",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/back-off-your-hand.gif"
+    },
+    {
+      "id": "guess-where",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/guess-where.gif"
+    },
+    {
+      "id": "virtualvacation-guess",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/virtualvacation-guess.gif"
+    },
+    {
+      "id": "worlde",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/worlde.gif"
+    },
+    {
+      "id": "mapstd",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/mapstd.gif"
+    },
+    {
+      "id": "earth-nose-game",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/earth-nose-game.gif"
+    },
+    {
+      "id": "countryle",
+      "language": ["English", "Español", "Català", "Português", "Français", "Deutsch"],
+      "type": "Web",
+      "img": "assets/imgs/countryle.gif"
+    },
+    {
+      "id": "eoguesser",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/eoguesser.gif"
+    },
+    {
+      "id": "ughent-map",
+      "language": ["English", "Español", "Português", "Nederlands", "Francçais", "العَرَبِيَّة", "中文", "русский"],
+      "type": "Web",
+      "img": "assets/imgs/ughent-map.gif"
+    },
+    {
+      "id": "traveling-salesman-problem",
+      "language": ["English"],
+      "type": "Web",
+      "img": "assets/imgs/traveling-salesman-problem.gif"
     }
+
   ]
 }

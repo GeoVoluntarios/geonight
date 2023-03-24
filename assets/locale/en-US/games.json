@@ -82,5 +82,113 @@
     "description": "Scratch quickly and try to find out the name of the monument.",
     "url": "https://www.geodevelopers.org/NameThatLandmark/",
     "author": "Esri UK"
+  },
+  "geoguessr": {
+    "title": "GeoGuessr",
+    "description": "Geography game which takes you on a journey around the world and challenges your ability to recognize your surroundings",
+    "url": "https://www.geoguessr.com/",
+    "author": "Anton Wallén"
+  },
+  "city-guesser": {
+    "title": "City-Guesser",
+    "description": "Guess what city it is by looking at a floor plan with road infrastructure, parks, rivers and little else. Ideal if you like urban planning and cities",
+    "url": "https://jamaps.github.io/city-guesser/",
+    "author": "Jeff Allen"
+  },
+  "posio": {
+    "title": "Posio",
+    "description": "Multiplayer game where you have to wait for the time to answer where the city you are asked for is located. Points are given according to how close you point.",
+    "url": "https://posio.abrenaut.com",
+    "author": "Arthur Brenaut"
+  },
+  "quizzity": {
+    "title": "Quizzity",
+    "description": "You have to point out six cities in the world. You get more points the less kilometers there are between the real location and the one you indicate.",
+    "url": "https://david-peter.de/quizzity/",
+    "author": "David Peter"
+  },
+  "planemad": {
+    "title": "PlaneMad",
+    "description": "Guess the country using quick context clues; but be careful, because sometimes the map is rotated to mislead you!",
+    "url": "https://planemad.github.io/map-quiz/",
+    "author": "Arun Ganesh"
+  },
+  "click-that-hood": {
+    "title": "Click that hood",
+    "description": "Game based on open data with +260 maps to learn about neighbourhoods of cities, states, ... The faster you answer, the better!",
+    "url": "https://click-that-hood.com/",
+    "author": "Code for America"
+  },
+  "quiz-map-world-city-soviet-cold-war-spy": {
+    "title": "Cold war Soviet spy map",
+    "description": "Guess the city based on the spy map made by the Soviets during the Cold War using 🛰️ and 🕵️‍♀️ at street level",
+    "url": "https://www.theguardian.com/cities/ng-interactive/2018/apr/27/quiz-map-world-city-soviet-cold-war-spy",
+    "author": "The Guardian"
+  },
+  "the-view-from-above": {
+    "title": "The View from Above",
+    "description": "Guess to which country the shown satellite image belongs. There are levels and lives (Google watermarked)",
+    "url": "https://qz.com/304487/the-view-from-above-can-you-name-these-countries-using-only-satellite-photos",
+    "author": "Quartz"
+  },
+  "back-off-your-hand": {
+    "title": "Back of your hand 🤚",
+    "description": "Guess the location of 5 streets in an urban area of your choice (home, work, ...). Do you really know it like the back of your hand?",
+    "url": "https://backofyourhand.com/game?difficulty=taxi-driver&lat=51.5164&lng=-0.093&numberOfQuestions=5&radius=2000&seed=FUYDED",
+    "author": "Adam Lynch"
+  },
+  "guess-where": {
+    "title": "Guess Where?",
+    "description": "An interactive geo quiz game app. Guess the unmarked capital city from given choices",
+    "url": "https://guess-where.pages.dev/",
+    "author": "Jabran Rafique"
+  },
+  "virtualvacation-guess": {
+    "title": "City Guesser (VirtualVacation)",
+    "description": "Guess your location by watching a video. Multiple categories: monuments, places in the world, in the USA and in Europe.",
+    "url": "https://virtualvacation.us/guess",
+    "author": "Paul McBurney"
+  },
+  "worlde": {
+    "title": "Worlde",
+    "description": "Guess a country or city in 🇺🇸 in 6 attempts.  \n⬜ Gray = letter is not there; 🟨 Yellow = there but in other position; 🟩 Green = it is in right position.",
+    "url": "https://worlde-word-game.glitch.me/",
+    "author": "Unknown"
+  },
+  "mapstd": {
+    "title": "mapstd",
+    "description": "A tower defense game. Choose a location defend it from attackers by strategically placing defense towers.",
+    "url": "https://www.mapstd.com/",
+    "author": "Duncan Barclay"
+  },
+  "earth-nose-game": {
+    "title": "Earth nose game",
+    "description": "Point out the city of a country by rotating a globe 🌎 with the NOSE 👃 by moving your head in front of the PC or mobile camera",
+    "url": "https://observablehq.com/embed/@ambassadors/earth-nose-direction-game?cells=chart,share,viewof+sound,viewof+reset,viewof+projectionName,viewof+videoDevice,ack",
+    "author": "Fil, Mootari & Radames"
+  },
+  "countryle": {
+    "title": "Countryle",
+    "description": "Another geographical version of Wordle. Try it with a country and follow the clues",
+    "url": "https://www.countryle.com/",
+    "author": "Unknown"
+  },
+  "eoguesser": {
+    "title": "EOGuesser",
+    "description": "Another version of Wordle. Each day there are 3 attempts to locate a city from an image 🛰️. Hints: quadrant / hemisphere / distance",
+    "url": "https://s2maps.eu/eo-guesser/",
+    "author": "EOX IT Services GmbH"
+  },
+  "ughent-map": {
+    "title": "Ghent University Map",
+    "description": "Most of us have distorted ideas about the relative sizes between countries. And this game-survey puts you to the test in 12 cases",
+    "url": "http://www.maps.ugent.be",
+    "author": "Ghent University, Belgium"
+  },
+  "traveling-salesman-problem": {
+    "title": "Traveling Salesman Problem",
+    "description": "Math problem with applications in logistics, planning, urbanism... Find out the shortest path that joins the points.",
+    "url": "https://www.math.uwaterloo.ca/tsp/app/diy.html",
+    "author": "University of Waterloo, Canada"
   }
 }

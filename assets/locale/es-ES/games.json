@@ -48,31 +48,31 @@
     "author": "Esri UK"
   },
   "ideex-explora": {
-    "title": "IDE Explora",
+    "title": "IDE Explora (Extremadura)",
     "description": "Elige una comarca del mapa extremeño y explórala a través de imágenes y audios",
     "url": "http://www.ideex.es/idedidactica/ideexplora/index.html",
     "author": "IDE de Extremadura"
   },
   "idearagon-geo-oca": {
-    "title": "Geo Oca",
+    "title": "Geo Oca (Aragón)",
     "description": "Responde acertadamante las preguntas y mueve tu ficha. Juega en modo individual o multijugador",
     "url": "https://idearagon.aragon.es/geojuegos/htm/es/geo-oca.html",
     "author": "IDE de Aragón"
   },
   "idearagon-geo-boom": {
-    "title": "Geo Boom",
+    "title": "Geo Boom (Aragón)",
     "description": "El juego consiste en una batería de 10 preguntas interactivas de ámbito geográfico en formato BOMBA",
     "url": "https://idearagon.aragon.es/geojuegos/htm/es/geo-boom.html",
     "author": "IDE de Aragón"
   },
   "idearagon-geo-paisaje": {
-    "title": "Geo Paisaje",
+    "title": "Geo Paisaje (Aragón)",
     "description": "Localiza sobre el mapa de Aragón dónde se encuentra el paisaje que se muestra en la foto",
     "url": "https://idearagon.aragon.es/geojuegos/htm/es/geo-boom.html",
     "author": "IDE de Aragón"
   },
   "idearagon-crea-tu-ciudad": {
-    "title": "Crea tu ciudad",
+    "title": "Crea tu ciudad (Aragón)",
     "description": "Crear tu ciudad añadiendo: carreteras, terrenos, colocar edificios e incluso decorar la ciudad ...",
     "url": "https://idearagon.aragon.es/geojuegos/htm/es/creatuciudad.html",
     "author": "IDE de Aragón"
@@ -100,5 +100,41 @@
     "description": "Once rompecabezas para poner a prueba tus conocimientos sobre: fronteras mundiales,provincias españolas, estados americanos, ...",
     "url": "https://mappuzzle.xyz/?map=world_borders",
     "author": "Alejandro Aranda"
+  },
+  "new-gis-idearagon": {
+    "title": "Juegos GIS (Aragón)",
+    "description": "Aprende capitales de provincia, comarcas, lagos y embalses, municipios, provincias, relieve, ríos y zonas protegidas.",
+    "url": "https://idearagon.aragon.es/geojuegos/htm/es/aragon.html",
+    "author": "Gobierno de Aragón"
+  },
+  "interactivemaps-idearagon": {
+    "title": "Mapas interactivos (Aragón)",
+    "description": "Elige entre 15 categorias de mapas donde tendrás que localizar ubicaciones o responder preguntas sobre las mismas",
+    "url": "https://idearagon.aragon.es/geojuegos/htm/es/index.html",
+    "author": "Gobierno de Aragón"
+  },
+  "ideex-aventura": {
+    "title": "IDE Aventura (Extremadura)",
+    "description": "Se buscan voluntarios para localizar manuscritos, especies, tesoros, ... aprende mientras disfrutas jugando con esta historia.",
+    "url": "http://www.ideex.es/ideaventura/",
+    "author": "IDE de Extremadura"
+  },
+  "ideex-quiz": {
+    "title": "IDE Quiz (Extremadura)",
+    "description": "Cuestionario sobre Extremadura categorizado por edades: [6-8], [9-12], [13-16] años",
+    "url": "http://www.ideex.es/idedidactica/idequiz/index.html",
+    "author": "IDE de Extremadura"
+  },
+  "ughent-map": {
+    "title": "Ghent University Map",
+    "description": "La mayoría de nosotros tenemos ideas distorsionadas sobre los tamaños relativos entre países. Y este juego-encuesta te pone a prueba en 12 casos.",
+    "url": "http://www.maps.ugent.be",
+    "author": "Universidad de Gante, Bélgica"
+  },
+  "countryle": {
+    "title": "Countryle",
+    "description": "Otra versión geográfica de Wordle. Pruébalo con un país y sigue las pistas",
+    "url": "https://www.countryle.com/",
+    "author": "Unknown"
   }
 }
