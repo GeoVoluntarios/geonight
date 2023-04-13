@@ -271,7 +271,7 @@
           Specifically,
           <strong class="bg-yellow">
             this page you are visiting is a recreational initiative
-            launched by the Spanish Association of Geography in
+            that was originally launched by the Spanish Association of Geography in
             collaboration with other entities
           </strong>
           to disseminate the contents of geography as well as to
@@ -294,7 +294,8 @@
       </div>
 
       <h3 class="mt-5"
-          data-i18n="organized-by">
+          data-i18n="organized-by"
+          style="display:none">
         Organized by
       </h3>
       <div class="sponsor-grid__container">
@@ -315,7 +316,7 @@
 
       <p class="text-center mt-3 small juega"
          data-i18n="join-partners">
-        If you want to join the contributors, message us at info@geovoluntarios.org.
+        If you want to become a partner, contact us at info@geovoluntarios.org.
       </p>
 
     </div>
@@ -388,9 +389,11 @@
     </li>
   </div>
 
-  <!-- PARTNERS TEMPLATE -->
-  <div id="listing-template"
-       style="display:none">
+  <script id="listing-template"
+          type="text/x-handlebars-template">
+    <!-- PARTNERS TEMPLATE -->
+    <!-- <div 
+         style="display:none"> -->
     <div class="sponsor-grid__item">
       <div class="sponsor-grid__logo">
         <div class="sponsor-grid__logo__center">
@@ -406,7 +409,8 @@
         </div>
       </div>
     </div>
-  </div>
+    <!-- </div> -->
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <!-- Bootstrap core JS-->
